@@ -1,0 +1,7 @@
+{
+  "variants": {
+    "": {
+      "model": "iron-stars:block/steel_block"
+    }
+  }
+}
