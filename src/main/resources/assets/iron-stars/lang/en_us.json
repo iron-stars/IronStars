@@ -1,0 +1,32 @@
+{
+  "itemGroup.iron-stars": "Iron Stars",
+
+  "item.iron-stars.chip":"Chip",
+  "item.iron-stars.circuit_board":"Circuit Board",
+  "item.iron-stars.copper_wire":"Copper Wire",
+  "item.iron-stars.hardened_resin":"Hardened Resin",
+  "item.iron-stars.magnet":"Magnet",
+  "item.iron-stars.resin":"Resin",
+  "item.iron-stars.silicon":"Silicon",
+  "item.iron-stars.steel_ingot":"Steel Ingot",
+  "item.iron-stars.sticky_resin":"Sticky Resin",
+  "item.iron-stars.titanium_alloy_ingot":"Titanium Alloy Ingot",
+  "item.iron-stars.titanium_ingot":"Titanium Ingot",
+
+  "block.iron-stars.coil":"Coil",
+  "block.iron-stars.electric_wire":"Electric Wire",
+  "block.iron-stars.magnet_block":"Magnet Block",
+  "block.iron-stars.moon_dust":"Moon Dust",
+  "block.iron-stars.moon_rock":"Moon Rock",
+  "block.iron-stars.moon_soil":"Moon Soil",
+  "block.iron-stars.motor":"Motor",
+  "block.iron-stars.motor_lay":"Motor Lay",
+  "block.iron-stars.silicon_block":"Silicon Block",
+  "block.iron-stars.steel_block":"Steel Block",
+  "block.iron-stars.steel_tiles":"Steel Tiles",
+  "block.iron-stars.titanium_alloy_block":"Titanium Alloy Block",
+  "block.iron-stars.titanium_block":"Titanium Block",
+  "block.iron-stars.titanium_ore":"Titanium Ore",
+  "block.iron-stars.turbine":"Turbine",
+  "block.iron-stars.windmill":"Windmill"
+}
