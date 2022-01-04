@@ -19,5 +19,4 @@ public class AllBlocks {
     public static final TitaniumOre titaniumOre = new TitaniumOre();
     public static final Turbine turbine = new Turbine();
     public static final Windmill windmill = new Windmill();
-
 }

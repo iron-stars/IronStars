@@ -1,10 +1,14 @@
 package com.xekr.ironstars;
 
+import net.minecraft.client.renderer.ItemBlockRenderTypes;
+import net.minecraft.client.renderer.RenderType;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.item.Item;
+import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.event.RegistryEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
+import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
 
 import java.util.Objects;
 
@@ -64,4 +68,13 @@ public class Register {
         event.getRegistry().register(AllItems.titanium_ingot);
     }
 
+    @Mod.EventBusSubscriber(bus = Mod.EventBusSubscriber.Bus.MOD,value = Dist.CLIENT)
+    public class RenderTypeRegistry {
+        private static ItemBlockRenderTypes RenderTypeLookup;
+
+        @SubscribeEvent
+        public static void onRenderTypeSetup(FMLClientSetupEvent event) {
+            RenderTypeLookup.setRenderLayer(AllBlocks.moonDust, RenderType.cutout());
+        }
+    }
 }
