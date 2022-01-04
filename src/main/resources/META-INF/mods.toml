@@ -3,26 +3,26 @@ loaderVersion = "[36,)"
 
 license = "All rights reserved"
 [[mods]]
-modId = "iron_stars"
+modId = "ironstars"
 version = "${file.jarVersion}"
 displayName = "Iron Stars"
 #updateJSONURL="http://myurl.me/"
 #displayURL="http://example.com/"
-#logoFile="iron_stars.png"
+#logoFile="ironstars.png"
 #credits="Thanks for this example mod goes to Java"
 authors = "XeKr, LucunJi"
 description = '''
 
 '''
 
-[[dependencies.iron_stars]]
+[[dependencies.ironstars]]
 modId = "forge"
 mandatory = true
 versionRange = "[36,)"
 ordering = "NONE"
 side = "BOTH"
 
-[[dependencies.iron_stars]]
+[[dependencies.ironstars]]
 modId = "minecraft"
 mandatory = true
 versionRange = "[1.18,)"

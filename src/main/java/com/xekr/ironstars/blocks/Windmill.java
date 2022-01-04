@@ -9,7 +9,8 @@ public class Windmill extends Block {
         super(Block.Properties
                 .of(Material.METAL)
                 .explosionResistance(0.5F)
-                .sound(SoundType.METAL));
+                .sound(SoundType.METAL)
+                .noOcclusion());
         this.setRegistryName("windmill");
     }
 }

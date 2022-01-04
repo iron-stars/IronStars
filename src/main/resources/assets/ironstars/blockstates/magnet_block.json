@@ -1,0 +1,16 @@
+{
+  "variants": {
+    "axis=x": {
+      "model": "ironstars:block/magnet_block",
+      "x": 90,
+      "y": 90
+    },
+    "axis=y": {
+      "model": "ironstars:block/magnet_block"
+    },
+    "axis=z": {
+      "model": "ironstars:block/magnet_block",
+      "x": 90
+    }
+  }
+}

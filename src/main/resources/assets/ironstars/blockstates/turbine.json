@@ -1,0 +1,26 @@
+{
+  "variants": {
+    "facing=down": {
+      "model": "ironstars:block/turbine",
+      "x": 180
+},
+    "facing=east": {
+      "model": "ironstars:block/turbine_lay",
+      "y": 90
+    },
+    "facing=north": {
+      "model": "ironstars:block/turbine_lay"
+    },
+    "facing=south": {
+      "model": "ironstars:block/turbine_lay",
+      "y": 180
+    },
+    "facing=up": {
+      "model": "ironstars:block/turbine"
+    },
+    "facing=west": {
+      "model": "ironstars:block/turbine_lay",
+      "y": 270
+    }
+  }
+}

@@ -10,7 +10,8 @@ public class Coil extends RotatedPillarBlock {
         super(Block.Properties
                 .of(Material.METAL)
                 .explosionResistance(0.5f)
-                .sound(SoundType.METAL));
+                .sound(SoundType.METAL)
+                .noOcclusion());
         this.setRegistryName("coil");
     }
 }

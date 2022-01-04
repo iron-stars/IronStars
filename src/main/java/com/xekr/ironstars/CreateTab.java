@@ -2,7 +2,6 @@ package com.xekr.ironstars;
 
 import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.ItemStack;
-import org.jetbrains.annotations.NotNull;
 
 public class CreateTab extends CreativeModeTab {
     public static CreateTab MAIN;
@@ -12,7 +11,7 @@ public class CreateTab extends CreativeModeTab {
     }
 
     @Override
-    public @NotNull ItemStack makeIcon() {
+    public ItemStack makeIcon() {
         return new ItemStack(AllItems.chip);
     }
 }

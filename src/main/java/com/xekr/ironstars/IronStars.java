@@ -13,7 +13,7 @@ import org.apache.logging.log4j.Logger;
 @Mod(IronStars.ID)
 public class IronStars {
 
-    public static final String ID = "iron_stars";
+    public static final String ID = "ironstars";
     public static final String NAME = "Iron Stars";
     public static final String VERSION = "1.0";
     // Directly reference a log4j logger.

@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=east": {
+      "model": "ironstars:block/motor",
+      "y": 90
+    },
+    "facing=north": {
+      "model": "ironstars:block/motor"
+    },
+    "facing=south": {
+      "model": "ironstars:block/motor",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "ironstars:block/motor",
+      "y": 270
+    }
+  }
+}

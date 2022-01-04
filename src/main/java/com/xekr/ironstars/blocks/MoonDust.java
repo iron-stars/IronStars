@@ -10,7 +10,8 @@ public class MoonDust extends SnowLayerBlock {
         super(Block.Properties
                 .of(Material.CLAY)
                 .explosionResistance(0.5F)
-                .sound(SoundType.SAND));
+                .sound(SoundType.SAND)
+                .noOcclusion());
         this.setRegistryName("moon_dust");
     }
 }
