@@ -35,5 +35,4 @@ public class IronStars {
         ItemBlockRenderTypes.setRenderLayer(AllBlocks.turbine, RenderType.cutoutMipped());
         ItemBlockRenderTypes.setRenderLayer(AllBlocks.windmill, RenderType.cutoutMipped());
     }
-
 }

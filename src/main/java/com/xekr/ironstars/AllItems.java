@@ -19,21 +19,21 @@ public class AllItems {
     public static final CommonItem titanium_ingot = new CommonItem("titanium_ingot");
 
     //BlockItems
-    public static final BlockItem coil = new BlockItem(AllBlocks.coil,new Item.Properties().tab(CreateTab.MAIN));
-    public static final BlockItem electric_wire = new BlockItem(AllBlocks.electricWire,new Item.Properties().tab(CreateTab.MAIN));
-    public static final BlockItem magnet_block = new BlockItem(AllBlocks.magnetBlock,new Item.Properties().tab(CreateTab.MAIN));
-    public static final BlockItem moon_dust = new BlockItem(AllBlocks.moonDust,new Item.Properties().tab(CreateTab.MAIN));
-    public static final BlockItem moon_rock = new BlockItem(AllBlocks.moonRock,new Item.Properties().tab(CreateTab.MAIN));
-    public static final BlockItem moon_soil = new BlockItem(AllBlocks.moonSoil,new Item.Properties().tab(CreateTab.MAIN));
-    public static final BlockItem motor = new BlockItem(AllBlocks.motor,new Item.Properties().tab(CreateTab.MAIN));
-    public static final BlockItem motor_lay = new BlockItem(AllBlocks.motorLay,new Item.Properties().tab(CreateTab.MAIN));
-    public static final BlockItem silicon_block = new BlockItem(AllBlocks.siliconBlock,new Item.Properties().tab(CreateTab.MAIN));
-    public static final BlockItem steel_block = new BlockItem(AllBlocks.steelBlock,new Item.Properties().tab(CreateTab.MAIN));
-    public static final BlockItem steel_tiles = new BlockItem(AllBlocks.steelTiles,new Item.Properties().tab(CreateTab.MAIN));
-    public static final BlockItem titanium_alloy_block = new BlockItem(AllBlocks.titaniumAlloyBlock,new Item.Properties().tab(CreateTab.MAIN));
-    public static final BlockItem titanium_block = new BlockItem(AllBlocks.titaniumBlock,new Item.Properties().tab(CreateTab.MAIN));
-    public static final BlockItem titanium_ore = new BlockItem(AllBlocks.titaniumOre,new Item.Properties().tab(CreateTab.MAIN));
-    public static final BlockItem turbine = new BlockItem(AllBlocks.turbine,new Item.Properties().tab(CreateTab.MAIN));
-    public static final BlockItem windmill = new BlockItem(AllBlocks.windmill,new Item.Properties().tab(CreateTab.MAIN));
+    public static final BlockItem coil = new BlockItem(AllBlocks.coil,new Item.Properties().tab(CreateTab.IRON_STAR));
+    public static final BlockItem electric_wire = new BlockItem(AllBlocks.electricWire,new Item.Properties().tab(CreateTab.IRON_STAR));
+    public static final BlockItem magnet_block = new BlockItem(AllBlocks.magnetBlock,new Item.Properties().tab(CreateTab.IRON_STAR));
+    public static final BlockItem moon_dust = new BlockItem(AllBlocks.moonDust,new Item.Properties().tab(CreateTab.IRON_STAR));
+    public static final BlockItem moon_rock = new BlockItem(AllBlocks.moonRock,new Item.Properties().tab(CreateTab.IRON_STAR));
+    public static final BlockItem moon_soil = new BlockItem(AllBlocks.moonSoil,new Item.Properties().tab(CreateTab.IRON_STAR));
+    public static final BlockItem motor = new BlockItem(AllBlocks.motor,new Item.Properties().tab(CreateTab.IRON_STAR));
+    public static final BlockItem motor_lay = new BlockItem(AllBlocks.motorLay,new Item.Properties().tab(CreateTab.IRON_STAR));
+    public static final BlockItem silicon_block = new BlockItem(AllBlocks.siliconBlock,new Item.Properties().tab(CreateTab.IRON_STAR));
+    public static final BlockItem steel_block = new BlockItem(AllBlocks.steelBlock,new Item.Properties().tab(CreateTab.IRON_STAR));
+    public static final BlockItem steel_tiles = new BlockItem(AllBlocks.steelTiles,new Item.Properties().tab(CreateTab.IRON_STAR));
+    public static final BlockItem titanium_alloy_block = new BlockItem(AllBlocks.titaniumAlloyBlock,new Item.Properties().tab(CreateTab.IRON_STAR));
+    public static final BlockItem titanium_block = new BlockItem(AllBlocks.titaniumBlock,new Item.Properties().tab(CreateTab.IRON_STAR));
+    public static final BlockItem titanium_ore = new BlockItem(AllBlocks.titaniumOre,new Item.Properties().tab(CreateTab.IRON_STAR));
+    public static final BlockItem turbine = new BlockItem(AllBlocks.turbine,new Item.Properties().tab(CreateTab.IRON_STAR));
+    public static final BlockItem windmill = new BlockItem(AllBlocks.windmill,new Item.Properties().tab(CreateTab.IRON_STAR));
 
 }

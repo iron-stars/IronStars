@@ -4,10 +4,9 @@ import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.ItemStack;
 
 public class CreateTab extends CreativeModeTab {
-    public static CreateTab MAIN;
-    public CreateTab(String name) {
-        super(IronStars.ID+":"+name);
-        MAIN = this;
+    public static final CreativeModeTab IRON_STAR = new CreateTab();
+    public CreateTab() {
+        super(IronStars.ID);
     }
 
     @Override
