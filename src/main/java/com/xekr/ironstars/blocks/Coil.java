@@ -1,15 +1,15 @@
 package com.xekr.ironstars.blocks;
 
-import net.minecraft.block.Block;
-import net.minecraft.block.RotatedPillarBlock;
-import net.minecraft.block.SoundType;
-import net.minecraft.block.material.Material;
+import net.minecraft.world.level.block.Block;
+import net.minecraft.world.level.block.RotatedPillarBlock;
+import net.minecraft.world.level.block.SoundType;
+import net.minecraft.world.level.material.Material;
 
 public class Coil extends RotatedPillarBlock {
     public Coil(){
         super(Block.Properties
-                .create(Material.IRON)
-                .hardnessAndResistance(0.5F)
+                .of(Material.METAL)
+                .explosionResistance(0.5f)
                 .sound(SoundType.METAL));
         this.setRegistryName("coil");
     }

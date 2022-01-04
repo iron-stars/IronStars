@@ -1,0 +1,22 @@
+{
+	"credit": "Made by XeKr with Blockbench",
+	"parent": "minecraft:block/block",
+	"textures": {
+		"0": "iron_stars:block/electric_wire",
+		"particle": "iron_stars:block/electric_wire"
+	},
+	"elements": [
+		{
+			"from": [6, 0, 0],
+			"to": [10, 2, 16],
+			"faces": {
+				"north": {"uv": [12, 14, 16, 16], "texture": "#0"},
+				"east": {"uv": [14, 0, 16, 16], "rotation": 90, "texture": "#0"},
+				"south": {"uv": [12, 14, 16, 16], "texture": "#0"},
+				"west": {"uv": [14, 0, 16, 16], "rotation": 90, "texture": "#0"},
+				"up": {"uv": [12, 0, 16, 16], "texture": "#0"},
+				"down": {"uv": [12, 0, 16, 16], "texture": "#0"}
+			}
+		}
+	]
+}

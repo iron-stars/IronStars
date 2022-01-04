@@ -1,0 +1,16 @@
+{
+  "variants": {
+    "axis=x": {
+      "model": "iron_stars:block/coil",
+      "x": 90,
+      "y": 90
+    },
+    "axis=y": {
+      "model": "iron_stars:block/coil"
+    },
+    "axis=z": {
+      "model": "iron_stars:block/coil",
+      "x": 90
+    }
+  }
+}

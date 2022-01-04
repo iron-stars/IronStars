@@ -1,0 +1,158 @@
+{
+  "multipart": [
+    {
+      "when": {"down": "ns"},
+      "apply": {"model": "iron_stars:block/wire_line"}
+    },
+    {
+      "when": {"down": "we"},
+      "apply": {"model": "iron_stars:block/wire_line","y": 90}
+    },
+    {
+      "when": {"down": "nw"},
+      "apply": {"model": "iron_stars:block/wire_corner"}
+    },
+    {
+      "when": {"down": "ne"},
+      "apply": {"model": "iron_stars:block/wire_corner","y": 90}
+    },
+    {
+      "when": {"down": "se"},
+      "apply": {"model": "iron_stars:block/wire_corner","y": 180}
+    },
+    {
+      "when": {"down": "sw"},
+      "apply": {"model": "iron_stars:block/wire_corner","y": 270}
+    },
+
+
+    {
+      "when": {"up": "ns"},
+      "apply": {"model": "iron_stars:block/wire_line","z": 180}
+    },
+    {
+      "when": {"up": "we"},
+      "apply": {"model": "iron_stars:block/wire_line","y": 90,"z": 180}
+    },
+    {
+      "when": {"up": "ne"},
+      "apply": {"model": "iron_stars:block/wire_corner","z": 180}
+    },
+    {
+      "when": {"up": "nw"},
+      "apply": {"model": "iron_stars:block/wire_corner","y": 90,"z": 180}
+    },
+    {
+      "when": {"up": "sw"},
+      "apply": {"model": "iron_stars:block/wire_corner","y": 180,"z": 180}
+    },
+    {
+      "when": {"up": "se"},
+      "apply": {"model": "iron_stars:block/wire_corner","y": 270,"z": 180}
+    },
+
+
+    {
+      "when": {"north": "ud"},
+      "apply": {"model": "iron_stars:block/wire_wall_line"}
+    },
+    {
+      "when": {"north": "lr"},
+      "apply": {"model": "iron_stars:block/wire_wall_line","z": 90}
+    },
+    {
+      "when": {"north": "ul"},
+      "apply": {"model": "iron_stars:block/wire_wall_corner"}
+    },
+    {
+      "when": {"north": "ur"},
+      "apply": {"model": "iron_stars:block/wire_wall_corner","z": 90}
+    },
+    {
+      "when": {"north": "dr"},
+      "apply": {"model": "iron_stars:block/wire_wall_corner","z": 180}
+    },
+    {
+      "when": {"north": "dl"},
+      "apply": {"model": "iron_stars:block/wire_wall_corner","z": 270}
+    },
+
+
+    {
+      "when": {"east": "ud"},
+      "apply": {"model": "iron_stars:block/wire_wall_line","y": 90}
+    },
+    {
+      "when": {"east": "lr"},
+      "apply": {"model": "iron_stars:block/wire_wall_line","z": 90,"y": 90}
+    },
+    {
+      "when": {"east": "ul"},
+      "apply": {"model": "iron_stars:block/wire_wall_corner","y": 90}
+    },
+    {
+      "when": {"east": "ur"},
+      "apply": {"model": "iron_stars:block/wire_wall_corner","z": 90,"y": 90}
+    },
+    {
+      "when": {"east": "dr"},
+      "apply": {"model": "iron_stars:block/wire_wall_corner","z": 180,"y": 90}
+    },
+    {
+      "when": {"east": "dl"},
+      "apply": {"model": "iron_stars:block/wire_wall_corner","z": 270,"y": 90}
+    },
+
+
+    {
+      "when": {"south": "ud"},
+      "apply": {"model": "iron_stars:block/wire_wall_line","y": 180}
+    },
+    {
+      "when": {"south": "lr"},
+      "apply": {"model": "iron_stars:block/wire_wall_line","z": 90,"y": 180}
+    },
+    {
+      "when": {"south": "ul"},
+      "apply": {"model": "iron_stars:block/wire_wall_corner","y": 180}
+    },
+    {
+      "when": {"south": "ur"},
+      "apply": {"model": "iron_stars:block/wire_wall_corner","z": 90,"y": 180}
+    },
+    {
+      "when": {"south": "dr"},
+      "apply": {"model": "iron_stars:block/wire_wall_corner","z": 180,"y": 180}
+    },
+    {
+      "when": {"south": "dl"},
+      "apply": {"model": "iron_stars:block/wire_wall_corner","z": 270,"y": 180}
+    },
+
+
+    {
+      "when": {"west": "ud"},
+      "apply": {"model": "iron_stars:block/wire_wall_line","y": 270}
+    },
+    {
+      "when": {"west": "lr"},
+      "apply": {"model": "iron_stars:block/wire_wall_line","z": 90,"y": 270}
+    },
+    {
+      "when": {"west": "ul"},
+      "apply": {"model": "iron_stars:block/wire_wall_corner","y": 270}
+    },
+    {
+      "when": {"west": "ur"},
+      "apply": {"model": "iron_stars:block/wire_wall_corner","z": 90,"y": 270}
+    },
+    {
+      "when": {"west": "dr"},
+      "apply": {"model": "iron_stars:block/wire_wall_corner","z": 180,"y": 270}
+    },
+    {
+      "when": {"west": "dl"},
+      "apply": {"model": "iron_stars:block/wire_wall_corner","z": 270,"y": 270}
+    }
+  ]
+}

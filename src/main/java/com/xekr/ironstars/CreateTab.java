@@ -1,16 +1,18 @@
 package com.xekr.ironstars;
 
-import net.minecraft.item.ItemGroup;
-import net.minecraft.item.ItemStack;
+import net.minecraft.world.item.CreativeModeTab;
+import net.minecraft.world.item.ItemStack;
+import org.jetbrains.annotations.NotNull;
 
-public class CreateTab extends ItemGroup {
-    public static final ItemGroup ITON_STAR = new CreateTab();
-    public CreateTab() {
-        super(IronStars.ID);
+public class CreateTab extends CreativeModeTab {
+    public static CreateTab MAIN;
+    public CreateTab(String name) {
+        super(IronStars.ID+":"+name);
+        MAIN = this;
     }
 
     @Override
-    public ItemStack createIcon() {
+    public @NotNull ItemStack makeIcon() {
         return new ItemStack(AllItems.chip);
     }
 }

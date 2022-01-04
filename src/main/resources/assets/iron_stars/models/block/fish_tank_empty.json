@@ -1,0 +1,35 @@
+{
+	"credit": "Made by XeKr with Blockbench",
+	"parent": "minecraft:block/block",
+	"textures": {
+		"0": "iron_stars:block/fish_tank_bottom",
+		"1": "iron_stars:block/fish_tank_side",
+		"2": "iron_stars:block/fish_tank_top",
+		"particle": "iron_stars:block/fish_tank_bottom"
+	},
+	"elements": [
+		{
+			"from": [0, 0, 0],
+			"to": [16, 16, 16],
+			"faces": {
+				"north": {"uv": [0, 0, 16, 16], "texture": "#1"},
+				"east": {"uv": [0, 0, 16, 16], "texture": "#1"},
+				"south": {"uv": [0, 0, 16, 16], "texture": "#1"},
+				"west": {"uv": [0, 0, 16, 16], "texture": "#1"},
+				"up": {"uv": [0, 0, 16, 16], "texture": "#2"},
+				"down": {"uv": [0, 0, 16, 16], "texture": "#0"}
+			}
+		},
+		{
+			"from": [15.9, 15.9, 15.9],
+			"to": [0.1, 0.1, 0.1],
+			"faces": {
+				"north": {"uv": [0, 16, 16, 0], "texture": "#1"},
+				"east": {"uv": [0, 16, 16, 0], "texture": "#1"},
+				"south": {"uv": [0, 16, 16, 0], "texture": "#1"},
+				"west": {"uv": [0, 16, 16, 0], "texture": "#1"},
+				"up": {"uv": [0, 0, 16, 16], "texture": "#0"}
+			}
+		}
+	]
+}

@@ -1,0 +1,46 @@
+{
+	"credit": "Made by XeKr with Blockbench",
+	"parent": "minecraft:block/block",
+	"textures": {
+		"0": "iron_stars:block/interactor",
+		"1": "iron_stars:block/interactor_top",
+		"particle": "iron_stars:block/interactor"
+	},
+	"elements": [
+		{
+			"from": [2, 14, 2],
+			"to": [14, 16, 14],
+			"faces": {
+				"north": {"uv": [2, 12, 14, 14], "texture": "#1"},
+				"east": {"uv": [2, 12, 14, 14], "texture": "#1"},
+				"south": {"uv": [2, 12, 14, 14], "texture": "#1"},
+				"west": {"uv": [2, 12, 14, 14], "texture": "#1"},
+				"up": {"uv": [2, 2, 14, 14], "texture": "#1"},
+				"down": {"uv": [2, 2, 14, 14], "texture": "#1"}
+			}
+		},
+		{
+			"from": [3, 3, 3],
+			"to": [13, 13, 13],
+			"faces": {
+				"north": {"uv": [6, 6, 16, 16], "texture": "#0"},
+				"east": {"uv": [6, 6, 16, 16], "texture": "#0"},
+				"south": {"uv": [6, 6, 16, 16], "texture": "#0"},
+				"west": {"uv": [6, 6, 16, 16], "texture": "#0"},
+				"up": {"uv": [6, 6, 16, 16], "texture": "#0"},
+				"down": {"uv": [6, 6, 16, 16], "texture": "#0"}
+			}
+		},
+		{
+			"from": [5, 5, 5],
+			"to": [11, 14, 11],
+			"faces": {
+				"north": {"uv": [0, 0, 6, 9], "texture": "#0"},
+				"east": {"uv": [0, 0, 6, 9], "texture": "#0"},
+				"south": {"uv": [0, 0, 6, 9], "texture": "#0"},
+				"west": {"uv": [0, 0, 6, 9], "texture": "#0"},
+				"down": {"uv": [0, 10, 6, 16], "texture": "#0"}
+			}
+		}
+	]
+}

@@ -1,10 +1,12 @@
 package com.xekr.ironstars;
 
-import net.minecraft.block.Block;
-import net.minecraft.item.Item;
+import net.minecraft.world.level.block.Block;
+import net.minecraft.world.item.Item;
 import net.minecraftforge.event.RegistryEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
+
+import java.util.Objects;
 
 @Mod.EventBusSubscriber(bus= Mod.EventBusSubscriber.Bus.MOD)
 public class Register {
@@ -31,22 +33,22 @@ public class Register {
     @SubscribeEvent
     public static void onItemsRegister(RegistryEvent.Register<Item> event){
         //BlockItems
-        event.getRegistry().register(AllItems.coil.setRegistryName(AllBlocks.coil.getRegistryName()));
-        event.getRegistry().register(AllItems.electric_wire.setRegistryName(AllBlocks.electricWire.getRegistryName()));
-        event.getRegistry().register(AllItems.magnet_block.setRegistryName(AllBlocks.magnetBlock.getRegistryName()));
-        event.getRegistry().register(AllItems.moon_dust.setRegistryName(AllBlocks.moonDust.getRegistryName()));
-        event.getRegistry().register(AllItems.moon_rock.setRegistryName(AllBlocks.moonRock.getRegistryName()));
-        event.getRegistry().register(AllItems.moon_soil.setRegistryName(AllBlocks.moonSoil.getRegistryName()));
-        event.getRegistry().register(AllItems.motor.setRegistryName(AllBlocks.motor.getRegistryName()));
-        event.getRegistry().register(AllItems.motor_lay.setRegistryName(AllBlocks.motorLay.getRegistryName()));
-        event.getRegistry().register(AllItems.silicon_block.setRegistryName(AllBlocks.siliconBlock.getRegistryName()));
-        event.getRegistry().register(AllItems.steel_block.setRegistryName(AllBlocks.steelBlock.getRegistryName()));
-        event.getRegistry().register(AllItems.steel_tiles.setRegistryName(AllBlocks.steelTiles.getRegistryName()));
-        event.getRegistry().register(AllItems.titanium_alloy_block.setRegistryName(AllBlocks.titaniumAlloyBlock.getRegistryName()));
-        event.getRegistry().register(AllItems.titanium_block.setRegistryName(AllBlocks.titaniumBlock.getRegistryName()));
-        event.getRegistry().register(AllItems.titanium_ore.setRegistryName(AllBlocks.titaniumOre.getRegistryName()));
-        event.getRegistry().register(AllItems.turbine.setRegistryName(AllBlocks.turbine.getRegistryName()));
-        event.getRegistry().register(AllItems.windmill.setRegistryName(AllBlocks.windmill.getRegistryName()));
+        event.getRegistry().register(AllItems.coil.setRegistryName(Objects.requireNonNull(AllBlocks.coil.getRegistryName())));
+        event.getRegistry().register(AllItems.electric_wire.setRegistryName(Objects.requireNonNull(AllBlocks.electricWire.getRegistryName())));
+        event.getRegistry().register(AllItems.magnet_block.setRegistryName(Objects.requireNonNull(AllBlocks.magnetBlock.getRegistryName())));
+        event.getRegistry().register(AllItems.moon_dust.setRegistryName(Objects.requireNonNull(AllBlocks.moonDust.getRegistryName())));
+        event.getRegistry().register(AllItems.moon_rock.setRegistryName(Objects.requireNonNull(AllBlocks.moonRock.getRegistryName())));
+        event.getRegistry().register(AllItems.moon_soil.setRegistryName(Objects.requireNonNull(AllBlocks.moonSoil.getRegistryName())));
+        event.getRegistry().register(AllItems.motor.setRegistryName(Objects.requireNonNull(AllBlocks.motor.getRegistryName())));
+        event.getRegistry().register(AllItems.motor_lay.setRegistryName(Objects.requireNonNull(AllBlocks.motorLay.getRegistryName())));
+        event.getRegistry().register(AllItems.silicon_block.setRegistryName(Objects.requireNonNull(AllBlocks.siliconBlock.getRegistryName())));
+        event.getRegistry().register(AllItems.steel_block.setRegistryName(Objects.requireNonNull(AllBlocks.steelBlock.getRegistryName())));
+        event.getRegistry().register(AllItems.steel_tiles.setRegistryName(Objects.requireNonNull(AllBlocks.steelTiles.getRegistryName())));
+        event.getRegistry().register(AllItems.titanium_alloy_block.setRegistryName(Objects.requireNonNull(AllBlocks.titaniumAlloyBlock.getRegistryName())));
+        event.getRegistry().register(AllItems.titanium_block.setRegistryName(Objects.requireNonNull(AllBlocks.titaniumBlock.getRegistryName())));
+        event.getRegistry().register(AllItems.titanium_ore.setRegistryName(Objects.requireNonNull(AllBlocks.titaniumOre.getRegistryName())));
+        event.getRegistry().register(AllItems.turbine.setRegistryName(Objects.requireNonNull(AllBlocks.turbine.getRegistryName())));
+        event.getRegistry().register(AllItems.windmill.setRegistryName(Objects.requireNonNull(AllBlocks.windmill.getRegistryName())));
 
         //Items
         event.getRegistry().register(AllItems.chip);

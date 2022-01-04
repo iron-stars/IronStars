@@ -1,15 +1,15 @@
 package com.xekr.ironstars.blocks;
 
-import net.minecraft.block.Block;
-import net.minecraft.block.SnowBlock;
-import net.minecraft.block.SoundType;
-import net.minecraft.block.material.Material;
+import net.minecraft.world.level.block.Block;
+import net.minecraft.world.level.block.SnowLayerBlock;
+import net.minecraft.world.level.block.SoundType;
+import net.minecraft.world.level.material.Material;
 
-public class MoonDust extends SnowBlock {
+public class MoonDust extends SnowLayerBlock {
     public MoonDust() {
         super(Block.Properties
-                .create(Material.CLAY)
-                .hardnessAndResistance(0.5F)
+                .of(Material.CLAY)
+                .explosionResistance(0.5F)
                 .sound(SoundType.SAND));
         this.setRegistryName("moon_dust");
     }

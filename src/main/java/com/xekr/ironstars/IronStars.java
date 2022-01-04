@@ -1,7 +1,7 @@
 package com.xekr.ironstars;
 
 import net.minecraft.client.renderer.RenderType;
-import net.minecraft.client.renderer.RenderTypeLookup;
+import net.minecraft.client.renderer.ItemBlockRenderTypes;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
 import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
@@ -13,7 +13,7 @@ import org.apache.logging.log4j.Logger;
 @Mod(IronStars.ID)
 public class IronStars {
 
-    public static final String ID = "iron-stars";
+    public static final String ID = "iron_stars";
     public static final String NAME = "Iron Stars";
     public static final String VERSION = "1.0";
     // Directly reference a log4j logger.
@@ -29,11 +29,11 @@ public class IronStars {
     }
 
     private void clientSetup(final FMLClientSetupEvent event) {
-        RenderTypeLookup.setRenderLayer(AllBlocks.magnetBlock, RenderType.getCutout());
-        RenderTypeLookup.setRenderLayer(AllBlocks.motor, RenderType.getCutout());
-        RenderTypeLookup.setRenderLayer(AllBlocks.motorLay, RenderType.getCutout());
-        RenderTypeLookup.setRenderLayer(AllBlocks.turbine, RenderType.getCutout());
-        RenderTypeLookup.setRenderLayer(AllBlocks.windmill, RenderType.getCutout());
+        ItemBlockRenderTypes.setRenderLayer(AllBlocks.magnetBlock, RenderType.cutoutMipped());
+        ItemBlockRenderTypes.setRenderLayer(AllBlocks.motor, RenderType.cutoutMipped());
+        ItemBlockRenderTypes.setRenderLayer(AllBlocks.motorLay, RenderType.cutoutMipped());
+        ItemBlockRenderTypes.setRenderLayer(AllBlocks.turbine, RenderType.cutoutMipped());
+        ItemBlockRenderTypes.setRenderLayer(AllBlocks.windmill, RenderType.cutoutMipped());
     }
 
 }

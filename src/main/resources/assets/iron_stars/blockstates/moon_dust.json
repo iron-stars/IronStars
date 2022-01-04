@@ -1,0 +1,28 @@
+{
+  "variants": {
+    "layers=1": {
+      "model": "iron_stars:block/moon_dust_2"
+    },
+    "layers=2": {
+      "model": "iron_stars:block/moon_dust_4"
+    },
+    "layers=3": {
+      "model": "iron_stars:block/moon_dust_6"
+    },
+    "layers=4": {
+      "model": "iron_stars:block/moon_dust_8"
+    },
+    "layers=5": {
+      "model": "iron_stars:block/moon_dust_10"
+    },
+    "layers=6": {
+      "model": "iron_stars:block/moon_dust_12"
+    },
+    "layers=7": {
+      "model": "iron_stars:block/moon_dust_14"
+    },
+    "layers=8": {
+      "model": "iron_stars:block/moon_dust_16"
+    }
+  }
+}
