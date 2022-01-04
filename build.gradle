@@ -15,7 +15,7 @@ group = 'com.xekr'
 version = '1.0.1'
 
 java {
-    archivesBaseName = 'iron-stars'
+    archivesBaseName = 'IronStars'
     toolchain.languageVersion = JavaLanguageVersion.of(17)
 }
 
