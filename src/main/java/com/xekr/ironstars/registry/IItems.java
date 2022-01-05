@@ -23,22 +23,22 @@ public class IItems {
     public static final RegistryObject<Item> TITANIUM_ALLOY_INGOT = ITEMS.register("titanium_alloy_ingot", () -> new Item(getProperties()));
     public static final RegistryObject<Item> TITANIUM_INGOT = ITEMS.register("titanium_ingot", () -> new Item(getProperties()));
 
-    public static final RegistryObject<Item> coil = ITEMS.register("coil", () -> new BlockItem(IBlocks.COIL.get(), getProperties()));
-    public static final RegistryObject<Item> electric_wire = ITEMS.register("electric_wire", () -> new BlockItem(IBlocks.ELECTRIC_WIRE.get(), getProperties()));
-    public static final RegistryObject<Item> magnet_block = ITEMS.register("magnet_block", () -> new BlockItem(IBlocks.MAGNET.get(), getProperties()));
-    public static final RegistryObject<Item> moon_dust = ITEMS.register("moon_dust", () -> new BlockItem(IBlocks.MOON_DUST.get(), getProperties()));
-    public static final RegistryObject<Item> moon_rock = ITEMS.register("moon_rock", () -> new BlockItem(IBlocks.MOON_ROCK.get(), getProperties()));
-    public static final RegistryObject<Item> moon_soil = ITEMS.register("moon_soil", () -> new BlockItem(IBlocks.MOON_SOIL.get(), getProperties()));
-    public static final RegistryObject<Item> motor = ITEMS.register("motor", () -> new BlockItem(IBlocks.MOTOR.get(), getProperties()));
-    public static final RegistryObject<Item> motor_lay = ITEMS.register("motor_lay", () -> new BlockItem(IBlocks.MOTOR_LAY.get(), getProperties()));
-    public static final RegistryObject<Item> silicon_block = ITEMS.register("silicon_block", () -> new BlockItem(IBlocks.SILICON.get(), getProperties()));
-    public static final RegistryObject<Item> steel_block = ITEMS.register("steel_block", () -> new BlockItem(IBlocks.STEEL.get(), getProperties()));
-    public static final RegistryObject<Item> steel_tiles = ITEMS.register("steel_tiles", () -> new BlockItem(IBlocks.STEEL_TILES.get(), getProperties()));
-    public static final RegistryObject<Item> titanium_alloy_block = ITEMS.register("titanium_alloy_block", () -> new BlockItem(IBlocks.TITANIUM_ALLOY.get(), getProperties()));
-    public static final RegistryObject<Item> titanium_block = ITEMS.register("titanium_block", () -> new BlockItem(IBlocks.TITANIUM.get(), getProperties()));
-    public static final RegistryObject<Item> titanium_ore = ITEMS.register("titanium_ore", () -> new BlockItem(IBlocks.TITANIUM_ORE.get(), getProperties()));
-    public static final RegistryObject<Item> turbine = ITEMS.register("turbine", () -> new BlockItem(IBlocks.TURBINE.get(), getProperties()));
-    public static final RegistryObject<Item> windmill = ITEMS.register("windmill", () -> new BlockItem(IBlocks.WINDMILL.get(), getProperties()));
+    public static final RegistryObject<Item> COIL = ITEMS.register("coil", () -> new BlockItem(IBlocks.COIL.get(), getProperties()));
+    public static final RegistryObject<Item> ELECTRIC_WIRE = ITEMS.register("electric_wire", () -> new BlockItem(IBlocks.ELECTRIC_WIRE.get(), getProperties()));
+    public static final RegistryObject<Item> MAGNET_BLOCK = ITEMS.register("magnet_block", () -> new BlockItem(IBlocks.MAGNET_BLOCK.get(), getProperties()));
+    public static final RegistryObject<Item> MOON_DUST = ITEMS.register("moon_dust", () -> new BlockItem(IBlocks.MOON_DUST.get(), getProperties()));
+    public static final RegistryObject<Item> MOON_ROCK = ITEMS.register("moon_rock", () -> new BlockItem(IBlocks.MOON_ROCK.get(), getProperties()));
+    public static final RegistryObject<Item> MOON_SOIL = ITEMS.register("moon_soil", () -> new BlockItem(IBlocks.MOON_SOIL.get(), getProperties()));
+    public static final RegistryObject<Item> MOTOR = ITEMS.register("motor", () -> new BlockItem(IBlocks.MOTOR.get(), getProperties()));
+    public static final RegistryObject<Item> MOTOR_LAY = ITEMS.register("motor_lay", () -> new BlockItem(IBlocks.MOTOR_LAY.get(), getProperties()));
+    public static final RegistryObject<Item> SILICON_BLOCK = ITEMS.register("silicon_block", () -> new BlockItem(IBlocks.SILICON_BLOCK.get(), getProperties()));
+    public static final RegistryObject<Item> STEEL_BLOCK = ITEMS.register("steel_block", () -> new BlockItem(IBlocks.STEEL_BLOCK.get(), getProperties()));
+    public static final RegistryObject<Item> STEEL_TILES = ITEMS.register("steel_tiles", () -> new BlockItem(IBlocks.STEEL_TILES.get(), getProperties()));
+    public static final RegistryObject<Item> TITANIUM_ALLOY_BLOCK = ITEMS.register("titanium_alloy_block", () -> new BlockItem(IBlocks.TITANIUM_ALLOY_BLOCK.get(), getProperties()));
+    public static final RegistryObject<Item> TITANIUM_BLOCK = ITEMS.register("titanium_block", () -> new BlockItem(IBlocks.TITANIUM_BLOCK.get(), getProperties()));
+    public static final RegistryObject<Item> TITANIUM_ORE = ITEMS.register("titanium_ore", () -> new BlockItem(IBlocks.TITANIUM_ORE.get(), getProperties()));
+    public static final RegistryObject<Item> TURBINE = ITEMS.register("turbine", () -> new BlockItem(IBlocks.TURBINE.get(), getProperties()));
+    public static final RegistryObject<Item> WINDMILL = ITEMS.register("windmill", () -> new BlockItem(IBlocks.WINDMILL.get(), getProperties()));
 
 
     private static Item.Properties getProperties() {
