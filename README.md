@@ -1,6 +1,6 @@
 # IronStars
 [![Build Mod](https://github.com/Gu-ZT/IronStars/actions/workflows/build-mod.yml/badge.svg)](https://github.com/Gu-ZT/IronStars/actions/workflows/build-mod.yml)
-[![license](https://img.shields.io/github/license/iron-stars/IronStars)]()
+[![license](https://img.shields.io/github/license/iron-stars/IronStars)](https://github.com/iron-stars/IronStars/blob/master/LICENSE)
 [![pull request](https://img.shields.io/bitbucket/pr-raw/iron-stars/IronStars)](https://github.com/iron-stars/IronStars/pulls)
 [![fork](https://img.shields.io/github/forks/iron-stars/IronStars)](https://github.com/iron-stars/IronStars/network/members)
 ![star](https://img.shields.io/github/stars/iron-stars/IronStars)
