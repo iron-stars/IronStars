@@ -3,8 +3,6 @@ name: Build Mod
 on:
   push:
     branches: [ '1.18' ]
-  pull_request:
-    branches: [ '1.18' ]
 
 jobs:
   build:
