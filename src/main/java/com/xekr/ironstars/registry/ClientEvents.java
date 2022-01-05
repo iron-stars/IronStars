@@ -12,11 +12,10 @@ public class ClientEvents {
     @SubscribeEvent
     public static void onRenderTypeSetup(FMLClientSetupEvent event) {
         ItemBlockRenderTypes.setRenderLayer(IBlocks.MOON_DUST.get(), RenderType.cutout());
-        ItemBlockRenderTypes.setRenderLayer(IBlocks.MAGNET.get(), RenderType.cutoutMipped());
+        ItemBlockRenderTypes.setRenderLayer(IBlocks.MAGNET_BLOCK.get(), RenderType.cutoutMipped());
         ItemBlockRenderTypes.setRenderLayer(IBlocks.MOTOR.get(), RenderType.cutoutMipped());
         ItemBlockRenderTypes.setRenderLayer(IBlocks.MOTOR_LAY.get(), RenderType.cutoutMipped());
         ItemBlockRenderTypes.setRenderLayer(IBlocks.TURBINE.get(), RenderType.cutoutMipped());
         ItemBlockRenderTypes.setRenderLayer(IBlocks.WINDMILL.get(), RenderType.cutoutMipped());
-
     }
 }

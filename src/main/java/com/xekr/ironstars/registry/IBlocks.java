@@ -32,21 +32,20 @@ public class IBlocks {
 
     public static final RegistryObject<Block> COIL = BLOCKS.register("coil", () -> new CoilBlock(getProperties().noOcclusion()));
     public static final RegistryObject<Block> ELECTRIC_WIRE = BLOCKS.register("electric_wire", () -> new ElectricWireBlock(getProperties()));
-    public static final RegistryObject<Block> MAGNET = BLOCKS.register("magnet_block", () -> new MagnetBlock(getProperties().noOcclusion()));
+    public static final RegistryObject<Block> MAGNET_BLOCK = BLOCKS.register("magnet_block", () -> new MagnetBlock(getProperties().noOcclusion()));
     public static final RegistryObject<Block> MOON_DUST = BLOCKS.register("moon_dust", () -> new MoonDustBlock(getProperties(Material.CLAY).sound(SoundType.SAND).noOcclusion()));
     public static final RegistryObject<Block> MOON_ROCK = BLOCKS.register("moon_rock", () -> new MoonRockBlock(getProperties().sound(SoundType.STONE)));
     public static final RegistryObject<Block> MOON_SOIL = BLOCKS.register("moon_soil", () -> new MoonSoilBlock(getProperties(Material.CLAY).sound(SoundType.ROOTS)));
     public static final RegistryObject<Block> MOTOR = BLOCKS.register("motor", () -> new MotorBlock(getProperties().noOcclusion()));
     public static final RegistryObject<Block> MOTOR_LAY = BLOCKS.register("motor_lay", () -> new MotorLayBlock(getProperties().noOcclusion()));
-    public static final RegistryObject<Block> SILICON = BLOCKS.register("silicon_block", () -> new SiliconBlock(getProperties()));
-    public static final RegistryObject<Block> STEEL = BLOCKS.register("steel_block", () -> new SteelBlock(getProperties()));
+    public static final RegistryObject<Block> SILICON_BLOCK = BLOCKS.register("silicon_block", () -> new SiliconBlock(getProperties()));
+    public static final RegistryObject<Block> STEEL_BLOCK = BLOCKS.register("steel_block", () -> new SteelBlock(getProperties()));
     public static final RegistryObject<Block> STEEL_TILES = BLOCKS.register("steel_tiles", () -> new SteelTilesBlock(getProperties(Material.STONE).sound(SoundType.STONE)));
-    public static final RegistryObject<Block> TITANIUM_ALLOY = BLOCKS.register("titanium_alloy_block", () -> new TitaniumAlloyBlock(getProperties()));
-    public static final RegistryObject<Block> TITANIUM = BLOCKS.register("titanium_block", () -> new TitaniumBlock(getProperties()));
+    public static final RegistryObject<Block> TITANIUM_ALLOY_BLOCK = BLOCKS.register("titanium_alloy_block", () -> new TitaniumAlloyBlock(getProperties()));
+    public static final RegistryObject<Block> TITANIUM_BLOCK = BLOCKS.register("titanium_block", () -> new TitaniumBlock(getProperties()));
     public static final RegistryObject<Block> TITANIUM_ORE = BLOCKS.register("titanium_ore", () -> new TitaniumOreBlock(getProperties(Material.STONE).sound(SoundType.STONE)));
     public static final RegistryObject<Block> TURBINE = BLOCKS.register("turbine", () -> new TurbineBlock(getProperties().noOcclusion()));
     public static final RegistryObject<Block> WINDMILL = BLOCKS.register("windmill", () -> new WindmillBlock(getProperties().noOcclusion()));
-
 
     private static Properties getProperties() {
         return getProperties(Material.METAL);
