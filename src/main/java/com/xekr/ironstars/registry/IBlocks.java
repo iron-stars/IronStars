@@ -8,7 +8,6 @@ import com.xekr.ironstars.blocks.MoonDustBlock;
 import com.xekr.ironstars.blocks.MoonRockBlock;
 import com.xekr.ironstars.blocks.MoonSoilBlock;
 import com.xekr.ironstars.blocks.MotorBlock;
-import com.xekr.ironstars.blocks.MotorLayBlock;
 import com.xekr.ironstars.blocks.SiliconBlock;
 import com.xekr.ironstars.blocks.SteelBlock;
 import com.xekr.ironstars.blocks.SteelTilesBlock;
@@ -31,13 +30,13 @@ public class IBlocks {
     private static final DeferredRegister<Block> BLOCKS = DeferredRegister.create(ForgeRegistries.BLOCKS, IronStars.ID);
 
     public static final RegistryObject<Block> COIL = BLOCKS.register("coil", () -> new CoilBlock(getProperties().noOcclusion()));
-    public static final RegistryObject<Block> ELECTRIC_WIRE = BLOCKS.register("electric_wire", () -> new ElectricWireBlock(getProperties()));
+//    public static final RegistryObject<Block> ELECTRIC_WIRE = BLOCKS.register("electric_wire", () -> new ElectricWireBlock(getProperties())); TODO:报错太多暂时删掉
     public static final RegistryObject<Block> MAGNET_BLOCK = BLOCKS.register("magnet_block", () -> new MagnetBlock(getProperties().noOcclusion()));
     public static final RegistryObject<Block> MOON_DUST = BLOCKS.register("moon_dust", () -> new MoonDustBlock(getProperties(Material.CLAY).sound(SoundType.SAND).noOcclusion()));
     public static final RegistryObject<Block> MOON_ROCK = BLOCKS.register("moon_rock", () -> new MoonRockBlock(getProperties().sound(SoundType.STONE)));
     public static final RegistryObject<Block> MOON_SOIL = BLOCKS.register("moon_soil", () -> new MoonSoilBlock(getProperties(Material.CLAY).sound(SoundType.ROOTS)));
     public static final RegistryObject<Block> MOTOR = BLOCKS.register("motor", () -> new MotorBlock(getProperties().noOcclusion()));
-    public static final RegistryObject<Block> MOTOR_LAY = BLOCKS.register("motor_lay", () -> new MotorLayBlock(getProperties().noOcclusion()));
+    public static final RegistryObject<Block> MOTOR_LAY = BLOCKS.register("motor_lay", () -> new MotorBlock(getProperties().noOcclusion()));
     public static final RegistryObject<Block> SILICON_BLOCK = BLOCKS.register("silicon_block", () -> new SiliconBlock(getProperties()));
     public static final RegistryObject<Block> STEEL_BLOCK = BLOCKS.register("steel_block", () -> new SteelBlock(getProperties()));
     public static final RegistryObject<Block> STEEL_TILES = BLOCKS.register("steel_tiles", () -> new SteelTilesBlock(getProperties(Material.STONE).sound(SoundType.STONE)));
