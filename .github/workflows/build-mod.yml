@@ -18,7 +18,7 @@ jobs:
           java-version: '17'
           distribution: 'adopt'
       - name: Set build number
-        run: sed -i "s/build.undefined/build.$GITHUB_RUN_NUMBER/g" gradle.properties
+        run: sed -i "s/undefined/$GITHUB_RUN_NUMBER/g" gradle.properties
       - name: Grant execute permission
         run: chmod +x gradlew
       - name: Build with Gradle
