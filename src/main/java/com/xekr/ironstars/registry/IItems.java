@@ -40,7 +40,6 @@ public class IItems {
     public static final RegistryObject<Item> TURBINE = ITEMS.register("turbine", () -> new BlockItem(IBlocks.TURBINE.get(), getProperties()));
     public static final RegistryObject<Item> WINDMILL = ITEMS.register("windmill", () -> new BlockItem(IBlocks.WINDMILL.get(), getProperties()));
 
-
     private static Item.Properties getProperties() {
         return new Item.Properties().tab(IronStars.CREATIVE_MODE_TAB);
     }
