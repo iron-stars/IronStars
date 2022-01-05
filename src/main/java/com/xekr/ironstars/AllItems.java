@@ -35,5 +35,4 @@ public class AllItems {
     public static final BlockItem titanium_ore = new BlockItem(AllBlocks.titaniumOre,new Item.Properties().tab(CreativeModeTab.IRON_STAR));
     public static final BlockItem turbine = new BlockItem(AllBlocks.turbine,new Item.Properties().tab(CreativeModeTab.IRON_STAR));
     public static final BlockItem windmill = new BlockItem(AllBlocks.windmill,new Item.Properties().tab(CreativeModeTab.IRON_STAR));
-
 }

@@ -10,7 +10,7 @@ displayName = "Iron Stars"
 displayURL="http://ironstars.polaris-mc.tech/"
 #logoFile="ironstars.png"
 #credits="Thanks for this example mod goes to Java"
-authors = "XeKr, LucunJi"
+authors = "IronStars Production group"
 description = '''
 
 '''
@@ -25,6 +25,6 @@ side = "BOTH"
 [[dependencies.ironstars]]
 modId = "minecraft"
 mandatory = true
-versionRange = "[1.18,)"
+versionRange = "[1.18.1,1.19)"
 ordering = "NONE"
 side = "BOTH"
