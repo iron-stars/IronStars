@@ -1,0 +1,33 @@
+{
+	"credit": "Made by XeKr with Blockbench",
+	"parent": "minecraft:block/block",
+	"textures": {
+		"particle": "ironstars:block/moon_dust",
+		"top": "ironstars:block/moon_dust",
+		"side": "ironstars:block/moon_dust_side"
+	},
+	"elements": [
+		{
+			"from": [0, 0, 0],
+			"to": [16, 14, 16],
+			"faces": {
+				"north": {"uv": [0, 2, 16, 16], "texture": "#top", "cullface": "north"},
+				"east": {"uv": [0, 2, 16, 16], "texture": "#top", "cullface": "east"},
+				"south": {"uv": [0, 2, 16, 16], "texture": "#top", "cullface": "south"},
+				"west": {"uv": [0, 2, 16, 16], "texture": "#top", "cullface": "west"},
+				"up": {"uv": [0, 0, 16, 16], "texture": "#top"},
+				"down": {"uv": [0, 0, 16, 16], "texture": "#top", "cullface": "down"}
+			}
+		},
+		{
+			"from": [-0.05, -8, -0.05],
+			"to": [16.05, 0, 16.05],
+			"faces": {
+				"north": {"uv": [0, 0, 16, 8], "texture": "#side", "cullface": "north"},
+				"east": {"uv": [0, 0, 16, 8], "texture": "#side", "cullface": "east"},
+				"south": {"uv": [0, 0, 16, 8], "texture": "#side", "cullface": "south"},
+				"west": {"uv": [0, 0, 16, 8], "texture": "#side", "cullface": "west"}
+			}
+		}
+	]
+}
