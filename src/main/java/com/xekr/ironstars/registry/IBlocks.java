@@ -1,21 +1,7 @@
 package com.xekr.ironstars.registry;
 
+import com.xekr.ironstars.blocks.*;
 import com.xekr.ironstars.IronStars;
-import com.xekr.ironstars.blocks.CoilBlock;
-import com.xekr.ironstars.blocks.ElectricWireBlock;
-import com.xekr.ironstars.blocks.MagnetBlock;
-import com.xekr.ironstars.blocks.MoonDustBlock;
-import com.xekr.ironstars.blocks.MoonRockBlock;
-import com.xekr.ironstars.blocks.MoonSoilBlock;
-import com.xekr.ironstars.blocks.MotorBlock;
-import com.xekr.ironstars.blocks.SiliconBlock;
-import com.xekr.ironstars.blocks.SteelBlock;
-import com.xekr.ironstars.blocks.SteelTilesBlock;
-import com.xekr.ironstars.blocks.TitaniumAlloyBlock;
-import com.xekr.ironstars.blocks.TitaniumBlock;
-import com.xekr.ironstars.blocks.TitaniumOreBlock;
-import com.xekr.ironstars.blocks.TurbineBlock;
-import com.xekr.ironstars.blocks.WindmillBlock;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.SoundType;
 import net.minecraft.world.level.block.state.BlockBehaviour.Properties;
