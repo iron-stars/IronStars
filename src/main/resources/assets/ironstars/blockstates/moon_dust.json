@@ -1,28 +1,28 @@
 {
   "variants": {
     "layers=1": {
-      "model": "ironstars:block/moon_dust_2"
+      "model": "ironstars:block/moon_dust/2"
     },
     "layers=2": {
-      "model": "ironstars:block/moon_dust_4"
+      "model": "ironstars:block/moon_dust/4"
     },
     "layers=3": {
-      "model": "ironstars:block/moon_dust_6"
+      "model": "ironstars:block/moon_dust/6"
     },
     "layers=4": {
-      "model": "ironstars:block/moon_dust_8"
+      "model": "ironstars:block/moon_dust/8"
     },
     "layers=5": {
-      "model": "ironstars:block/moon_dust_10"
+      "model": "ironstars:block/moon_dust/10"
     },
     "layers=6": {
-      "model": "ironstars:block/moon_dust_12"
+      "model": "ironstars:block/moon_dust/12"
     },
     "layers=7": {
-      "model": "ironstars:block/moon_dust_14"
+      "model": "ironstars:block/moon_dust/14"
     },
     "layers=8": {
-      "model": "ironstars:block/moon_dust_16"
+      "model": "ironstars:block/moon_dust/16"
     }
   }
 }

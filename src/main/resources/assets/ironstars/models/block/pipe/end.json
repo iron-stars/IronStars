@@ -1,0 +1,23 @@
+{
+	"credit": "Made by XeKr with Blockbench",
+	"parent": "minecraft:block/block",
+	"textures": {
+		"1": "ironstars:block/pipe_end",
+		"particle": "ironstars:block/pipe"
+	},
+	"elements": [
+		{
+			"from": [3, 3, 0],
+			"to": [13, 13, 2],
+			"rotation": {"angle": 0, "axis": "y", "origin": [8, 8, 8]},
+			"faces": {
+				"north": {"uv": [1, 1, 11, 11], "texture": "#1"},
+				"east": {"uv": [0, 1, 2, 11], "texture": "#1"},
+				"south": {"uv": [1, 1, 11, 11], "texture": "#1"},
+				"west": {"uv": [10, 1, 12, 11], "texture": "#1"},
+				"up": {"uv": [10, 1, 12, 11], "rotation": 90, "texture": "#1"},
+				"down": {"uv": [0, 1, 2, 11], "rotation": 90, "texture": "#1"}
+			}
+		}
+	]
+}
