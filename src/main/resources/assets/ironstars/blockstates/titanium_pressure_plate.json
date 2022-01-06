@@ -1,0 +1,10 @@
+{
+  "variants": {
+    "powered=false": {
+      "model": "ironstars:block/plate/titanium"
+    },
+    "powered=true": {
+      "model": "ironstars:block/plate/titanium_down"
+    }
+  }
+}

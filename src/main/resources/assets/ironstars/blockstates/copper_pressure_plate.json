@@ -1,0 +1,10 @@
+{
+  "variants": {
+    "powered=false": {
+      "model": "ironstars:block/plate/copper"
+    },
+    "powered=true": {
+      "model": "ironstars:block/plate/copper_down"
+    }
+  }
+}
