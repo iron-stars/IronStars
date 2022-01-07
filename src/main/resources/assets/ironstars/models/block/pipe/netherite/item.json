@@ -2,9 +2,9 @@
 	"credit": "Made by XeKr with Blockbench",
 	"parent": "minecraft:block/block",
 	"textures": {
-		"0": "ironstars:block/pipe",
-		"1": "ironstars:block/pipe_end",
-		"particle": "ironstars:block/pipe"
+		"0": "ironstars:block/pipe/netherite/side",
+		"1": "ironstars:block/pipe/netherite/end",
+		"particle": "ironstars:block/pipe/netherite/side"
 	},
 	"elements": [
 		{
