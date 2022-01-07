@@ -11,9 +11,9 @@ import org.spongepowered.asm.mixin.injection.Redirect;
 @Mixin(ItemEntity.class)
 public class ItemEntityMixin {
     @Redirect(method = "tick", at = @At(value = "INVOKE", target = "Lnet/minecraft/world/phys/Vec3;add(DDD)Lnet/minecraft/world/phys/Vec3;"))
-    private Vec3 slowDown(Vec3 instance, double p_82521_, double p_82522_, double p_82523_) {
+    private Vec3 slowDown(Vec3 instance, double pX, double pY, double pZ) {
         ItemEntity ths = (ItemEntity) (Object) this;
-        if (ths.level.getBlockState(ths.blockPosition()).is(IBlocks.MAGNET_BLOCK.get())) p_82522_ /= IronStarsConfig.ItemInMagnetGravy;
-        return instance.add(p_82521_, p_82522_, p_82523_);
+        if (ths.level.getBlockState(ths.blockPosition()).is(IBlocks.MAGNET_BLOCK.get())) pY /= IronStarsConfig.ItemInMagnetGravy;
+        return instance.add(pX, pY, pZ);
     }
 }
