@@ -27,8 +27,8 @@ public class IBlocks {
     public static final RegistryObject<Block> MOON_DUST = BLOCKS.register("moon_dust", () -> new MoonDustBlock(getProperties(Material.CLAY).sound(SoundType.SAND).noOcclusion()));
     public static final RegistryObject<Block> MOON_ROCK = BLOCKS.register("moon_rock", () -> new MoonRockBlock(getProperties().sound(SoundType.STONE)));
     public static final RegistryObject<Block> MOON_SOIL = BLOCKS.register("moon_soil", () -> new MoonSoilBlock(getProperties(Material.CLAY).sound(SoundType.ROOTS)));
-    public static final RegistryObject<Block> MOTOR = BLOCKS.register("motor", () -> new MotorBlock(getProperties().noOcclusion()));
-    public static final RegistryObject<Block> MOTOR_LAY = BLOCKS.register("motor_lay", () -> new MotorBlock(getProperties().noOcclusion()));
+    public static final RegistryObject<Block> MOTOR = BLOCKS.register("motor", () -> new MotorBlock(getProperties().noOcclusion(), false));
+    public static final RegistryObject<Block> MOTOR_LAY = BLOCKS.register("motor_lay", () -> new MotorBlock(getProperties().noOcclusion(), true));
     public static final RegistryObject<Block> SILICON_BLOCK = BLOCKS.register("silicon_block", () -> new SiliconBlock(getProperties()));
     public static final RegistryObject<Block> STEEL_BLOCK = BLOCKS.register("steel_block", () -> new SteelBlock(getProperties()));
     public static final RegistryObject<Block> STEEL_TILES = BLOCKS.register("steel_tiles", () -> new SteelTilesBlock(getProperties(Material.STONE).sound(SoundType.STONE)));
@@ -43,7 +43,7 @@ public class IBlocks {
     }
 
     private static Properties getProperties(Material material) {
-        return Properties.of(material).explosionResistance(0.5F).sound(SoundType.METAL);
+        return Properties.of(material).sound(SoundType.METAL).strength(5.0F, 6.0F).requiresCorrectToolForDrops();
     }
 
     public static void register(IEventBus bus) {

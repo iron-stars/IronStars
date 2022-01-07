@@ -2,7 +2,9 @@ package com.xekr.ironstars.blocks;
 
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
+import net.minecraft.world.InteractionResult;
 import net.minecraft.world.entity.player.Player;
+import net.minecraft.world.item.context.UseOnContext;
 import net.minecraft.world.level.BlockGetter;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.Block;
@@ -13,7 +15,7 @@ import net.minecraft.world.phys.shapes.CollisionContext;
 import net.minecraft.world.phys.shapes.Shapes;
 import net.minecraft.world.phys.shapes.VoxelShape;
 
-public class MagnetBlock extends RotatedPillarBlock implements CanWrenchBlock {
+public class MagnetBlock extends RotatedPillarBlock implements IWrenchBlock {
     private static final VoxelShape xShape;
     private static final VoxelShape yShape;
     private static final VoxelShape zShape;
@@ -32,6 +34,22 @@ public class MagnetBlock extends RotatedPillarBlock implements CanWrenchBlock {
         };
     }
 
+    @Override
+    public InteractionResult onWrenched(BlockState state, UseOnContext context) {
+        Level world = context.getLevel();
+        Player player = context.getPlayer();
+        if (player != null && !world.isClientSide) {
+            Direction.Axis target = switch (context.getClickedFace().getAxis()) {
+                case X -> IWrenchBlock.rotateAxisX(state.getValue(AXIS));
+                case Y -> IWrenchBlock.rotateAxisY(state.getValue(AXIS));
+                case Z -> IWrenchBlock.rotateAxisZ(state.getValue(AXIS));
+            };
+            world.setBlockAndUpdate(context.getClickedPos(), state.setValue(AXIS, target));
+            return InteractionResult.SUCCESS;
+        }
+        return InteractionResult.PASS;
+    }
+
     static {
         VoxelShape reduce = Block.box(0, 5, 5, 16, 11, 11);
         xShape = Shapes.join(Shapes.block(), reduce, BooleanOp.NOT_SAME);
@@ -39,15 +57,5 @@ public class MagnetBlock extends RotatedPillarBlock implements CanWrenchBlock {
         yShape = Shapes.join(Shapes.block(), reduce, BooleanOp.NOT_SAME);
         reduce = Block.box(5, 5, 0, 11, 11, 16);
         zShape = Shapes.join(Shapes.block(), reduce, BooleanOp.NOT_SAME);
-    }
-
-    @Override
-    public void onWrenched(Level world, BlockPos pos, BlockState state, Player player, Direction direction) {
-        Direction.Axis target = switch (state.getValue(AXIS)) {
-            case X -> Direction.Axis.Y;
-            case Y -> Direction.Axis.Z;
-            case Z -> Direction.Axis.X;
-        };
-        world.setBlockAndUpdate(pos, state.setValue(AXIS, target));
     }
 }

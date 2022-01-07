@@ -1,7 +1,7 @@
 package com.xekr.ironstars.registry;
 
 import com.xekr.ironstars.IronStars;
-import com.xekr.ironstars.item.Wrench;
+import com.xekr.ironstars.item.WrenchItem;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
 import net.minecraftforge.eventbus.api.IEventBus;
@@ -23,7 +23,7 @@ public class IItems {
     public static final RegistryObject<Item> STICKY_RESIN = ITEMS.register("sticky_resin", () -> new Item(getProperties()));
     public static final RegistryObject<Item> TITANIUM_ALLOY_INGOT = ITEMS.register("titanium_alloy_ingot", () -> new Item(getProperties()));
     public static final RegistryObject<Item> TITANIUM_INGOT = ITEMS.register("titanium_ingot", () -> new Item(getProperties()));
-    public static final RegistryObject<Item> WRENCH = ITEMS.register("wrench", () -> new Wrench(getProperties()));
+    public static final RegistryObject<Item> WRENCH = ITEMS.register("wrench", () -> new WrenchItem(getProperties()));
 
     public static final RegistryObject<Item> ACCELERATOR = ITEMS.register("accelerator", () -> new BlockItem(IBlocks.ACCELERATOR.get(), getProperties()));
     public static final RegistryObject<Item> CENTRIFUGE = ITEMS.register("centrifuge", () -> new BlockItem(IBlocks.CENTRIFUGE.get(), getProperties()));
