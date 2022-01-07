@@ -25,8 +25,14 @@ public class IItems {
     public static final RegistryObject<Item> TITANIUM_INGOT = ITEMS.register("titanium_ingot", () -> new Item(getProperties()));
     public static final RegistryObject<Item> WRENCH = ITEMS.register("wrench", () -> new Wrench(getProperties()));
 
+    public static final RegistryObject<Item> ACCELERATOR = ITEMS.register("accelerator", () -> new BlockItem(IBlocks.ACCELERATOR.get(), getProperties()));
+    public static final RegistryObject<Item> CENTRIFUGE = ITEMS.register("centrifuge", () -> new BlockItem(IBlocks.CENTRIFUGE.get(), getProperties()));
+    public static final RegistryObject<Item> CHEMICAL_ACCUMULATOR = ITEMS.register("chemical_accumulator", () -> new BlockItem(IBlocks.CHEMICAL_ACCUMULATOR.get(), getProperties()));
     public static final RegistryObject<Item> COIL = ITEMS.register("coil", () -> new BlockItem(IBlocks.COIL.get(), getProperties()));
 //    public static final RegistryObject<Item> ELECTRIC_WIRE = ITEMS.register("electric_wire", () -> new BlockItem(IBlocks.ELECTRIC_WIRE.get(), getProperties()));
+    public static final RegistryObject<Item> FISH_TANK = ITEMS.register("fish_tank", () -> new BlockItem(IBlocks.FISH_TANK.get(), getProperties()));
+    public static final RegistryObject<Item> INTERACTOR = ITEMS.register("interactor", () -> new BlockItem(IBlocks.INTERACTOR.get(), getProperties()));
+    public static final RegistryObject<Item> ITEM_RAIL = ITEMS.register("item_rail", () -> new BlockItem(IBlocks.ITEM_RAIL.get(), getProperties()));
     public static final RegistryObject<Item> MAGNET_BLOCK = ITEMS.register("magnet_block", () -> new BlockItem(IBlocks.MAGNET_BLOCK.get(), getProperties()));
     public static final RegistryObject<Item> MOON_DUST = ITEMS.register("moon_dust", () -> new BlockItem(IBlocks.MOON_DUST.get(), getProperties()));
     public static final RegistryObject<Item> MOON_ROCK = ITEMS.register("moon_rock", () -> new BlockItem(IBlocks.MOON_ROCK.get(), getProperties()));

@@ -15,8 +15,14 @@ import net.minecraftforge.registries.RegistryObject;
 public class IBlocks {
     private static final DeferredRegister<Block> BLOCKS = DeferredRegister.create(ForgeRegistries.BLOCKS, IronStars.ID);
 
+    public static final RegistryObject<Block> ACCELERATOR = BLOCKS.register("accelerator", () -> new AcceleratorBlock(getProperties().noOcclusion()));
+    public static final RegistryObject<Block> CENTRIFUGE = BLOCKS.register("centrifuge", () -> new CentrifugeBlock(getProperties().noOcclusion()));
+    public static final RegistryObject<Block> CHEMICAL_ACCUMULATOR = BLOCKS.register("chemical_accumulator", () -> new ChemicalAccumulatorBlock(getProperties().noOcclusion()));
     public static final RegistryObject<Block> COIL = BLOCKS.register("coil", () -> new CoilBlock(getProperties().noOcclusion()));
-//    public static final RegistryObject<Block> ELECTRIC_WIRE = BLOCKS.register("electric_wire", () -> new ElectricWireBlock(getProperties())); TODO:报错太多暂时删掉
+//    public static final RegistryObject<Block> ELECTRIC_WIRE = BLOCKS.register("electric_wire", () -> new ElectricWireBlock(getProperties())); // TODO:报错太多暂时删掉
+    public static final RegistryObject<Block> FISH_TANK = BLOCKS.register("fish_tank", () -> new FishTankBlock(getProperties().noOcclusion()));
+    public static final RegistryObject<Block> INTERACTOR = BLOCKS.register("interactor", () -> new InteractorBlock(getProperties().noOcclusion()));
+    public static final RegistryObject<Block> ITEM_RAIL = BLOCKS.register("item_rail", () -> new ItemRailBlock(getProperties().noOcclusion()));
     public static final RegistryObject<Block> MAGNET_BLOCK = BLOCKS.register("magnet_block", () -> new MagnetBlock(getProperties().noOcclusion()));
     public static final RegistryObject<Block> MOON_DUST = BLOCKS.register("moon_dust", () -> new MoonDustBlock(getProperties(Material.CLAY).sound(SoundType.SAND).noOcclusion()));
     public static final RegistryObject<Block> MOON_ROCK = BLOCKS.register("moon_rock", () -> new MoonRockBlock(getProperties().sound(SoundType.STONE)));
