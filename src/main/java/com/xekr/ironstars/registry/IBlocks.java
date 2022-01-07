@@ -1,21 +1,7 @@
 package com.xekr.ironstars.registry;
 
+import com.xekr.ironstars.blocks.*;
 import com.xekr.ironstars.IronStars;
-import com.xekr.ironstars.blocks.CoilBlock;
-import com.xekr.ironstars.blocks.ElectricWireBlock;
-import com.xekr.ironstars.blocks.MagnetBlock;
-import com.xekr.ironstars.blocks.MoonDustBlock;
-import com.xekr.ironstars.blocks.MoonRockBlock;
-import com.xekr.ironstars.blocks.MoonSoilBlock;
-import com.xekr.ironstars.blocks.MotorBlock;
-import com.xekr.ironstars.blocks.SiliconBlock;
-import com.xekr.ironstars.blocks.SteelBlock;
-import com.xekr.ironstars.blocks.SteelTilesBlock;
-import com.xekr.ironstars.blocks.TitaniumAlloyBlock;
-import com.xekr.ironstars.blocks.TitaniumBlock;
-import com.xekr.ironstars.blocks.TitaniumOreBlock;
-import com.xekr.ironstars.blocks.TurbineBlock;
-import com.xekr.ironstars.blocks.WindmillBlock;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.SoundType;
 import net.minecraft.world.level.block.state.BlockBehaviour.Properties;
@@ -29,8 +15,14 @@ import net.minecraftforge.registries.RegistryObject;
 public class IBlocks {
     private static final DeferredRegister<Block> BLOCKS = DeferredRegister.create(ForgeRegistries.BLOCKS, IronStars.ID);
 
+    public static final RegistryObject<Block> ACCELERATOR = BLOCKS.register("accelerator", () -> new AcceleratorBlock(getProperties().noOcclusion()));
+    public static final RegistryObject<Block> CENTRIFUGE = BLOCKS.register("centrifuge", () -> new CentrifugeBlock(getProperties().noOcclusion()));
+    public static final RegistryObject<Block> CHEMICAL_ACCUMULATOR = BLOCKS.register("chemical_accumulator", () -> new ChemicalAccumulatorBlock(getProperties().noOcclusion()));
     public static final RegistryObject<Block> COIL = BLOCKS.register("coil", () -> new CoilBlock(getProperties().noOcclusion()));
-//    public static final RegistryObject<Block> ELECTRIC_WIRE = BLOCKS.register("electric_wire", () -> new ElectricWireBlock(getProperties())); TODO:报错太多暂时删掉
+//    public static final RegistryObject<Block> ELECTRIC_WIRE = BLOCKS.register("electric_wire", () -> new ElectricWireBlock(getProperties())); // TODO:报错太多暂时删掉
+    public static final RegistryObject<Block> FISH_TANK = BLOCKS.register("fish_tank", () -> new FishTankBlock(getProperties().noOcclusion()));
+    public static final RegistryObject<Block> INTERACTOR = BLOCKS.register("interactor", () -> new InteractorBlock(getProperties().noOcclusion()));
+    public static final RegistryObject<Block> ITEM_RAIL = BLOCKS.register("item_rail", () -> new ItemRailBlock(getProperties().noOcclusion()));
     public static final RegistryObject<Block> MAGNET_BLOCK = BLOCKS.register("magnet_block", () -> new MagnetBlock(getProperties().noOcclusion()));
     public static final RegistryObject<Block> MOON_DUST = BLOCKS.register("moon_dust", () -> new MoonDustBlock(getProperties(Material.CLAY).sound(SoundType.SAND).noOcclusion()));
     public static final RegistryObject<Block> MOON_ROCK = BLOCKS.register("moon_rock", () -> new MoonRockBlock(getProperties().sound(SoundType.STONE)));

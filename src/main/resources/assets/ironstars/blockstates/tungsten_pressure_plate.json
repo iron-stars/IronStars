@@ -1,0 +1,10 @@
+{
+  "variants": {
+    "powered=false": {
+      "model": "ironstars:block/plate/tungsten"
+    },
+    "powered=true": {
+      "model": "ironstars:block/plate/tungsten_down"
+    }
+  }
+}

@@ -3,7 +3,7 @@
     "facing=down": {
       "model": "ironstars:block/turbine",
       "x": 180
-},
+    },
     "facing=east": {
       "model": "ironstars:block/turbine_lay",
       "y": 90
