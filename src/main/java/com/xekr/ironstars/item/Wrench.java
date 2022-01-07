@@ -21,11 +21,8 @@ public class Wrench extends Item {
         BlockState state = world.getBlockState(pos);
         Player player = context.getPlayer();
         if (!world.isClientSide && state.getBlock() instanceof CanWrenchBlock block) {
-            if (player.isShiftKeyDown()) {
-                block.onSneakWrenched(world, pos, state, player, context.getClickedFace());
-            } else {
-                block.onWrenched(world, pos, state, player, context.getClickedFace());
-            }
+            if (player.isShiftKeyDown()) block.onSneakWrenched(world, pos, state, player, context.getClickedFace());
+            else block.onWrenched(world, pos, state, player, context.getClickedFace());
             return InteractionResult.CONSUME;
         }
         return InteractionResult.PASS;
