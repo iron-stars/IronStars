@@ -2,8 +2,8 @@
 	"credit": "Made by XeKr with Blockbench",
 	"parent": "minecraft:block/block",
 	"textures": {
-		"1": "ironstars:block/pipe_end",
-		"particle": "ironstars:block/pipe"
+		"1": "ironstars:block/pipe/steel/end",
+		"particle": "ironstars:block/pipe/steel/side"
 	},
 	"elements": [
 		{
