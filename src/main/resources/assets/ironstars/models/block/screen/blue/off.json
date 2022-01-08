@@ -1,0 +1,6 @@
+{
+  "parent": "ironstars:block/screen/screen",
+  "textures": {
+    "0": "ironstars:block/screen/blue/off"
+  }
+}
