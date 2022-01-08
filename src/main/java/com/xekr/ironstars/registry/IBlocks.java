@@ -39,6 +39,9 @@ public class IBlocks {
     public static final RegistryObject<Block> TURBINE = BLOCKS.register("turbine", () -> new TurbineBlock(getProperties().noOcclusion()));
     public static final RegistryObject<Block> WINDMILL = BLOCKS.register("windmill", () -> new WindmillBlock(getProperties().noOcclusion()));
     public static final RegistryObject<Block> COPPER_PRESSURE_PLATE = BLOCKS.register("copper_pressure_plate", () -> new CopperPressurePlateBlock(PressurePlateBlock.Sensitivity.EVERYTHING, getProperties().noOcclusion()));
+    public static final RegistryObject<Block> TITANIUM_PRESSURE_PLATE = BLOCKS.register("titanium_pressure_plate", () -> new CopperPressurePlateBlock(PressurePlateBlock.Sensitivity.EVERYTHING, getProperties().noOcclusion()));
+    public static final RegistryObject<Block> STEEL_PRESSURE_PLATE = BLOCKS.register("steel_pressure_plate", () -> new CopperPressurePlateBlock(PressurePlateBlock.Sensitivity.EVERYTHING, getProperties().noOcclusion()));
+    public static final RegistryObject<Block> NETHERITE_PRESSURE_PLATE = BLOCKS.register("netherite_pressure_plate", () -> new CopperPressurePlateBlock(PressurePlateBlock.Sensitivity.EVERYTHING, getProperties().noOcclusion()));
 
     private static Properties getProperties() {
         return getProperties(Material.METAL);

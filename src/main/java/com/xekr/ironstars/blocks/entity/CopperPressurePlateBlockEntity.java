@@ -8,6 +8,8 @@ import net.minecraft.world.level.block.entity.BlockEntity;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.state.properties.Property;
 
+import static com.xekr.ironstars.blocks.CopperPressurePlateBlock.POWERED;
+
 public class CopperPressurePlateBlockEntity extends BlockEntity {
     private long times;
     public CopperPressurePlateBlockEntity(BlockPos pWorldPosition, BlockState pBlockState) {
@@ -17,20 +19,15 @@ public class CopperPressurePlateBlockEntity extends BlockEntity {
     public void tick() {
         if (this.level != null && !this.level.isClientSide) {
             BlockState state = this.getBlockState();
-            boolean powered = state.getValue(CopperPressurePlateBlock.POWERED);
-            boolean pressed = state.getValue(CopperPressurePlateBlock.PRESSED);
-            if (((CopperPressurePlateBlock)state.getBlock()).entityOn(this.level, this.getBlockPos())) {
+            boolean powered = state.getValue(POWERED);
+            if (state.getValue(CopperPressurePlateBlock.PRESSED)) {
                 times++;
-                if (!pressed) updateState(CopperPressurePlateBlock.PRESSED, true);
-                if (powered) updateState(CopperPressurePlateBlock.POWERED, false);
+                if (powered) updateState(POWERED, false);
             }else {
-                if (pressed) updateState(CopperPressurePlateBlock.PRESSED, false);
                 if (times > 0) {
-                    if (!powered) updateState(CopperPressurePlateBlock.POWERED, true);
+                    if (!powered) updateState(POWERED, true);
                     times--;
-                } else {
-                    if (powered) updateState(CopperPressurePlateBlock.POWERED, false);
-                }
+                } else if (powered) updateState(POWERED, false);
             }
         }
     }
