@@ -3,6 +3,7 @@ package com.xekr.ironstars.registry;
 import com.xekr.ironstars.blocks.*;
 import com.xekr.ironstars.IronStars;
 import net.minecraft.world.level.block.Block;
+import net.minecraft.world.level.block.PressurePlateBlock;
 import net.minecraft.world.level.block.SoundType;
 import net.minecraft.world.level.block.state.BlockBehaviour.Properties;
 import net.minecraft.world.level.material.Material;
@@ -23,7 +24,7 @@ public class IBlocks {
     public static final RegistryObject<Block> FISH_TANK = BLOCKS.register("fish_tank", () -> new FishTankBlock(getProperties().noOcclusion()));
     public static final RegistryObject<Block> INTERACTOR = BLOCKS.register("interactor", () -> new InteractorBlock(getProperties().noOcclusion()));
     public static final RegistryObject<Block> ITEM_RAIL = BLOCKS.register("item_rail", () -> new ItemRailBlock(getProperties().noOcclusion()));
-    public static final RegistryObject<Block> MAGNET_BLOCK = BLOCKS.register("magnet_block", () -> new MagnetBlock(getProperties().noOcclusion()));
+    public static final RegistryObject<Block> MAGNET_BLOCK = BLOCKS.register("magnet_block", () -> new MagnetBlock(getProperties().explosionResistance(6.0F).noOcclusion()));
     public static final RegistryObject<Block> MOON_DUST = BLOCKS.register("moon_dust", () -> new MoonDustBlock(getProperties(Material.CLAY).sound(SoundType.SAND).noOcclusion()));
     public static final RegistryObject<Block> MOON_ROCK = BLOCKS.register("moon_rock", () -> new MoonRockBlock(getProperties().sound(SoundType.STONE)));
     public static final RegistryObject<Block> MOON_SOIL = BLOCKS.register("moon_soil", () -> new MoonSoilBlock(getProperties(Material.CLAY).sound(SoundType.ROOTS)));
@@ -37,13 +38,14 @@ public class IBlocks {
     public static final RegistryObject<Block> TITANIUM_ORE = BLOCKS.register("titanium_ore", () -> new TitaniumOreBlock(getProperties(Material.STONE).sound(SoundType.STONE)));
     public static final RegistryObject<Block> TURBINE = BLOCKS.register("turbine", () -> new TurbineBlock(getProperties().noOcclusion()));
     public static final RegistryObject<Block> WINDMILL = BLOCKS.register("windmill", () -> new WindmillBlock(getProperties().noOcclusion()));
+    public static final RegistryObject<Block> COPPER_PRESSURE_PLATE = BLOCKS.register("copper_pressure_plate", () -> new CopperPressurePlateBlock(PressurePlateBlock.Sensitivity.EVERYTHING, getProperties().noOcclusion()));
 
     private static Properties getProperties() {
         return getProperties(Material.METAL);
     }
 
     private static Properties getProperties(Material material) {
-        return Properties.of(material).sound(SoundType.METAL).strength(5.0F, 6.0F).requiresCorrectToolForDrops();
+        return Properties.of(material).sound(SoundType.METAL).strength(5.0F).requiresCorrectToolForDrops();
     }
 
     public static void register(IEventBus bus) {

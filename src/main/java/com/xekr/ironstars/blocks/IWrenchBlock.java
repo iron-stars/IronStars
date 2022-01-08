@@ -24,7 +24,7 @@ public interface IWrenchBlock {
             state.spawnAfterBreak((ServerLevel) world, pos, ItemStack.EMPTY);
             world.destroyBlock(pos, false);
 //            world.removeBlock(pos, false);
-            // TODO 敲下方块的声音
+            // TODO 敲下方块后扳手发声
         }
         return InteractionResult.SUCCESS;
     }
