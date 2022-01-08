@@ -1,0 +1,39 @@
+package com.xekr.ironstars.registry;
+
+import com.xekr.ironstars.IronStars;
+import net.minecraft.world.item.CreativeModeTab;
+import net.minecraft.world.item.ItemStack;
+import org.jetbrains.annotations.NotNull;
+
+public class CreativeTab {
+
+    public static final CreativeModeTab BASE = new CreativeModeTab(IronStars.ID) {
+        @Override
+        public @NotNull ItemStack makeIcon() {
+            return new ItemStack(IItems.CHIP.get());
+        }
+    };
+
+    public static final CreativeModeTab DECO = new CreativeModeTab(IronStars.ID) {
+        @Override
+        public @NotNull ItemStack makeIcon() {
+            return new ItemStack(IItems.FISH_TANK.get());
+        }
+    };
+
+//    public static final CreativeModeTab SHIP = new CreativeModeTab(IronStars.ID) {
+//        @Override
+//        public @NotNull ItemStack makeIcon() {
+//            return new ItemStack(IItems.CHIP.get());
+//        }
+//    };
+
+    public static final CreativeModeTab ALIEN = new CreativeModeTab(IronStars.ID) {
+        @Override
+        public @NotNull ItemStack makeIcon() {
+            return new ItemStack(IItems.MOON_SOIL.get());
+        }
+    };
+
+
+}
