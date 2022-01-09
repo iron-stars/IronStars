@@ -52,6 +52,7 @@ public class IItems {
     public static final RegistryObject<Item> TURBINE = ITEMS.register("turbine", () -> new BlockItem(IBlocks.TURBINE.get(), getProperties()));
     public static final RegistryObject<Item> WINDMILL = ITEMS.register("windmill", () -> new BlockItem(IBlocks.WINDMILL.get(), getProperties()));
     public static final RegistryObject<Item> COPPER_PRESSURE_PLATE = ITEMS.register("copper_pressure_plate", () -> new BlockItem(IBlocks.COPPER_PRESSURE_PLATE.get(), getProperties()));
+    public static final RegistryObject<Item> NETHERITE_PRESSURE_PLATE = ITEMS.register("netherite_pressure_plate", () -> new BlockItem(IBlocks.NETHERITE_PRESSURE_PLATE.get(), getProperties().fireResistant()));
 
     private static Item.Properties getProperties() {
         return getProperties(BASE);
