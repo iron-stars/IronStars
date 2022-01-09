@@ -1,13 +1,10 @@
 package com.xekr.ironstars.registry;
 
 import com.xekr.ironstars.IronStars;
-import com.xekr.ironstars.blocks.CopperPressurePlateBlock;
 import com.xekr.ironstars.item.WrenchItem;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.Item;
-import net.minecraft.world.level.block.Block;
-import net.minecraft.world.level.block.PressurePlateBlock;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
@@ -58,6 +55,7 @@ public class IItems {
     public static final RegistryObject<Item> TITANIUM_PRESSURE_PLATE = ITEMS.register("titanium_pressure_plate", () -> new BlockItem(IBlocks.TITANIUM_PRESSURE_PLATE.get(), getProperties()));
     public static final RegistryObject<Item> STEEL_PRESSURE_PLATE = ITEMS.register("steel_pressure_plate", () -> new BlockItem(IBlocks.STEEL_PRESSURE_PLATE.get(), getProperties()));
     public static final RegistryObject<Item> NETHERITE_PRESSURE_PLATE = ITEMS.register("netherite_pressure_plate", () -> new BlockItem(IBlocks.NETHERITE_PRESSURE_PLATE.get(), getProperties()));
+    public static final RegistryObject<Item> TUNGSTEN_PRESSURE_PLATE = ITEMS.register("tungsten_pressure_plate", () -> new BlockItem(IBlocks.TUNGSTEN_PRESSURE_PLATE.get(), getProperties()));
 
     private static Item.Properties getProperties() {
         return getProperties(BASE);

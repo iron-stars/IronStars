@@ -1,6 +1,6 @@
 package com.xekr.ironstars.blocks;
 
-import com.xekr.ironstars.blocks.entity.CopperPressurePlateBlockEntity;
+import com.xekr.ironstars.blocks.entity.SteelPressurePlateBlockEntity;
 import net.minecraft.core.BlockPos;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.world.entity.Entity;
@@ -8,7 +8,6 @@ import net.minecraft.world.level.BlockGetter;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.EntityBlock;
-import net.minecraft.world.level.block.PressurePlateBlock;
 import net.minecraft.world.level.block.entity.BlockEntity;
 import net.minecraft.world.level.block.entity.BlockEntityTicker;
 import net.minecraft.world.level.block.entity.BlockEntityType;
@@ -22,10 +21,10 @@ import org.jetbrains.annotations.Nullable;
 
 import java.util.Random;
 
-public class CopperPressurePlateBlock extends PressurePlateBlock implements EntityBlock {
+public class SteelPressurePlateBlock extends SteelPressurePlateBlockSuperclass implements EntityBlock {
     public static final BooleanProperty PRESSED = BooleanProperty.create("pressed");
 
-    public CopperPressurePlateBlock(Sensitivity pSensitivity, Properties pProperties) {
+    public SteelPressurePlateBlock(Sensitivity pSensitivity, Properties pProperties) {
         super(pSensitivity, pProperties);
         this.registerDefaultState(this.stateDefinition.any().setValue(POWERED, false).setValue(PRESSED, false));
     }
@@ -78,18 +77,17 @@ public class CopperPressurePlateBlock extends PressurePlateBlock implements Enti
         }
     }
 
-    @Nullable
     @Override
     public BlockEntity newBlockEntity(BlockPos pPos, BlockState pState) {
-        return new CopperPressurePlateBlockEntity(pPos, pState);
+        return new SteelPressurePlateBlockEntity(pPos, pState);
     }
 
     @Nullable
     @Override
     public <T extends BlockEntity> BlockEntityTicker<T> getTicker(Level pLevel, BlockState pState, BlockEntityType<T> pBlockEntityType) {
         return pLevel.isClientSide ? null : (world, pos, state, blockEntity) -> {
-            if (blockEntity instanceof CopperPressurePlateBlockEntity) {
-                ((CopperPressurePlateBlockEntity)blockEntity).tick();
+            if (blockEntity instanceof SteelPressurePlateBlockEntity) {
+                ((SteelPressurePlateBlockEntity)blockEntity).tick();
             }
         };
     }
