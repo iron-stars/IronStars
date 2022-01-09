@@ -14,7 +14,7 @@ import org.spongepowered.asm.mixin.injection.Redirect;
 
 @Mixin(ItemEntity.class)
 public class ItemEntityMixin {
-    private static final ResourceLocation TITANIUM = IronStars.asResource("titanium");
+    private static final ResourceLocation TITANIUM = IronStars.asResource("titanium_alloy");
 
     @Redirect(method = "tick", at = @At(value = "INVOKE", target = "Lnet/minecraft/world/phys/Vec3;add(DDD)Lnet/minecraft/world/phys/Vec3;"))
     private Vec3 slowDown(Vec3 instance, double pX, double pY, double pZ) {
