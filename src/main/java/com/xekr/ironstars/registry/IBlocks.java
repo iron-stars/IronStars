@@ -2,6 +2,8 @@ package com.xekr.ironstars.registry;
 
 import com.xekr.ironstars.blocks.*;
 import com.xekr.ironstars.IronStars;
+import com.xekr.ironstars.blocks.SteelPressurePlateBlock;
+import com.xekr.ironstars.blocks.TitaniumPressurePlateBlock;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.PressurePlateBlock;
 import net.minecraft.world.level.block.SoundType;
