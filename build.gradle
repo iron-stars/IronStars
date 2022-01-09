@@ -1,3 +1,4 @@
+//file:noinspection GroovyAssignabilityCheck
 buildscript {
     repositories {
         maven { url = 'https://maven.minecraftforge.net' }
@@ -75,11 +76,22 @@ minecraft {
 sourceSets.main.resources { srcDir 'src/generated/resources' }
 
 repositories {
+    maven { url 'https://maven.tterrag.com' }
+    maven {
+        url 'https://www.cursemaven.com'
+        content {
+            includeGroup "curse.maven"
+        }
+    }
 }
 
 dependencies {
     minecraft "net.minecraftforge:forge:${project.mc_version}-${project.forge_version}"
     annotationProcessor 'org.spongepowered:mixin:0.8.4:processor'
+
+    runtimeOnly fg.deobf("com.jozufozu.flywheel:Flywheel-Forge:1.18-0.5.0.34")
+    compileOnly fg.deobf("curse.maven:create-328085:3583784")
+    runtimeOnly fg.deobf("curse.maven:create-328085:3583784")
 }
 
 jar {

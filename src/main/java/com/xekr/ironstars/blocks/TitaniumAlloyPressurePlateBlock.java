@@ -1,8 +1,7 @@
 package com.xekr.ironstars.blocks;
 
-import com.xekr.ironstars.IronStars;
+import com.xekr.ironstars.registry.AllItemTags;
 import net.minecraft.core.BlockPos;
-import net.minecraft.resources.ResourceLocation;
 import net.minecraft.sounds.SoundEvents;
 import net.minecraft.sounds.SoundSource;
 import net.minecraft.world.item.Items;
@@ -21,7 +20,6 @@ import java.util.List;
 
 public class TitaniumAlloyPressurePlateBlock extends BasePressurePlateBlock {
     public static final BooleanProperty POWERED = BlockStateProperties.POWERED;
-    private static final ResourceLocation TITANIUM = IronStars.asResource("titanium_alloy");
 
     public TitaniumAlloyPressurePlateBlock(Properties pProperties) {
         super(pProperties);
@@ -50,7 +48,7 @@ public class TitaniumAlloyPressurePlateBlock extends BasePressurePlateBlock {
     @Override
     protected int getSignalStrength(Level pLevel, BlockPos pPos) {
         List<? extends Entity> list = pLevel.getEntitiesOfClass(ItemEntity.class, TOUCH_AABB.move(pPos), entity ->
-                entity.getItem().is(Items.NETHER_STAR) || entity.getItem().getItem().getTags().contains(TITANIUM));
+                entity.getItem().is(Items.NETHER_STAR) || entity.getItem().getItem().getTags().contains(AllItemTags.TITANIUM));
 
         for(Entity entity : list) {
             if (!entity.isIgnoringBlockTriggers()) {
