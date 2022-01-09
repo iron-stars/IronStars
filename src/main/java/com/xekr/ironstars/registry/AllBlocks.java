@@ -15,7 +15,7 @@ import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
 
 
-public class IBlocks {
+public class AllBlocks {
     private static final DeferredRegister<Block> BLOCKS = DeferredRegister.create(ForgeRegistries.BLOCKS, IronStars.ID);
 
     //base
@@ -38,7 +38,7 @@ public class IBlocks {
     public static final RegistryObject<Block> COPPER_PRESSURE_PLATE = BLOCKS.register("copper_pressure_plate", () -> new CopperPressurePlateBlock(PressurePlateBlock.Sensitivity.EVERYTHING, getProperties().strength(0.5F).noCollission()));
     public static final RegistryObject<Block> TITANIUM_PRESSURE_PLATE = BLOCKS.register("titanium_pressure_plate", () -> new CopperPressurePlateBlock(PressurePlateBlock.Sensitivity.EVERYTHING, getProperties().strength(0.5F).noCollission()));
     public static final RegistryObject<Block> STEEL_PRESSURE_PLATE = BLOCKS.register("steel_pressure_plate", () -> new CopperPressurePlateBlock(PressurePlateBlock.Sensitivity.EVERYTHING, getProperties().strength(0.5F).noCollission()));
-    public static final RegistryObject<Block> NETHERITE_PRESSURE_PLATE = BLOCKS.register("netherite_pressure_plate", () -> new NetheritePressurePlateBlock(NetheritePressurePlateBlock.Sensitivity.FIRERESISTANT, getProperties().noCollission()));
+    public static final RegistryObject<Block> NETHERITE_PRESSURE_PLATE = BLOCKS.register("netherite_pressure_plate", () -> new NetheritePressurePlateBlock(getProperties().noCollission()));
     //deco
     public static final RegistryObject<Block> STEEL_TILES = BLOCKS.register("steel_tiles", () -> new SteelTilesBlock(getProperties(Material.STONE).sound(SoundType.STONE)));
     public static final RegistryObject<Block> FISH_TANK = BLOCKS.register("fish_tank", () -> new FishTankBlock(getProperties().noOcclusion()));
