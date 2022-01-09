@@ -1,9 +1,9 @@
 {
   "variants": {
-    "powered=false": {
+    "pressed=false": {
       "model": "ironstars:block/plate/titanium"
     },
-    "powered=true": {
+    "pressed=true": {
       "model": "ironstars:block/plate/titanium_down"
     }
   }
