@@ -38,5 +38,11 @@
   "block.ironstars.titanium_block":"钛块",
   "block.ironstars.titanium_ore":"钛矿石",
   "block.ironstars.turbine":"涡轮",
-  "block.ironstars.windmill":"风车"
+  "block.ironstars.windmill":"风车",
+  "block.ironstars.copper_pressure_plate":"铜质压力板",
+  "block.ironstars.netherite_pressure_plate":"下界合金压力板",
+  "block.ironstars.steel_pressure_plate":"钢质压力板",
+  "block.ironstars.titanium_pressure_plate":"钛质压力板",
+  "block.ironstars.tungsten_pressure_plate":"钨质压力板",
+  "block.ironstars.titanium_alloy_pressure_plate":"钛合金压力板"
 }
