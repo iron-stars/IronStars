@@ -1,5 +1,8 @@
 {
-  "itemGroup.ironstars": "Iron Stars",
+  "itemGroup.ironstars.base": "Iron Stars|Base",
+  "itemGroup.ironstars.deco": "Iron Stars|Deco",
+  "itemGroup.ironstars.ship": "Iron Stars|Ship",
+  "itemGroup.ironstars.alien": "Iron Stars|Alien",
 
   "item.ironstars.chip":"Chip",
   "item.ironstars.circuit_board":"Circuit Board",
