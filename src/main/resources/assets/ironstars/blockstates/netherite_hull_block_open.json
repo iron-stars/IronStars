@@ -1,0 +1,9 @@
+{
+  "variants": {
+    "": [
+      {"model": "ironstars:block/hull/netherite/open1"},
+      {"model": "ironstars:block/hull/netherite/open2"},
+      {"model": "ironstars:block/hull/netherite/open3"}
+    ]
+  }
+}

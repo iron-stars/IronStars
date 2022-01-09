@@ -1,0 +1,9 @@
+{
+  "variants": {
+    "": [
+      {"model": "ironstars:block/hull/titanium/open1"},
+      {"model": "ironstars:block/hull/titanium/open2"},
+      {"model": "ironstars:block/hull/titanium/open3"}
+    ]
+  }
+}
