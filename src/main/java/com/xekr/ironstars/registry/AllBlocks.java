@@ -2,8 +2,6 @@ package com.xekr.ironstars.registry;
 
 import com.xekr.ironstars.blocks.*;
 import com.xekr.ironstars.IronStars;
-import com.xekr.ironstars.blocks.SteelPressurePlateBlock;
-import com.xekr.ironstars.blocks.TitaniumPressurePlateBlock;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.PressurePlateBlock;
 import net.minecraft.world.level.block.SoundType;
@@ -33,7 +31,8 @@ public class AllBlocks {
     public static final RegistryObject<Block> COPPER_PRESSURE_PLATE = BLOCKS.register("copper_pressure_plate", () -> new CopperPressurePlateBlock(PressurePlateBlock.Sensitivity.EVERYTHING, getProperties().strength(0.5F).noCollission()));
     public static final RegistryObject<Block> TITANIUM_PRESSURE_PLATE = BLOCKS.register("titanium_pressure_plate", () -> new CopperPressurePlateBlock(PressurePlateBlock.Sensitivity.EVERYTHING, getProperties().strength(0.5F).noCollission()));
     public static final RegistryObject<Block> STEEL_PRESSURE_PLATE = BLOCKS.register("steel_pressure_plate", () -> new CopperPressurePlateBlock(PressurePlateBlock.Sensitivity.EVERYTHING, getProperties().strength(0.5F).noCollission()));
-    public static final RegistryObject<Block> NETHERITE_PRESSURE_PLATE = BLOCKS.register("netherite_pressure_plate", () -> new NetheritePressurePlateBlock(NetheritePressurePlateBlock.Sensitivity.FIRERESISTANT, getProperties().noCollission()));    public static final RegistryObject<Block> MAGNET_BLOCK = BLOCKS.register("magnet_block", () -> new MagnetBlock(getProperties().explosionResistance(6.0F).noOcclusion()));
+    public static final RegistryObject<Block> NETHERITE_PRESSURE_PLATE = BLOCKS.register("netherite_pressure_plate", () -> new NetheritePressurePlateBlock(getProperties().noCollission()));
+    public static final RegistryObject<Block> MAGNET_BLOCK = BLOCKS.register("magnet_block", () -> new MagnetBlock(getProperties().explosionResistance(6.0F).noOcclusion()));
     public static final RegistryObject<Block> SILICON_BLOCK = BLOCKS.register("silicon_block", () -> new SiliconBlock(getProperties()));
     public static final RegistryObject<Block> STEEL_BLOCK = BLOCKS.register("steel_block", () -> new SteelBlock(getProperties()));
     public static final RegistryObject<Block> TITANIUM_ALLOY_BLOCK = BLOCKS.register("titanium_alloy_block", () -> new TitaniumAlloyBlock(getProperties()));
