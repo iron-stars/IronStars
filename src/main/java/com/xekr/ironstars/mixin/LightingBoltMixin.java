@@ -1,6 +1,6 @@
 package com.xekr.ironstars.mixin;
 
-import com.xekr.ironstars.registry.IBlocks;
+import com.xekr.ironstars.registry.AllBlocks;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.world.entity.LightningBolt;
@@ -19,7 +19,7 @@ public class LightingBoltMixin {
     private static void toMagnet(Level world, BlockPos pos, CallbackInfo ci, BlockState lightState, BlockPos targetPos, BlockState targetState) {
         for (int i = 0; i < 16; i++) {
             if (!targetState.is(Blocks.IRON_BLOCK)) break;
-            world.setBlockAndUpdate(targetPos, IBlocks.MAGNET_BLOCK.get().defaultBlockState());
+            world.setBlockAndUpdate(targetPos, AllBlocks.MAGNET_BLOCK.get().defaultBlockState());
             targetPos = targetPos.relative(Direction.DOWN);
         }
     }

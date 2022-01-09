@@ -1,0 +1,8 @@
+{
+  "replace": false,
+  "values": [
+    "ironstars:titanium_alloy_block",
+    "ironstars:titanium_alloy_ingot",
+    "ironstars:titanium_pressure_plate"
+  ]
+}

@@ -1,7 +1,7 @@
 package com.xekr.ironstars.blocks.entity;
 
 import com.xekr.ironstars.blocks.CopperPressurePlateBlock;
-import com.xekr.ironstars.registry.IBlockEntities;
+import com.xekr.ironstars.registry.AllBlockEntities;
 import net.minecraft.core.BlockPos;
 import net.minecraft.nbt.CompoundTag;
 import net.minecraft.world.level.block.entity.BlockEntity;
@@ -13,7 +13,7 @@ import static com.xekr.ironstars.blocks.CopperPressurePlateBlock.POWERED;
 public class CopperPressurePlateBlockEntity extends BlockEntity {
     private long times;
     public CopperPressurePlateBlockEntity(BlockPos pWorldPosition, BlockState pBlockState) {
-        super(IBlockEntities.COPPER_PRESSURE_PLATE.get(), pWorldPosition, pBlockState);
+        super(AllBlockEntities.COPPER_PRESSURE_PLATE.get(), pWorldPosition, pBlockState);
     }
 
     public void tick() {
