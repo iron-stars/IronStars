@@ -1,0 +1,10 @@
+{
+  "variants": {
+    "powered=false": {
+      "model": "ironstars:block/plate/netherite"
+    },
+    "powered=true": {
+      "model": "ironstars:block/plate/netherite_down"
+    }
+  }
+}

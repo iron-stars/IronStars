@@ -57,7 +57,7 @@ public class IItems {
     public static final RegistryObject<Item> COPPER_PRESSURE_PLATE = ITEMS.register("copper_pressure_plate", () -> new BlockItem(IBlocks.COPPER_PRESSURE_PLATE.get(), getProperties()));
     public static final RegistryObject<Item> TITANIUM_PRESSURE_PLATE = ITEMS.register("titanium_pressure_plate", () -> new BlockItem(IBlocks.TITANIUM_PRESSURE_PLATE.get(), getProperties()));
     public static final RegistryObject<Item> STEEL_PRESSURE_PLATE = ITEMS.register("steel_pressure_plate", () -> new BlockItem(IBlocks.STEEL_PRESSURE_PLATE.get(), getProperties()));
-    public static final RegistryObject<Item> NETHERITE_PRESSURE_PLATE = ITEMS.register("netherite_pressure_plate", () -> new BlockItem(IBlocks.NETHERITE_PRESSURE_PLATE.get(), getProperties()));
+    public static final RegistryObject<Item> NETHERITE_PRESSURE_PLATE = ITEMS.register("netherite_pressure_plate", () -> new BlockItem(IBlocks.NETHERITE_PRESSURE_PLATE.get(), getProperties().fireResistant()));
 
     private static Item.Properties getProperties() {
         return getProperties(BASE);
