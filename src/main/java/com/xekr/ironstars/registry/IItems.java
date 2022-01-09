@@ -43,6 +43,7 @@ public class IItems {
     //deco
     public static final RegistryObject<Item> STEEL_TILES = ITEMS.register("steel_tiles", () -> new BlockItem(IBlocks.STEEL_TILES.get(), getProperties(DECO)));
     public static final RegistryObject<Item> FISH_TANK = ITEMS.register("fish_tank", () -> new BlockItem(IBlocks.FISH_TANK.get(), getProperties(DECO)));
+    //ship
     //alien
     public static final RegistryObject<Item> MOON_DUST = ITEMS.register("moon_dust", () -> new BlockItem(IBlocks.MOON_DUST.get(), getProperties(ALIEN)));
     public static final RegistryObject<Item> MOON_ROCK = ITEMS.register("moon_rock", () -> new BlockItem(IBlocks.MOON_ROCK.get(), getProperties(ALIEN)));
@@ -63,6 +64,7 @@ public class IItems {
     public static final RegistryObject<Item> TITANIUM_ALLOY_INGOT = ITEMS.register("titanium_alloy_ingot", () -> new Item(getProperties()));
     public static final RegistryObject<Item> TITANIUM_INGOT = ITEMS.register("titanium_ingot", () -> new Item(getProperties()));
     //deco
+    //ship
     //alien
 
     private static Item.Properties getProperties() {
