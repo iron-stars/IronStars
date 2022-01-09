@@ -1,9 +1,8 @@
 package com.xekr.ironstars.mixin;
 
-import com.xekr.ironstars.IronStars;
 import com.xekr.ironstars.config.IronStarsConfig;
 import com.xekr.ironstars.registry.AllBlocks;
-import net.minecraft.resources.ResourceLocation;
+import com.xekr.ironstars.registry.AllItemTags;
 import net.minecraft.world.entity.item.ItemEntity;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
@@ -14,8 +13,6 @@ import org.spongepowered.asm.mixin.injection.Redirect;
 
 @Mixin(ItemEntity.class)
 public class ItemEntityMixin {
-    private static final ResourceLocation TITANIUM = IronStars.asResource("titanium_alloy");
-
     @Redirect(method = "tick", at = @At(value = "INVOKE", target = "Lnet/minecraft/world/phys/Vec3;add(DDD)Lnet/minecraft/world/phys/Vec3;"))
     private Vec3 slowDown(Vec3 instance, double pX, double pY, double pZ) {
         ItemEntity ths = (ItemEntity) (Object) this;
@@ -25,6 +22,6 @@ public class ItemEntityMixin {
 
     @Redirect(method = "hurt", at = @At(value = "INVOKE", target = "Lnet/minecraft/world/item/ItemStack;is(Lnet/minecraft/world/item/Item;)Z"))
     private boolean explosion(ItemStack instance, Item pItem) {
-        return instance.is(pItem) || instance.getItem().getTags().contains(TITANIUM);
+        return instance.is(pItem) || instance.getItem().getTags().contains(AllItemTags.TITANIUM);
     }
 }
