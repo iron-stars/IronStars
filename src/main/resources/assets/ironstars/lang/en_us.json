@@ -4,6 +4,8 @@
   "itemGroup.ironstars.ship": "Iron Stars|Ship",
   "itemGroup.ironstars.alien": "Iron Stars|Alien",
 
+  "energy.ironstars.unit": "RF",
+
   "item.ironstars.chip":"Chip",
   "item.ironstars.circuit_board":"Circuit Board",
   "item.ironstars.copper_wire":"Copper Wire",

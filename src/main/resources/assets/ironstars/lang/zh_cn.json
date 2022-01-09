@@ -4,6 +4,8 @@
   "itemGroup.ironstars.ship": "钢铁星辰|飞船",
   "itemGroup.ironstars.alien": "钢铁星辰|外星",
 
+  "energy.ironstars.unit": "RF",
+
   "item.ironstars.chip":"芯片",
   "item.ironstars.circuit_board":"电路板",
   "item.ironstars.copper_wire":"铜线",
