@@ -32,6 +32,7 @@ public class AllItems {
     public static final RegistryObject<Item> TITANIUM_PRESSURE_PLATE = ITEMS.register("titanium_pressure_plate", () -> new BlockItem(AllBlocks.TITANIUM_PRESSURE_PLATE.get(), getProperties()));
     public static final RegistryObject<Item> STEEL_PRESSURE_PLATE = ITEMS.register("steel_pressure_plate", () -> new BlockItem(AllBlocks.STEEL_PRESSURE_PLATE.get(), getProperties()));
     public static final RegistryObject<Item> NETHERITE_PRESSURE_PLATE = ITEMS.register("netherite_pressure_plate", () -> new BlockItem(AllBlocks.NETHERITE_PRESSURE_PLATE.get(), getProperties().fireResistant()));
+    public static final RegistryObject<Item> TITANIUM_ALLOY_PRESSURE_PLATE = ITEMS.register("titanium_alloy_pressure_plate", () -> new BlockItem(AllBlocks.TITANIUM_ALLOY_PRESSURE_PLATE.get(), getProperties().fireResistant()));
     public static final RegistryObject<Item> MAGNET_BLOCK = ITEMS.register("magnet_block", () -> new BlockItem(AllBlocks.MAGNET_BLOCK.get(), getProperties()));
     public static final RegistryObject<Item> SILICON_BLOCK = ITEMS.register("silicon_block", () -> new BlockItem(AllBlocks.SILICON_BLOCK.get(), getProperties()));
     public static final RegistryObject<Item> STEEL_BLOCK = ITEMS.register("steel_block", () -> new BlockItem(AllBlocks.STEEL_BLOCK.get(), getProperties()));
