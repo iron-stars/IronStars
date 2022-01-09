@@ -1,8 +1,9 @@
 package com.xekr.ironstars;
 
-import com.xekr.ironstars.registry.IBlockEntities;
-import com.xekr.ironstars.registry.IBlocks;
-import com.xekr.ironstars.registry.IItems;
+import com.xekr.ironstars.registry.AllBlocks;
+import com.xekr.ironstars.registry.AllBlockEntities;
+import com.xekr.ironstars.registry.AllItems;
+import net.minecraft.resources.ResourceLocation;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
@@ -19,8 +20,12 @@ public class IronStars {
     public IronStars() {
         IEventBus bus = FMLJavaModLoadingContext.get().getModEventBus();
 
-        IBlocks.register(bus);
-        IBlockEntities.register(bus);
-        IItems.register(bus);
+        AllBlocks.register(bus);
+        AllBlockEntities.register(bus);
+        AllItems.register(bus);
+    }
+
+    public static ResourceLocation asResource(String name) {
+        return new ResourceLocation(ID, name);
     }
 }

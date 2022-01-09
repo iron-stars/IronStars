@@ -11,17 +11,17 @@ import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
 public class ClientEvents {
     @SubscribeEvent
     public static void onRenderTypeSetup(FMLClientSetupEvent event) {
-        ItemBlockRenderTypes.setRenderLayer(IBlocks.ACCELERATOR.get(), RenderType.cutoutMipped());
-        ItemBlockRenderTypes.setRenderLayer(IBlocks.CENTRIFUGE.get(), RenderType.cutoutMipped());
-        ItemBlockRenderTypes.setRenderLayer(IBlocks.CHEMICAL_ACCUMULATOR.get(), RenderType.cutoutMipped());
-        ItemBlockRenderTypes.setRenderLayer(IBlocks.FISH_TANK.get(), RenderType.cutoutMipped());
-        ItemBlockRenderTypes.setRenderLayer(IBlocks.INTERACTOR.get(), RenderType.cutoutMipped());
-        ItemBlockRenderTypes.setRenderLayer(IBlocks.ITEM_RAIL.get(), RenderType.cutoutMipped());
-        ItemBlockRenderTypes.setRenderLayer(IBlocks.MOON_DUST.get(), RenderType.cutout());
-        ItemBlockRenderTypes.setRenderLayer(IBlocks.MAGNET_BLOCK.get(), RenderType.cutout());
-        ItemBlockRenderTypes.setRenderLayer(IBlocks.MOTOR.get(), RenderType.cutoutMipped());
-        ItemBlockRenderTypes.setRenderLayer(IBlocks.MOTOR_LAY.get(), RenderType.cutoutMipped());
-        ItemBlockRenderTypes.setRenderLayer(IBlocks.TURBINE.get(), RenderType.cutoutMipped());
-        ItemBlockRenderTypes.setRenderLayer(IBlocks.WINDMILL.get(), RenderType.cutoutMipped());
+        ItemBlockRenderTypes.setRenderLayer(AllBlocks.ACCELERATOR.get(), RenderType.cutoutMipped());
+        ItemBlockRenderTypes.setRenderLayer(AllBlocks.CENTRIFUGE.get(), RenderType.cutoutMipped());
+        ItemBlockRenderTypes.setRenderLayer(AllBlocks.CHEMICAL_ACCUMULATOR.get(), RenderType.cutoutMipped());
+        ItemBlockRenderTypes.setRenderLayer(AllBlocks.FISH_TANK.get(), RenderType.cutoutMipped());
+        ItemBlockRenderTypes.setRenderLayer(AllBlocks.INTERACTOR.get(), RenderType.cutoutMipped());
+        ItemBlockRenderTypes.setRenderLayer(AllBlocks.ITEM_RAIL.get(), RenderType.cutoutMipped());
+        ItemBlockRenderTypes.setRenderLayer(AllBlocks.MOON_DUST.get(), RenderType.cutout());
+        ItemBlockRenderTypes.setRenderLayer(AllBlocks.MAGNET_BLOCK.get(), RenderType.cutout());
+        ItemBlockRenderTypes.setRenderLayer(AllBlocks.MOTOR.get(), RenderType.cutoutMipped());
+        ItemBlockRenderTypes.setRenderLayer(AllBlocks.MOTOR_LAY.get(), RenderType.cutoutMipped());
+        ItemBlockRenderTypes.setRenderLayer(AllBlocks.TURBINE.get(), RenderType.cutoutMipped());
+        ItemBlockRenderTypes.setRenderLayer(AllBlocks.WINDMILL.get(), RenderType.cutoutMipped());
     }
 }
