@@ -1,7 +1,6 @@
 {
   "replace": false,
   "values": [
-    "ironstars:magnet_block",
     "ironstars:copper_pressure_plate"
   ]
 }
