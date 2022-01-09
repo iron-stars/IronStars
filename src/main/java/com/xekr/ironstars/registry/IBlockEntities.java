@@ -12,7 +12,7 @@ import net.minecraftforge.registries.RegistryObject;
 public class IBlockEntities {
     private static final DeferredRegister<BlockEntityType<?>> BLOCK_ENTITIES = DeferredRegister.create(ForgeRegistries.BLOCK_ENTITIES, IronStars.ID);
 
-    public static final RegistryObject<BlockEntityType<CopperPressurePlateBlockEntity>> COPPER_PRESSURE_PLATE = BLOCK_ENTITIES.register("copper_pressure_plate", () -> BlockEntityType.Builder.of(CopperPressurePlateBlockEntity::new, IBlocks.COPPER_PRESSURE_PLATE.get()).build(null));
+    public static final RegistryObject<BlockEntityType<CopperPressurePlateBlockEntity>> COPPER_PRESSURE_PLATE = BLOCK_ENTITIES.register("copper_pressure_plate", () -> BlockEntityType.Builder.of(CopperPressurePlateBlockEntity::new, AllBlocks.COPPER_PRESSURE_PLATE.get()).build(null));
 
     public static void register(IEventBus bus) {
         BLOCK_ENTITIES.register(bus);

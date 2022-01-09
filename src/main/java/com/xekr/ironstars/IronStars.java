@@ -1,8 +1,8 @@
 package com.xekr.ironstars;
 
+import com.xekr.ironstars.registry.AllBlocks;
 import com.xekr.ironstars.registry.IBlockEntities;
-import com.xekr.ironstars.registry.IBlocks;
-import com.xekr.ironstars.registry.IItems;
+import com.xekr.ironstars.registry.AllItems;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
@@ -19,8 +19,8 @@ public class IronStars {
     public IronStars() {
         IEventBus bus = FMLJavaModLoadingContext.get().getModEventBus();
 
-        IBlocks.register(bus);
+        AllBlocks.register(bus);
         IBlockEntities.register(bus);
-        IItems.register(bus);
+        AllItems.register(bus);
     }
 }
