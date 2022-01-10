@@ -18,6 +18,11 @@
   "item.ironstars.titanium_alloy_ingot":"Titanium Alloy Ingot",
   "item.ironstars.titanium_ingot":"Titanium Ingot",
   "item.ironstars.wrench":"Wrench",
+  "item.ironstars.pearl_fragment":"Pearl Fragment",
+  "item.ironstars.pure_crystal":"Pure Crystal",
+  "item.ironstars.space_crystal":"Space Crystal",
+  "item.ironstars.remote_control":"Remote Control",
+  "item.ironstars.breathing_helmet":"Breathing Helmet",
 
   "block.ironstars.accelerator":"Accelerator",
   "block.ironstars.centrifuge":"Centrifuge",

@@ -18,6 +18,11 @@
   "item.ironstars.titanium_alloy_ingot":"钛合金锭",
   "item.ironstars.titanium_ingot":"钛锭",
   "item.ironstars.wrench":"扳手",
+  "item.ironstars.pearl_fragment":"珍珠碎片",
+  "item.ironstars.pure_crystal":"纯净水晶",
+  "item.ironstars.space_crystal":"空间晶体",
+  "item.ironstars.remote_control":"遥控器",
+  "item.ironstars.breathing_helmet":"呼吸头盔",
 
   "block.ironstars.accelerator":"电磁加速器",
   "block.ironstars.centrifuge":"离心机",
