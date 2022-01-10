@@ -35,7 +35,7 @@ public class SteelPressurePlateBlock extends PressurePlateBlock implements Entit
 
     @NotNull
     @Override
-    public VoxelShape getShape(BlockState pState, BlockGetter pLevel, BlockPos pPos, CollisionContext pContext) {
+    public  VoxelShape getShape(BlockState pState, BlockGetter pLevel, BlockPos pPos, CollisionContext pContext) {
         return pState.getValue(PRESSED) ? PRESSED_AABB : AABB;
     }
 

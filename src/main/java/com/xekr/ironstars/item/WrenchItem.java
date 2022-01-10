@@ -18,8 +18,10 @@ public class WrenchItem extends Item {
         Level world = context.getLevel();
         Player player = context.getPlayer();
         BlockState state = world.getBlockState(context.getClickedPos());
-        if (player != null && !world.isClientSide && state.getBlock() instanceof IWrenchBlock block)
+        if (player != null && !world.isClientSide && state.getBlock() instanceof IWrenchBlock block) {
             return player.isShiftKeyDown() ? block.onSneakWrenched(state, context) : block.onWrenched(state, context);
-        else return InteractionResult.PASS;
+        } else {
+            return InteractionResult.PASS;
+        }
     }
 }

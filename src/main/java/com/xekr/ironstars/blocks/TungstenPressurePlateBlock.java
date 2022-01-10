@@ -1,9 +1,11 @@
 package com.xekr.ironstars.blocks;
 
-import com.xekr.ironstars.blocks.entity.CopperPressurePlateBlockEntity;
+import com.xekr.ironstars.blocks.entity.TungstenPressurePlateBlockEntity;
 import net.minecraft.core.BlockPos;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.world.entity.Entity;
+import net.minecraft.world.entity.Mob;
+import net.minecraft.world.entity.monster.Monster;
 import net.minecraft.world.level.BlockGetter;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.Block;
@@ -18,20 +20,23 @@ import net.minecraft.world.level.block.state.properties.BooleanProperty;
 import net.minecraft.world.level.gameevent.GameEvent;
 import net.minecraft.world.phys.shapes.CollisionContext;
 import net.minecraft.world.phys.shapes.VoxelShape;
+import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 
+import java.util.List;
 import java.util.Random;
 
-public class CopperPressurePlateBlock extends PressurePlateBlock implements EntityBlock {
+public class TungstenPressurePlateBlock extends PressurePlateBlock implements EntityBlock {
     public static final BooleanProperty PRESSED = BooleanProperty.create("pressed");
 
-    public CopperPressurePlateBlock(Sensitivity pSensitivity, Properties pProperties) {
+    public TungstenPressurePlateBlock(Sensitivity pSensitivity, Properties pProperties) {
         super(pSensitivity, pProperties);
         this.registerDefaultState(this.stateDefinition.any().setValue(POWERED, false).setValue(PRESSED, false));
     }
 
+    @NotNull
     @Override
-    public VoxelShape getShape(BlockState pState, BlockGetter pLevel, BlockPos pPos, CollisionContext pContext) {
+    public  VoxelShape getShape(BlockState pState, BlockGetter pLevel, BlockPos pPos, CollisionContext pContext) {
         return pState.getValue(PRESSED) ? PRESSED_AABB : AABB;
     }
 
@@ -78,19 +83,32 @@ public class CopperPressurePlateBlock extends PressurePlateBlock implements Enti
         }
     }
 
-    @Nullable
     @Override
     public BlockEntity newBlockEntity(BlockPos pPos, BlockState pState) {
-        return new CopperPressurePlateBlockEntity(pPos, pState);
+        return new TungstenPressurePlateBlockEntity(pPos, pState);
     }
 
     @Nullable
     @Override
     public <T extends BlockEntity> BlockEntityTicker<T> getTicker(Level pLevel, BlockState pState, BlockEntityType<T> pBlockEntityType) {
         return pLevel.isClientSide ? null : (world, pos, state, blockEntity) -> {
-            if (blockEntity instanceof CopperPressurePlateBlockEntity) {
-                ((CopperPressurePlateBlockEntity)blockEntity).tick();
+            if (blockEntity instanceof TungstenPressurePlateBlockEntity) {
+                ((TungstenPressurePlateBlockEntity)blockEntity).tick();
             }
         };
+    }
+
+    @Override
+    protected int getSignalStrength(Level pLevel, BlockPos pPos) {
+        net.minecraft.world.phys.AABB aabb = TOUCH_AABB.move(pPos);
+        List<? extends Entity> list = pLevel.getEntitiesOfClass(Monster.class, aabb);
+        if (!list.isEmpty()) {
+            for(Entity entity : list) {
+                if (!entity.isIgnoringBlockTriggers()) {
+                    return 15;
+                }
+            }
+        }
+        return 0;
     }
 }
