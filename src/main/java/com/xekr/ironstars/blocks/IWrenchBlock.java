@@ -11,6 +11,9 @@ import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.state.BlockState;
 
+/**
+ * 可以被扳手右键敲的方块继承此接口
+ */
 public interface IWrenchBlock {
     InteractionResult onWrenched(BlockState state, UseOnContext context);
 
