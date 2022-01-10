@@ -1,7 +1,9 @@
 package com.xekr.ironstars.registry;
 
 import com.xekr.ironstars.IronStars;
+import com.xekr.ironstars.item.BreathingHelmet;
 import com.xekr.ironstars.item.WrenchItem;
+import net.minecraft.world.entity.EquipmentSlot;
 import net.minecraft.world.item.*;
 import net.minecraft.world.level.material.Fluids;
 import net.minecraftforge.eventbus.api.IEventBus;
@@ -62,6 +64,11 @@ public class AllItems {
     public static final RegistryObject<Item> STICKY_RESIN = ITEMS.register("sticky_resin", () -> new Item(getProperties()));
     public static final RegistryObject<Item> TITANIUM_ALLOY_INGOT = ITEMS.register("titanium_alloy_ingot", () -> new Item(getProperties()));
     public static final RegistryObject<Item> TITANIUM_INGOT = ITEMS.register("titanium_ingot", () -> new Item(getProperties()));
+    public static final RegistryObject<Item> PEARL_FRAGMENT = ITEMS.register("pearl_fragment", () -> new Item(getProperties()));
+    public static final RegistryObject<Item> PURE_CRYSTAL = ITEMS.register("pure_crystal", () -> new Item(getProperties()));
+    public static final RegistryObject<Item> SPACE_CRYSTAL = ITEMS.register("space_crystal", () -> new Item(getProperties()));
+    public static final RegistryObject<Item> REMOTE_CONTROL = ITEMS.register("remote_control", () -> new Item(getProperties()));
+    public static final RegistryObject<Item> BREATHING_HELMET = ITEMS.register("breathing_helmet", () -> new BreathingHelmet(getProperties()));
     //deco
     //ship
     //alien

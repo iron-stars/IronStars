@@ -6,7 +6,8 @@
   "refmap": "mixins.refmap.json",
   "mixins": [
     "ItemEntityMixin",
-    "LightingBoltMixin"
+    "LightingBoltMixin",
+    "PlayerMixin"
   ],
   "client": [
   ],
