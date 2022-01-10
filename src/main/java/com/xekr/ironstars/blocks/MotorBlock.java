@@ -9,23 +9,24 @@ import net.minecraft.world.level.block.Rotation;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.state.StateDefinition;
 import net.minecraft.world.level.block.state.properties.BlockStateProperties;
-import net.minecraft.world.level.block.state.properties.BooleanProperty;
 import net.minecraft.world.level.block.state.properties.EnumProperty;
 import net.minecraft.world.phys.shapes.CollisionContext;
 import net.minecraft.world.phys.shapes.Shapes;
 import net.minecraft.world.phys.shapes.VoxelShape;
 
 public class MotorBlock extends Block {
-    public static final BooleanProperty LAY = BooleanProperty.create("lay");
+//    public static final BooleanProperty LAY = BooleanProperty.create("lay");
     public static final EnumProperty<Direction.Axis> AXIS = BlockStateProperties.HORIZONTAL_AXIS;
     private static final VoxelShape axShape;
     private static final VoxelShape azShape;
     private static final VoxelShape bxShape;
     private static final VoxelShape bzShape;
+    private final boolean lay;
 
     public MotorBlock(Properties properties, boolean lay) {
         super(properties);
-        this.registerDefaultState(this.stateDefinition.any().setValue(LAY, Boolean.FALSE).setValue(AXIS, Direction.Axis.X));
+        this.registerDefaultState(this.stateDefinition.any().setValue(AXIS, Direction.Axis.X));
+        this.lay = lay;
     }
 
     @Override
@@ -37,15 +38,15 @@ public class MotorBlock extends Block {
     @SuppressWarnings("deprecation")
     public VoxelShape getShape(BlockState pState, BlockGetter pLevel, BlockPos pPos, CollisionContext pContext) {
         return switch (pState.getValue(AXIS)) {
-            case X -> pState.getValue(LAY) ? bxShape : axShape;
-            case Z -> pState.getValue(LAY) ? bzShape : azShape;
+            case X -> this.lay ? bxShape : axShape;
+            case Z -> this.lay ? bzShape : azShape;
             case Y -> throw new IllegalStateException(pState.getBlock() + " dont have Y direction");
         };
     }
 
     @Override
     protected void createBlockStateDefinition(StateDefinition.Builder<Block, BlockState> definition) {
-        definition.add(LAY, AXIS);
+        definition.add(AXIS);
     }
 
     @Override
