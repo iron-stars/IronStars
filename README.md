@@ -22,4 +22,4 @@
 * [宋盛元](https://afdian.net/u/dcb533f0716711eca56552540025c377)
 
 # Support US
-[<img src="./support_us.jpg" alt="" width="375" height="517"/>](https://afdian.net/@Gugle)
+[<img src="./support_us.jpg" height="400"/>](https://afdian.net/@Gugle)
