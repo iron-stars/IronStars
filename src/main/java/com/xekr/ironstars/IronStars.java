@@ -2,6 +2,7 @@ package com.xekr.ironstars;
 
 import com.xekr.ironstars.registry.AllBlocks;
 import com.xekr.ironstars.registry.AllBlockEntities;
+import com.xekr.ironstars.registry.AllFluids;
 import com.xekr.ironstars.registry.AllItems;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraftforge.eventbus.api.IEventBus;
@@ -23,6 +24,7 @@ public class IronStars {
         AllBlocks.register(bus);
         AllBlockEntities.register(bus);
         AllItems.register(bus);
+        AllFluids.register(bus);
     }
 
     public static ResourceLocation asResource(String name) {

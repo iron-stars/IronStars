@@ -2,9 +2,8 @@ package com.xekr.ironstars.registry;
 
 import com.xekr.ironstars.IronStars;
 import com.xekr.ironstars.item.WrenchItem;
-import net.minecraft.world.item.BlockItem;
-import net.minecraft.world.item.CreativeModeTab;
-import net.minecraft.world.item.Item;
+import net.minecraft.world.item.*;
+import net.minecraft.world.level.material.Fluids;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
@@ -51,6 +50,7 @@ public class AllItems {
 
     //base
     public static final RegistryObject<Item> WRENCH = ITEMS.register("wrench", () -> new WrenchItem(getProperties()));
+    public static final RegistryObject<Item> ACID_FLUID_BUCKET = ITEMS.register("acid_fluid_bucket",() -> new BucketItem(AllFluids.ACID_FLUID, (new Item.Properties()).craftRemainder(Items.BUCKET).stacksTo(1).tab(BASE)));
     public static final RegistryObject<Item> CHIP = ITEMS.register("chip", () -> new Item(getProperties()));
     public static final RegistryObject<Item> CIRCUIT_BOARD = ITEMS.register("circuit_board", () -> new Item(getProperties()));
     public static final RegistryObject<Item> COPPER_WIRE = ITEMS.register("copper_wire", () -> new Item(getProperties()));
