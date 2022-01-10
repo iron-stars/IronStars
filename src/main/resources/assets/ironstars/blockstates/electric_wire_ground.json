@@ -1,0 +1,140 @@
+{
+  "multipart": [
+    {
+      "when": {
+        "OR": [
+          {
+            "west": "none",
+            "east": "none",
+            "north": "none",
+            "south": "none"
+          },
+          {
+            "east": "side|up",
+            "north": "side|up"
+          },
+          {
+            "east": "side|up",
+            "south": "side|up"
+          },
+          {
+            "west": "side|up",
+            "south": "side|up"
+          },
+          {
+            "west": "side|up",
+            "north": "side|up"
+          }
+        ]
+      },
+      "apply": {
+        "model": "ironstars:block/wire/ground/dot"
+      }
+    },
+    {
+      "when": {
+        "north": "side"
+      },
+      "apply": {
+        "model": "ironstars:block/wire/ground/side"
+      }
+    },
+    {
+      "when": {
+        "east": "side"
+      },
+      "apply": {
+        "model": "ironstars:block/wire/ground/side",
+        "y": 90
+      }
+    },
+    {
+      "when": {
+        "south": "side"
+      },
+      "apply": {
+        "model": "ironstars:block/wire/ground/side",
+        "y": 180
+      }
+    },
+    {
+      "when": {
+        "west": "side"
+      },
+      "apply": {
+        "model": "ironstars:block/wire/ground/side",
+        "y": 270
+      }
+    },
+    {
+      "when": {
+        "north": "up"
+      },
+      "apply": {
+        "model": "ironstars:block/wire/ground/up"
+      }
+    },
+    {
+      "when": {
+        "east": "up"
+      },
+      "apply": {
+        "model": "ironstars:block/wire/ground/up",
+        "y": 90
+      }
+    },
+    {
+      "when": {
+        "south": "up"
+      },
+      "apply": {
+        "model": "ironstars:block/wire/ground/up",
+        "y": 180
+      }
+    },
+    {
+      "when": {
+        "west": "up"
+      },
+      "apply": {
+        "model": "ironstars:block/wire/ground/up",
+        "y": 270
+      }
+    },
+    {
+      "when": {
+        "north": "joint"
+      },
+      "apply": {
+        "model": "ironstars:block/wire/ground/joint"
+      }
+    },
+    {
+      "when": {
+        "east": "joint"
+      },
+      "apply": {
+        "model": "ironstars:block/wire/ground/joint",
+        "y": 90
+      }
+    },
+    {
+      "when": {
+        "south": "joint"
+      },
+      "apply": {
+        "model": "ironstars:block/wire/ground/joint",
+        "y": 180
+      }
+    },
+    {
+      "when": {
+        "west": "joint"
+      },
+      "apply": {
+        "model": "ironstars:block/wire/ground/joint",
+        "y": 270
+      }
+    }
+  ]
+}

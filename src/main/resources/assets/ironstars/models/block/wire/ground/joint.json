@@ -1,0 +1,43 @@
+{
+	"credit": "Made by XeKr with Blockbench",
+	"parent": "minecraft:block/block",
+	"textures": {
+		"0": "ironstars:block/electric_wire",
+		"particle": "ironstars:block/electric_wire"
+	},
+	"elements": [
+		{
+			"from": [6, 0, 2],
+			"to": [10, 1, 8],
+			"faces": {
+				"east": {"uv": [0, 0, 6, 1], "texture": "#0"},
+				"west": {"uv": [0, 0, 6, 1], "texture": "#0"},
+				"up": {"uv": [0, 2, 4, 8], "texture": "#0"},
+				"down": {"uv": [0, 0, 4, 6], "texture": "#0"}
+			}
+		},
+		{
+			"from": [6.05, 1, 2],
+			"to": [9.95, 2, 4.65],
+			"rotation": {"angle": 22.5, "axis": "x", "origin": [8, 2, 2]},
+			"faces": {
+				"east": {"uv": [0, 0, 3, 1], "texture": "#0"},
+				"south": {"uv": [0, 0, 4, 1], "texture": "#0"},
+				"west": {"uv": [0, 0, 3, 1], "texture": "#0"},
+				"up": {"uv": [0, 2, 4, 5], "texture": "#0"}
+			}
+		},
+		{
+			"from": [5, 0, 0],
+			"to": [11, 3, 2],
+			"faces": {
+				"north": {"uv": [10, 10, 16, 13], "texture": "#0"},
+				"east": {"uv": [10, 13, 12, 16], "texture": "#0"},
+				"south": {"uv": [10, 13, 16, 16], "texture": "#0"},
+				"west": {"uv": [14, 13, 16, 16], "texture": "#0"},
+				"up": {"uv": [10, 15, 16, 13], "texture": "#0"},
+				"down": {"uv": [10, 14, 16, 16], "texture": "#0"}
+			}
+		}
+	]
+}

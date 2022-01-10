@@ -1,0 +1,106 @@
+{
+  "multipart": [
+    {
+      "when": {"north": "ud"},
+      "apply": {"model": "ironstars:block/wire/wall/line"}
+    },
+    {
+      "when": {"north": "lr"},
+      "apply": {"model": "ironstars:block/wire/wall/line","z": 90}
+    },
+    {
+      "when": {"north": "ul"},
+      "apply": {"model": "ironstars:block/wire/wall/corner"}
+    },
+    {
+      "when": {"north": "ur"},
+      "apply": {"model": "ironstars:block/wire/wall/corner","z": 90}
+    },
+    {
+      "when": {"north": "dr"},
+      "apply": {"model": "ironstars:block/wire/wall/corner","z": 180}
+    },
+    {
+      "when": {"north": "dl"},
+      "apply": {"model": "ironstars:block/wire/wall/corner","z": 270}
+    },
+
+
+    {
+      "when": {"east": "ud"},
+      "apply": {"model": "ironstars:block/wire/wall/line","y": 90}
+    },
+    {
+      "when": {"east": "lr"},
+      "apply": {"model": "ironstars:block/wire/wall/line","z": 90,"y": 90}
+    },
+    {
+      "when": {"east": "ul"},
+      "apply": {"model": "ironstars:block/wire/wall/corner","y": 90}
+    },
+    {
+      "when": {"east": "ur"},
+      "apply": {"model": "ironstars:block/wire/wall/corner","z": 90,"y": 90}
+    },
+    {
+      "when": {"east": "dr"},
+      "apply": {"model": "ironstars:block/wire/wall/corner","z": 180,"y": 90}
+    },
+    {
+      "when": {"east": "dl"},
+      "apply": {"model": "ironstars:block/wire/wall/corner","z": 270,"y": 90}
+    },
+
+
+    {
+      "when": {"south": "ud"},
+      "apply": {"model": "ironstars:block/wire/wall/line","y": 180}
+    },
+    {
+      "when": {"south": "lr"},
+      "apply": {"model": "ironstars:block/wire/wall/line","z": 90,"y": 180}
+    },
+    {
+      "when": {"south": "ul"},
+      "apply": {"model": "ironstars:block/wire/wall/corner","y": 180}
+    },
+    {
+      "when": {"south": "ur"},
+      "apply": {"model": "ironstars:block/wire/wall/corner","z": 90,"y": 180}
+    },
+    {
+      "when": {"south": "dr"},
+      "apply": {"model": "ironstars:block/wire/wall/corner","z": 180,"y": 180}
+    },
+    {
+      "when": {"south": "dl"},
+      "apply": {"model": "ironstars:block/wire/wall/corner","z": 270,"y": 180}
+    },
+
+
+    {
+      "when": {"west": "ud"},
+      "apply": {"model": "ironstars:block/wire/wall/line","y": 270}
+    },
+    {
+      "when": {"west": "lr"},
+      "apply": {"model": "ironstars:block/wire/wall/line","z": 90,"y": 270}
+    },
+    {
+      "when": {"west": "ul"},
+      "apply": {"model": "ironstars:block/wire/wall/corner","y": 270}
+    },
+    {
+      "when": {"west": "ur"},
+      "apply": {"model": "ironstars:block/wire/wall/corner","z": 90,"y": 270}
+    },
+    {
+      "when": {"west": "dr"},
+      "apply": {"model": "ironstars:block/wire/wall/corner","z": 180,"y": 270}
+    },
+    {
+      "when": {"west": "dl"},
+      "apply": {"model": "ironstars:block/wire/wall/corner","z": 270,"y": 270}
+    }
+  ]
+}
