@@ -33,6 +33,7 @@ public class AllBlocks {
     public static final RegistryObject<Block> STEEL_PRESSURE_PLATE = BLOCKS.register("steel_pressure_plate", () -> new SteelPressurePlateBlock(PressurePlateBlock.Sensitivity.MOBS, getProperties().strength(0.5F).noCollission()));
     public static final RegistryObject<Block> NETHERITE_PRESSURE_PLATE = BLOCKS.register("netherite_pressure_plate", () -> new NetheritePressurePlateBlock(getProperties().noCollission()));
     public static final RegistryObject<Block> TITANIUM_ALLOY_PRESSURE_PLATE = BLOCKS.register("titanium_alloy_pressure_plate", () -> new TitaniumAlloyPressurePlateBlock(getProperties().noCollission()));
+    public static final RegistryObject<Block> TUNGSTEN_PRESSURE_PLATE = BLOCKS.register("tungsten_pressure_plate", () -> new TungstenPressurePlateBlock(PressurePlateBlock.Sensitivity.MOBS, getProperties().strength(0.5F).noCollission()));
     public static final RegistryObject<Block> MAGNET_BLOCK = BLOCKS.register("magnet_block", () -> new MagnetBlock(getProperties().explosionResistance(6.0F).noOcclusion()));
     public static final RegistryObject<Block> SILICON_BLOCK = BLOCKS.register("silicon_block", () -> new SiliconBlock(getProperties()));
     public static final RegistryObject<Block> STEEL_BLOCK = BLOCKS.register("steel_block", () -> new SteelBlock(getProperties()));

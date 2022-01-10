@@ -22,12 +22,18 @@ public class TitaniumPressurePlateBlockEntity extends BlockEntity {
             boolean powered = state.getValue(POWERED);
             if (state.getValue(TitaniumPressurePlateBlock.PRESSED)) {
                 times++;
-                if (powered) updateState(POWERED, false);
+                if (powered) {
+                    updateState(POWERED, false);
+                }
             }else {
                 if (times > 0) {
-                    if (!powered) updateState(POWERED, true);
+                    if (!powered) {
+                        updateState(POWERED, true);
+                    }
                     times--;
-                } else if (powered) updateState(POWERED, false);
+                } else if (powered) {
+                    updateState(POWERED, false);
+                }
             }
         }
     }

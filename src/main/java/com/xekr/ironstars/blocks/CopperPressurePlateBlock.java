@@ -43,12 +43,16 @@ public class CopperPressurePlateBlock extends PressurePlateBlock implements Enti
 
     @Override
     public void tick(BlockState pState, ServerLevel pLevel, BlockPos pPos, Random pRand) {
-        if (pState.getValue(PRESSED)) this.checkPressed(null, pLevel, pPos, pState, true);
+        if (pState.getValue(PRESSED)) {
+            this.checkPressed(null, pLevel, pPos, pState, true);
+        }
     }
 
     @Override
     public void entityInside(BlockState pState, Level pLevel, BlockPos pPos, Entity pEntity) {
-        if (!pLevel.isClientSide && !pState.getValue(PRESSED)) checkPressed(pEntity, pLevel, pPos, pState, false);
+        if (!pLevel.isClientSide && !pState.getValue(PRESSED)) {
+            checkPressed(pEntity, pLevel, pPos, pState, false);
+        }
     }
 
     protected void checkPressed(@Nullable Entity pEntity, Level pLevel, BlockPos pPos, BlockState pState, boolean currentPressed) {
@@ -84,7 +88,9 @@ public class CopperPressurePlateBlock extends PressurePlateBlock implements Enti
     @Override
     public <T extends BlockEntity> BlockEntityTicker<T> getTicker(Level pLevel, BlockState pState, BlockEntityType<T> pBlockEntityType) {
         return pLevel.isClientSide ? null : (world, pos, state, blockEntity) -> {
-            if (blockEntity instanceof CopperPressurePlateBlockEntity) ((CopperPressurePlateBlockEntity)blockEntity).tick();
+            if (blockEntity instanceof CopperPressurePlateBlockEntity) {
+                ((CopperPressurePlateBlockEntity)blockEntity).tick();
+            }
         };
     }
 }

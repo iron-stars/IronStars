@@ -15,6 +15,7 @@ import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.state.StateDefinition;
 import net.minecraft.world.level.block.state.properties.BlockStateProperties;
 import net.minecraft.world.level.block.state.properties.BooleanProperty;
+import org.jetbrains.annotations.NotNull;
 
 import java.util.List;
 
@@ -31,7 +32,9 @@ public class TitaniumAlloyPressurePlateBlock extends BasePressurePlateBlock {
         return pState.getValue(POWERED) ? 15 : 0;
     }
 
-    protected BlockState setSignalForState(BlockState pState, int pStrength) {
+    @NotNull
+    @Override
+    protected  BlockState setSignalForState(BlockState pState, int pStrength) {
         return pState.setValue(POWERED, pStrength > 0);
     }
 
@@ -59,6 +62,7 @@ public class TitaniumAlloyPressurePlateBlock extends BasePressurePlateBlock {
         return 0;
     }
 
+    @Override
     protected void createBlockStateDefinition(StateDefinition.Builder<Block, BlockState> pBuilder) {
         pBuilder.add(POWERED);
     }
