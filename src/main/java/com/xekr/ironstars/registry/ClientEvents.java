@@ -7,7 +7,7 @@ import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
 
-@Mod.EventBusSubscriber(bus = Mod.EventBusSubscriber.Bus.MOD,value = Dist.CLIENT)
+@Mod.EventBusSubscriber(bus = Mod.EventBusSubscriber.Bus.MOD, value = Dist.CLIENT)
 public class ClientEvents {
     @SubscribeEvent
     public static void onRenderTypeSetup(FMLClientSetupEvent event) {
@@ -23,5 +23,8 @@ public class ClientEvents {
         ItemBlockRenderTypes.setRenderLayer(AllBlocks.MOTOR_LAY.get(), RenderType.cutoutMipped());
         ItemBlockRenderTypes.setRenderLayer(AllBlocks.TURBINE.get(), RenderType.cutoutMipped());
         ItemBlockRenderTypes.setRenderLayer(AllBlocks.WINDMILL.get(), RenderType.cutoutMipped());
+//      Fluids
+        ItemBlockRenderTypes.setRenderLayer(AllFluids.ACID_FLUID.get(), RenderType.translucent());
+        ItemBlockRenderTypes.setRenderLayer(AllFluids.ACID_FLUID_FLOWING.get(), RenderType.translucent());
     }
 }
