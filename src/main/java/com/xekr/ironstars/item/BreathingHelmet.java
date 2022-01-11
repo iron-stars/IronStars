@@ -1,5 +1,6 @@
 package com.xekr.ironstars.item;
 
+import net.minecraft.tags.FluidTags;
 import net.minecraft.world.effect.MobEffectInstance;
 import net.minecraft.world.effect.MobEffects;
 import net.minecraft.world.entity.EquipmentSlot;
@@ -24,6 +25,7 @@ public class BreathingHelmet extends Item implements Wearable {
 
     @Override
     public void onArmorTick(ItemStack stack, Level world, Player player) {
-        player.addEffect(new MobEffectInstance(MobEffects.WATER_BREATHING, 200, 0, false, false, true));
+        if (player.isEyeInFluid(FluidTags.WATER))
+            player.addEffect(new MobEffectInstance(MobEffects.WATER_BREATHING, 200, 0, false, false, true));
     }
 }
