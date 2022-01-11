@@ -1,7 +1,7 @@
 {
   "variants": {
     "": {
-      "model": "ironstars:block/titanium_alloy_block"
+      "model": "ironstars:block/material/storage/titanium_alloy"
     }
   }
 }
