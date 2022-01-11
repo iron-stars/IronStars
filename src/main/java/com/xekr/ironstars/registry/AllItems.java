@@ -52,7 +52,7 @@ public class AllItems {
 
     //base
     public static final RegistryObject<Item> WRENCH = ITEMS.register("wrench", () -> new WrenchItem(getProperties()));
-    public static final RegistryObject<Item> ACID_FLUID_BUCKET = ITEMS.register("acid_fluid_bucket",() -> new BucketItem(AllFluids.ACID_FLUID, (new Item.Properties()).craftRemainder(Items.BUCKET).stacksTo(1).tab(BASE)));
+    public static final RegistryObject<Item> ACID_BUCKET = ITEMS.register("acid_bucket",() -> new BucketItem(AllFluids.ACID_FLUID, (new Item.Properties()).craftRemainder(Items.BUCKET).stacksTo(1).tab(BASE)));
     public static final RegistryObject<Item> CHIP = ITEMS.register("chip", () -> new Item(getProperties()));
     public static final RegistryObject<Item> CIRCUIT_BOARD = ITEMS.register("circuit_board", () -> new Item(getProperties()));
     public static final RegistryObject<Item> COPPER_WIRE = ITEMS.register("copper_wire", () -> new Item(getProperties()));
