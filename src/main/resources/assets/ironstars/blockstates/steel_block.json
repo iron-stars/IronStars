@@ -1,7 +1,7 @@
 {
   "variants": {
     "": {
-      "model": "ironstars:block/steel_block"
+      "model": "ironstars:block/material/storage/steel"
     }
   }
 }

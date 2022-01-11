@@ -1,7 +1,7 @@
 {
   "variants": {
     "": {
-      "model": "ironstars:block/titanium_ore"
+      "model": "ironstars:block/material/ore/titanium"
     }
   }
 }
