@@ -23,6 +23,8 @@
   "item.ironstars.space_crystal":"空间晶体",
   "item.ironstars.remote_control":"遥控器",
   "item.ironstars.breathing_helmet":"呼吸头盔",
+  "item.ironstars.acid_bucket":"酸桶",
+  "item.ironstars.acid_bottle":"酸瓶",
 
   "block.ironstars.accelerator":"电磁加速器",
   "block.ironstars.centrifuge":"离心机",

@@ -23,6 +23,8 @@
   "item.ironstars.space_crystal":"Space Crystal",
   "item.ironstars.remote_control":"Remote Control",
   "item.ironstars.breathing_helmet":"Breathing Helmet",
+  "item.ironstars.acid_bucket":"Acid_Bucket",
+  "item.ironstars.acid_bottle":"Acid_Bottle",
 
   "block.ironstars.accelerator":"Accelerator",
   "block.ironstars.centrifuge":"Centrifuge",
