@@ -42,6 +42,8 @@ public class AllBlocks {
     public static final RegistryObject<Block> TITANIUM_ALLOY_BLOCK = BLOCKS.register("titanium_alloy_block", () -> new TitaniumAlloyBlock(getProperties()));
     public static final RegistryObject<Block> TITANIUM_BLOCK = BLOCKS.register("titanium_block", () -> new TitaniumBlock(getProperties()));
     public static final RegistryObject<LiquidBlock> ACID = BLOCKS.register("acid", () -> new LiquidBlock(AllFluids.ACID_FLUID, BlockBehaviour.Properties.of(Material.WATER).noCollission().strength(100.0F).noDrops()));
+    public static final RegistryObject<LiquidBlock> REDSTONE = BLOCKS.register("redstone", () -> new LiquidBlock(AllFluids.REDSTONE_FLUID, BlockBehaviour.Properties.of(Material.WATER).noCollission().strength(100.0F).noDrops()));
+
     //deco
     public static final RegistryObject<Block> STEEL_TILES = BLOCKS.register("steel_tiles", () -> new SteelTilesBlock(getProperties(Material.STONE).sound(SoundType.STONE)));
     public static final RegistryObject<Block> FISH_TANK = BLOCKS.register("fish_tank", () -> new FishTankBlock(getProperties().noOcclusion()));
