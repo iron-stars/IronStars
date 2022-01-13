@@ -1,6 +1,6 @@
 {
   "parent": "minecraft:block/pressure_plate_down",
   "textures": {
-    "texture": "ironstars:block/titanium_alloy_block"
+    "texture": "ironstars:block/material/storage/titanium_alloy"
   }
 }
