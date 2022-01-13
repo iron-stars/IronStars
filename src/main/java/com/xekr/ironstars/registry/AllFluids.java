@@ -26,7 +26,7 @@ public class AllFluids {
     public static RegistryObject<FlowingFluid> REDSTONE_FLUID_FLOWING = FLUIDS.register("redstone_fluid_flowing", () -> new RedstoneFluid.Flowing(AllFluids.redPROPERTIES));
 
     public static AcidFluid.Properties acidPROPERTIES = new AcidFluid.Properties(ACID_FLUID, ACID_FLUID_FLOWING, FluidAttributes.builder(ACID_TEXTURE, FLOWING_ACID_TEXTURE).color(0xAAa5d439).density(4000).viscosity(4000)).bucket(AllItems.ACID_BUCKET).block(AllBlocks.ACID).slopeFindDistance(3).explosionResistance(100F);
-    public static RedstoneFluid.Properties redPROPERTIES = new RedstoneFluid.Properties(REDSTONE_FLUID, REDSTONE_FLUID_FLOWING, FluidAttributes.builder(REDSTONE_TEXTURE, FLOWING_REDSTONE_TEXTURE).color(0x7fDC143C).density(4000).viscosity(4000)).bucket(AllItems.REDSTONE_BUCKET).block(AllBlocks.REDSTONE).slopeFindDistance(3).explosionResistance(100F);
+    public static RedstoneFluid.Properties redPROPERTIES = new RedstoneFluid.Properties(REDSTONE_FLUID, REDSTONE_FLUID_FLOWING, FluidAttributes.builder(REDSTONE_TEXTURE, FLOWING_REDSTONE_TEXTURE).color(0xBBdc143c).density(4000).viscosity(4000)).bucket(AllItems.REDSTONE_BUCKET).block(AllBlocks.REDSTONE).slopeFindDistance(3).explosionResistance(100F);
 
     public static void register(IEventBus bus) {
         FLUIDS.register(bus);
