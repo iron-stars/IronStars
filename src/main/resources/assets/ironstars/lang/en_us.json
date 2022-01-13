@@ -27,7 +27,6 @@
   "item.ironstars.acid_bottle":"Acid_Bottle",
 
   "block.ironstars.accelerator":"Accelerator",
-  "block.ironstars.accelerator_lay":"Accelerator(Lay)",
   "block.ironstars.centrifuge":"Centrifuge",
   "block.ironstars.chemical_accumulator":"Chemical Accumulator",
   "block.ironstars.coil":"Coil",
@@ -50,8 +49,8 @@
   "block.ironstars.turbine":"Turbine",
   "block.ironstars.windmill":"Windmill",
   "block.ironstars.copper_pressure_plate":"Copper Pressure Plate",
-  "block.ironstars.netherite_pressure_plate":" Pressure Plate",
-  "block.ironstars.steel_pressure_plate":" Pressure Plate",
+  "block.ironstars.netherite_pressure_plate":"Netherite Pressure Plate",
+  "block.ironstars.steel_pressure_plate":"Steel Pressure Plate",
   "block.ironstars.titanium_pressure_plate":"Titanium Pressure Plate",
   "block.ironstars.tungsten_pressure_plate":"Tungsten Pressure Plate",
   "block.ironstars.titanium_alloy_pressure_plate":"Titanium Alloy Pressure Plate"
