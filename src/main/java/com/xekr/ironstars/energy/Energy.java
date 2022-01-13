@@ -1,9 +1,13 @@
 package com.xekr.ironstars.energy;
 
 public class Energy {
+    /**发电效率 总电量*/
     private int generationEfficiency;
+    /**电源效率 用电量*/
     private int powerEfficiency;
+    /**电压 */
     private int voltage;
+    /**电压比*/
     private double voltageRatio;
 
     private Energy() {
@@ -19,8 +23,7 @@ public class Energy {
     }
 
     public double getVoltageRatio() {
-        this.voltageRatio = this.generationEfficiency;
-        this.voltageRatio /= this.powerEfficiency;
+        this.voltageRatio = (double) this.generationEfficiency / this.powerEfficiency;
 //        if (this.voltageRatio >= 1) {
 //            this.voltageRatio = 1.0;
 //        } else if (this.voltageRatio >= 0.5) {
