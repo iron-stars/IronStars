@@ -6,4 +6,5 @@ public class AcceleratorBlock extends Block {
     public AcceleratorBlock(Properties properties) {
         super(properties);
     }
+
 }

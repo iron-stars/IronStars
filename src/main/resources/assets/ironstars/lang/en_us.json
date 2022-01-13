@@ -27,6 +27,7 @@
   "item.ironstars.acid_bottle":"Acid_Bottle",
 
   "block.ironstars.accelerator":"Accelerator",
+  "block.ironstars.accelerator_lay":"Accelerator(Lay)",
   "block.ironstars.centrifuge":"Centrifuge",
   "block.ironstars.chemical_accumulator":"Chemical Accumulator",
   "block.ironstars.coil":"Coil",
