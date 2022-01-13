@@ -20,7 +20,6 @@ public class AllBlocks {
 
     //base
     public static final RegistryObject<Block> ACCELERATOR = BLOCKS.register("accelerator", () -> new AcceleratorBlock(getProperties().noOcclusion()));
-    public static final RegistryObject<Block> ACCELERATOR_LAY  = BLOCKS.register("accelerator_lay", () -> new AcceleratorBlock(getProperties().noOcclusion()));
     public static final RegistryObject<Block> CENTRIFUGE = BLOCKS.register("centrifuge", () -> new CentrifugeBlock(getProperties().noOcclusion()));
     public static final RegistryObject<Block> CHEMICAL_ACCUMULATOR = BLOCKS.register("chemical_accumulator", () -> new ChemicalAccumulatorBlock(getProperties().noOcclusion()));
     public static final RegistryObject<Block> COIL = BLOCKS.register("coil", () -> new CoilBlock(getProperties().noOcclusion()));

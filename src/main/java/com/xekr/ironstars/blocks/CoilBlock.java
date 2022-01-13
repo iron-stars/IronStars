@@ -8,6 +8,7 @@ import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.phys.shapes.CollisionContext;
 import net.minecraft.world.phys.shapes.Shapes;
 import net.minecraft.world.phys.shapes.VoxelShape;
+import org.jetbrains.annotations.NotNull;
 
 public class CoilBlock extends RotatedPillarBlock {
     private static final VoxelShape SHAPE;
@@ -16,13 +17,15 @@ public class CoilBlock extends RotatedPillarBlock {
         super(properties);
     }
 
+    @NotNull
     @Override
+    @SuppressWarnings("deprecation")
     public VoxelShape getShape(BlockState pState, BlockGetter pLevel, BlockPos pPos, CollisionContext pContext) {
         return SHAPE;
     }
 
     static {
-        VoxelShape top = Block.box(0, 0, 0, 16, 16, 16);
+        VoxelShape top = Block.box(0, 16, 0, 16, 16, 16);
         VoxelShape middle = Block.box(2, 2, 2, 14, 14, 14);
         VoxelShape bottom = Block.box(0, 0, 0, 16, 2, 16);
         SHAPE = Shapes.or(bottom, middle, top);
