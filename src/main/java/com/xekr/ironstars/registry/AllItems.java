@@ -19,6 +19,7 @@ public class AllItems {
 
     //base
     public static final RegistryObject<Item> ACCELERATOR = ITEMS.register("accelerator", () -> new BlockItem(AllBlocks.ACCELERATOR.get(), getProperties()));
+    public static final RegistryObject<Item> ACCELERATOR_LAY = ITEMS.register("accelerator_lay", () -> new BlockItem(AllBlocks.ACCELERATOR_LAY.get(), getProperties()));
     public static final RegistryObject<Item> CENTRIFUGE = ITEMS.register("centrifuge", () -> new BlockItem(AllBlocks.CENTRIFUGE.get(), getProperties()));
     public static final RegistryObject<Item> CHEMICAL_ACCUMULATOR = ITEMS.register("chemical_accumulator", () -> new BlockItem(AllBlocks.CHEMICAL_ACCUMULATOR.get(), getProperties()));
     public static final RegistryObject<Item> COIL = ITEMS.register("coil", () -> new BlockItem(AllBlocks.COIL.get(), getProperties()));
