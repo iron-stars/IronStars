@@ -1,6 +1,6 @@
 {
   "parent": "minecraft:block/pressure_plate_up",
   "textures": {
-    "texture": "ironstars:block/tungsten_block"
+    "texture": "ironstars:block/material/storage/tungsten"
   }
 }
