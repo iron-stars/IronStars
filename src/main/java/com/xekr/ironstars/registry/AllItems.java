@@ -38,6 +38,7 @@ public class AllItems {
     public static final RegistryObject<Item> STEEL_BLOCK = ITEMS.register("steel_block", () -> new BlockItem(AllBlocks.STEEL_BLOCK.get(), getProperties()));
     public static final RegistryObject<Item> TITANIUM_ALLOY_BLOCK = ITEMS.register("titanium_alloy_block", () -> new BlockItem(AllBlocks.TITANIUM_ALLOY_BLOCK.get(), getProperties()));
     public static final RegistryObject<Item> TITANIUM_BLOCK = ITEMS.register("titanium_block", () -> new BlockItem(AllBlocks.TITANIUM_BLOCK.get(), getProperties()));
+
     //deco
     public static final RegistryObject<Item> STEEL_TILES = ITEMS.register("steel_tiles", () -> new BlockItem(AllBlocks.STEEL_TILES.get(), getProperties(DECO)));
     public static final RegistryObject<Item> FISH_TANK = ITEMS.register("fish_tank", () -> new BlockItem(AllBlocks.FISH_TANK.get(), getProperties(DECO)));
@@ -53,6 +54,7 @@ public class AllItems {
     public static final RegistryObject<Item> ACID_BUCKET = ITEMS.register("acid_bucket",() -> new BucketItem(AllFluids.ACID_FLUID, getProperties().craftRemainder(Items.BUCKET).stacksTo(1)));
     public static final RegistryObject<Item> REDSTONE_BUCKET = ITEMS.register("redstone_bucket",() -> new BucketItem(AllFluids.REDSTONE_FLUID, getProperties().craftRemainder(Items.BUCKET).stacksTo(1)));
 
+    public static final RegistryObject<Item> ACID_BOTTLE = ITEMS.register("acid_bottle",() -> new Item(getProperties().craftRemainder(Items.GLASS_BOTTLE).stacksTo(16)));
     public static final RegistryObject<Item> CHIP = ITEMS.register("chip", () -> new Item(getProperties()));
     public static final RegistryObject<Item> CIRCUIT_BOARD = ITEMS.register("circuit_board", () -> new Item(getProperties()));
     public static final RegistryObject<Item> COPPER_WIRE = ITEMS.register("copper_wire", () -> new Item(getProperties()));

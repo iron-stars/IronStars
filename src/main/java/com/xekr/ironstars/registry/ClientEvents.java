@@ -26,5 +26,7 @@ public class ClientEvents {
 //      Fluids
         ItemBlockRenderTypes.setRenderLayer(AllFluids.ACID_FLUID.get(), RenderType.translucent());
         ItemBlockRenderTypes.setRenderLayer(AllFluids.ACID_FLUID_FLOWING.get(), RenderType.translucent());
+        ItemBlockRenderTypes.setRenderLayer(AllFluids.REDSTONE_FLUID.get(), RenderType.translucent());
+        ItemBlockRenderTypes.setRenderLayer(AllFluids.REDSTONE_FLUID_FLOWING.get(), RenderType.translucent());
     }
 }
