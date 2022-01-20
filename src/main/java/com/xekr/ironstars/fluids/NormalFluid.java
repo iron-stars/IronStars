@@ -3,8 +3,8 @@ package com.xekr.ironstars.fluids;
 import net.minecraft.world.level.material.FluidState;
 import net.minecraftforge.fluids.ForgeFlowingFluid;
 
-public class RedstoneFluid extends ForgeFlowingFluid {
-    protected RedstoneFluid(Properties properties) {
+public class NormalFluid extends ForgeFlowingFluid {
+    protected NormalFluid(Properties properties) {
         super(properties);
     }
 
