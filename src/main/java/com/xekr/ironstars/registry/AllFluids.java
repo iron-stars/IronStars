@@ -1,8 +1,7 @@
 package com.xekr.ironstars.registry;
 
 import com.xekr.ironstars.IronStars;
-import com.xekr.ironstars.fluids.AcidFluid;
-import com.xekr.ironstars.fluids.RedstoneFluid;
+import com.xekr.ironstars.fluids.NormalFluid;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.level.material.FlowingFluid;
 import net.minecraft.world.level.material.Fluid;
@@ -20,13 +19,13 @@ public class AllFluids {
 
     public static final DeferredRegister<Fluid> FLUIDS = DeferredRegister.create(ForgeRegistries.FLUIDS, IronStars.ID);
 
-    public static RegistryObject<FlowingFluid> ACID_FLUID = FLUIDS.register("acid_fluid", () -> new AcidFluid.Source(AllFluids.acidPROPERTIES));
-    public static RegistryObject<FlowingFluid> ACID_FLUID_FLOWING = FLUIDS.register("acid_fluid_flowing", () -> new AcidFluid.Flowing(AllFluids.acidPROPERTIES));
-    public static RegistryObject<FlowingFluid> REDSTONE_FLUID = FLUIDS.register("redstone_fluid", () -> new RedstoneFluid.Source(AllFluids.redPROPERTIES));
-    public static RegistryObject<FlowingFluid> REDSTONE_FLUID_FLOWING = FLUIDS.register("redstone_fluid_flowing", () -> new RedstoneFluid.Flowing(AllFluids.redPROPERTIES));
+    public static RegistryObject<FlowingFluid> ACID_FLUID = FLUIDS.register("acid_fluid", () -> new NormalFluid.Source(AllFluids.acidPROPERTIES));
+    public static RegistryObject<FlowingFluid> ACID_FLUID_FLOWING = FLUIDS.register("acid_fluid_flowing", () -> new NormalFluid.Flowing(AllFluids.acidPROPERTIES));
+    public static RegistryObject<FlowingFluid> REDSTONE_FLUID = FLUIDS.register("redstone_fluid", () -> new NormalFluid.Source(AllFluids.redPROPERTIES));
+    public static RegistryObject<FlowingFluid> REDSTONE_FLUID_FLOWING = FLUIDS.register("redstone_fluid_flowing", () -> new NormalFluid.Flowing(AllFluids.redPROPERTIES));
 
-    public static AcidFluid.Properties acidPROPERTIES = new AcidFluid.Properties(ACID_FLUID, ACID_FLUID_FLOWING, FluidAttributes.builder(ACID_TEXTURE, FLOWING_ACID_TEXTURE).color(0xAAa5d439).density(4000).viscosity(4000)).bucket(AllItems.ACID_BUCKET).block(AllBlocks.ACID).slopeFindDistance(3).explosionResistance(100F);
-    public static RedstoneFluid.Properties redPROPERTIES = new RedstoneFluid.Properties(REDSTONE_FLUID, REDSTONE_FLUID_FLOWING, FluidAttributes.builder(REDSTONE_TEXTURE, FLOWING_REDSTONE_TEXTURE).color(0xBBdc143c).density(4000).viscosity(4000)).bucket(AllItems.REDSTONE_BUCKET).block(AllBlocks.REDSTONE).slopeFindDistance(3).explosionResistance(100F);
+    public static NormalFluid.Properties acidPROPERTIES = new NormalFluid.Properties(ACID_FLUID, ACID_FLUID_FLOWING, FluidAttributes.builder(ACID_TEXTURE, FLOWING_ACID_TEXTURE).color(0xAAa5d439).density(4000).viscosity(4000)).bucket(AllItems.ACID_BUCKET).block(AllBlocks.ACID).slopeFindDistance(3).explosionResistance(100F);
+    public static NormalFluid.Properties redPROPERTIES = new NormalFluid.Properties(REDSTONE_FLUID, REDSTONE_FLUID_FLOWING, FluidAttributes.builder(REDSTONE_TEXTURE, FLOWING_REDSTONE_TEXTURE).color(0xBBdc143c).density(4000).viscosity(4000)).bucket(AllItems.REDSTONE_BUCKET).block(AllBlocks.REDSTONE).slopeFindDistance(3).explosionResistance(100F);
 
     public static void register(IEventBus bus) {
         FLUIDS.register(bus);
