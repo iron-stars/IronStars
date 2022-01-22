@@ -2,18 +2,14 @@ package com.xekr.ironstars.registry;
 
 import com.mojang.brigadier.CommandDispatcher;
 import com.xekr.ironstars.command.TestCommand;
-import com.xekr.ironstars.world.WorldGenerator;
 import net.minecraft.client.renderer.ItemBlockRenderTypes;
 import net.minecraft.client.renderer.RenderType;
 import net.minecraft.commands.CommandSourceStack;
-import net.minecraft.data.DataGenerator;
 import net.minecraftforge.api.distmarker.Dist;
-import net.minecraftforge.common.data.ExistingFileHelper;
 import net.minecraftforge.event.RegisterCommandsEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
-import net.minecraftforge.forge.event.lifecycle.GatherDataEvent;
 
 public final class AllEvents {
     @Mod.EventBusSubscriber
