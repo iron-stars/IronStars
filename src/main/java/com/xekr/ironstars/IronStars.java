@@ -1,11 +1,14 @@
 package com.xekr.ironstars;
 
+import com.xekr.ironstars.recipe.AnvilRecipeTypes;
+import com.xekr.ironstars.recipe.RecipeEventHandler;
 import com.xekr.ironstars.registry.AllBlocks;
 import com.xekr.ironstars.registry.AllBlockEntities;
 import com.xekr.ironstars.registry.AllCapabilities;
 import com.xekr.ironstars.registry.AllFluids;
 import com.xekr.ironstars.registry.AllItems;
 import net.minecraft.resources.ResourceLocation;
+import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
@@ -26,6 +29,8 @@ public class IronStars {
         AllBlockEntities.register(bus);
         AllItems.register(bus);
         AllFluids.register(bus);
+        AnvilRecipeTypes.init();
+        MinecraftForge.EVENT_BUS.register(RecipeEventHandler.class);
     }
 
     public static ResourceLocation asResource(String name) {
