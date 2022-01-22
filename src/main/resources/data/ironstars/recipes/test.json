@@ -1,0 +1,11 @@
+{
+  "type": "ironstars:anvil_flattening",
+  "ingredients": [
+    {
+      "item": "ender_pearl"
+    }
+  ],
+  "output":  {
+    "item": "ender_eye"
+  }
+}

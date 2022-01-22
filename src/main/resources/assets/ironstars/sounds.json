@@ -1,0 +1,8 @@
+{
+  "deep_space": {
+    "replace": true,
+    "sounds":[
+      "deep_space"
+    ]
+  }
+}
