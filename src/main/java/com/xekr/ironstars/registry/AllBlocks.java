@@ -2,9 +2,9 @@ package com.xekr.ironstars.registry;
 
 import com.xekr.ironstars.blocks.*;
 import com.xekr.ironstars.IronStars;
-import net.minecraft.world.level.block.Block;
-import net.minecraft.world.level.block.LiquidBlock;
-import net.minecraft.world.level.block.SoundType;
+import net.minecraft.resources.ResourceLocation;
+import net.minecraft.world.level.block.*;
+import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.block.state.BlockBehaviour.Properties;
 import net.minecraft.world.level.material.Material;
 import net.minecraftforge.eventbus.api.IEventBus;
@@ -12,8 +12,11 @@ import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
 
+import static net.minecraft.world.level.block.Blocks.TRIPWIRE_HOOK;
+
 
 public class AllBlocks {
+
     private static final DeferredRegister<Block> BLOCKS = DeferredRegister.create(ForgeRegistries.BLOCKS, IronStars.ID);
 
     //base
@@ -21,6 +24,7 @@ public class AllBlocks {
     public static final RegistryObject<Block> CENTRIFUGE = BLOCKS.register("centrifuge", () -> new CentrifugeBlock(defaultProperties().noOcclusion()));
     public static final RegistryObject<Block> CHEMICAL_ACCUMULATOR = BLOCKS.register("chemical_accumulator", () -> new ChemicalAccumulatorBlock(defaultProperties().noOcclusion()));
     public static final RegistryObject<Block> COIL = BLOCKS.register("coil", () -> new CoilBlock(defaultProperties().noOcclusion()));
+    public static RegistryObject<Block> COPPER_TRIPWIRE = BLOCKS.register("copper_tripwire", () -> new CopperTripWireBlock((TripWireHookBlock)TRIPWIRE_HOOK, BlockBehaviour.Properties.of(Material.DECORATION).noCollission()));;
 //    public static final RegistryObject<Block> ELECTRIC_WIRE = BLOCKS.register("electric_wire", () -> new ElectricWireBlock(getProperties())); // TODO:报错太多暂时删掉
     public static final RegistryObject<Block> INTERACTOR = BLOCKS.register("interactor", () -> new InteractorBlock(defaultProperties().noOcclusion()));
     public static final RegistryObject<Block> ITEM_RAIL = BLOCKS.register("item_rail", () -> new ItemRailBlock(defaultProperties().noOcclusion()));

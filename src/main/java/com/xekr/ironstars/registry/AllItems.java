@@ -4,6 +4,7 @@ import com.xekr.ironstars.IronStars;
 import com.xekr.ironstars.item.BreathingHelmet;
 import com.xekr.ironstars.item.WrenchItem;
 import net.minecraft.world.item.*;
+import net.minecraft.world.level.block.Blocks;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
@@ -20,6 +21,7 @@ public class AllItems {
     public static final RegistryObject<Item> CENTRIFUGE = ITEMS.register("centrifuge", () -> new BlockItem(AllBlocks.CENTRIFUGE.get(), getProperties()));
     public static final RegistryObject<Item> CHEMICAL_ACCUMULATOR = ITEMS.register("chemical_accumulator", () -> new BlockItem(AllBlocks.CHEMICAL_ACCUMULATOR.get(), getProperties()));
     public static final RegistryObject<Item> COIL = ITEMS.register("coil", () -> new BlockItem(AllBlocks.COIL.get(), getProperties()));
+    public static final RegistryObject<Item> COPPER_WIRE = ITEMS.register("copper_wire", () -> new ItemNameBlockItem(AllBlocks.COPPER_TRIPWIRE.get(), getProperties()));
 //    public static final RegistryObject<Item> ELECTRIC_WIRE = ITEMS.register("electric_wire", () -> new BlockItem(IBlocks.ELECTRIC_WIRE.get(), getProperties()));
     public static final RegistryObject<Item> INTERACTOR = ITEMS.register("interactor", () -> new BlockItem(AllBlocks.INTERACTOR.get(), getProperties()));
     public static final RegistryObject<Item> ITEM_RAIL = ITEMS.register("item_rail", () -> new BlockItem(AllBlocks.ITEM_RAIL.get(), getProperties()));
@@ -57,7 +59,7 @@ public class AllItems {
     public static final RegistryObject<Item> ACID_BOTTLE = ITEMS.register("acid_bottle",() -> new Item(getProperties().craftRemainder(Items.GLASS_BOTTLE).stacksTo(16)));
     public static final RegistryObject<Item> CHIP = ITEMS.register("chip", () -> new Item(getProperties()));
     public static final RegistryObject<Item> CIRCUIT_BOARD = ITEMS.register("circuit_board", () -> new Item(getProperties()));
-    public static final RegistryObject<Item> COPPER_WIRE = ITEMS.register("copper_wire", () -> new Item(getProperties()));
+
     public static final RegistryObject<Item> HARDENED_RESIN = ITEMS.register("hardened_resin", () -> new Item(getProperties()));
     public static final RegistryObject<Item> MAGNET = ITEMS.register("magnet", () -> new Item(getProperties()));
     public static final RegistryObject<Item> RESIN = ITEMS.register("resin", () -> new Item(getProperties()));
