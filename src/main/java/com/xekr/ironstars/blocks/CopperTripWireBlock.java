@@ -1,6 +1,8 @@
 package com.xekr.ironstars.blocks;
 
 import net.minecraft.core.BlockPos;
+import net.minecraft.core.Direction;
+import net.minecraft.world.item.context.BlockPlaceContext;
 import net.minecraft.world.level.BlockGetter;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.PipeBlock;
@@ -33,4 +35,9 @@ public class CopperTripWireBlock extends TripWireBlock {
         return pState.getValue(ATTACHED) ? AABB : NOT_ATTACHED_AABB;
     }
 
+    public BlockState getStateForPlacement(BlockPlaceContext pContext) {
+        BlockGetter blockgetter = pContext.getLevel();
+        BlockPos blockpos = pContext.getClickedPos();
+        return this.defaultBlockState().setValue(NORTH, Boolean.valueOf(this.shouldConnectTo(blockgetter.getBlockState(blockpos.north()), Direction.NORTH))).setValue(EAST, Boolean.valueOf(this.shouldConnectTo(blockgetter.getBlockState(blockpos.east()), Direction.EAST))).setValue(SOUTH, Boolean.valueOf(this.shouldConnectTo(blockgetter.getBlockState(blockpos.south()), Direction.SOUTH))).setValue(WEST, Boolean.valueOf(this.shouldConnectTo(blockgetter.getBlockState(blockpos.west()), Direction.WEST)));
+    }
 }

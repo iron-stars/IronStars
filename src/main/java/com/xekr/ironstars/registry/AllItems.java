@@ -55,8 +55,10 @@ public class AllItems {
     public static final RegistryObject<Item> WRENCH = ITEMS.register("wrench", () -> new WrenchItem(getProperties()));
     public static final RegistryObject<Item> ACID_BUCKET = ITEMS.register("acid_bucket",() -> new BucketItem(AllFluids.ACID_FLUID, getProperties().craftRemainder(Items.BUCKET).stacksTo(1)));
     public static final RegistryObject<Item> REDSTONE_BUCKET = ITEMS.register("redstone_bucket",() -> new BucketItem(AllFluids.REDSTONE_FLUID, getProperties().craftRemainder(Items.BUCKET).stacksTo(1)));
+    public static final RegistryObject<Item> FUSION_FUEL_BUCKET = ITEMS.register("fusion_fuel_bucket",() -> new BucketItem(AllFluids.FUSION_FUEL_FLUID, getProperties().craftRemainder(Items.BUCKET).stacksTo(1)));
 
     public static final RegistryObject<Item> ACID_BOTTLE = ITEMS.register("acid_bottle",() -> new Item(getProperties().craftRemainder(Items.GLASS_BOTTLE).stacksTo(16)));
+
     public static final RegistryObject<Item> CHIP = ITEMS.register("chip", () -> new Item(getProperties()));
     public static final RegistryObject<Item> CIRCUIT_BOARD = ITEMS.register("circuit_board", () -> new Item(getProperties()));
 
