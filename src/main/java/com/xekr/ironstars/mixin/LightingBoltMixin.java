@@ -18,7 +18,9 @@ public class LightingBoltMixin {
     @Inject(at = @At("RETURN"), method = "clearCopperOnLightningStrike", locals = LocalCapture.CAPTURE_FAILHARD)
     private static void toMagnet(Level world, BlockPos pos, CallbackInfo ci, BlockState lightState, BlockPos targetPos, BlockState targetState) {
         for (int i = 0; i < 16; i++) {
-            if (!targetState.is(Blocks.IRON_BLOCK)) break;
+            BlockState blockState = world.getBlockState(targetPos);
+            if (!blockState.is(Blocks.IRON_BLOCK))
+                break;
             world.setBlockAndUpdate(targetPos, AllBlocks.MAGNET_BLOCK.get().defaultBlockState());
             targetPos = targetPos.relative(Direction.DOWN);
         }
