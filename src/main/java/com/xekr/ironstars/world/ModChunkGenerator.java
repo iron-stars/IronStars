@@ -35,10 +35,10 @@ import java.util.concurrent.CompletableFuture;
 import java.util.concurrent.Executor;
 
 public class ModChunkGenerator extends ChunkGenerator {
-    public static final Codec<ModChunkGenerator> CODEC = RecordCodecBuilder.create((instance) -> instance.group(
-            ChunkGenerator.CODEC.fieldOf("wrapped_generator").forGetter(o -> o.delegate),
-            Codec.BOOL.fieldOf("use_overworld_seed").forGetter(o -> false) // Don't make this persistent, we want to load the stored seed on existing worlds! This is purely used on world creation ONLY!!
+    public static final Codec<ModChunkGenerator> CODEC = RecordCodecBuilder.create(instance -> instance.group(
+            ChunkGenerator.CODEC.fieldOf("wrapped_generator").forGetter(o -> o.delegate)
     ).apply(instance, instance.stable(ModChunkGenerator::new)));
+
     public final ChunkGenerator delegate;
 
     public ModChunkGenerator(ChunkGenerator delegate, boolean owSeed) {

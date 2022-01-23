@@ -5,6 +5,7 @@ import com.xekr.ironstars.registry.AllBiomes;
 import net.minecraft.core.Registry;
 import net.minecraft.resources.ResourceKey;
 import net.minecraft.world.level.biome.Biome;
+import net.minecraft.world.level.biome.Biomes;
 
 import java.util.List;
 
@@ -17,7 +18,7 @@ public enum GenLayerTFBiomes implements AreaTransformer0 {
 	INSTANCE;
 	private static final int RARE_BIOME_CHANCE = 15;
 
-	protected static final List<ResourceKey<Biome>> commonBiomes = ImmutableList.of(AllBiomes.MOON);
+	protected static final List<ResourceKey<Biome>> commonBiomes = ImmutableList.of(Biomes.DESERT);
 	protected static final List<ResourceKey<Biome>> rareBiomes = ImmutableList.of();
 
 	private Registry<Biome> registry;

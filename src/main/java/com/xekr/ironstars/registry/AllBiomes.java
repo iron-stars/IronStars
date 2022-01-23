@@ -14,8 +14,7 @@ import net.minecraftforge.registries.ForgeRegistries;
 public class AllBiomes {
     private static final DeferredRegister<Biome> BIOMES = DeferredRegister.create(ForgeRegistries.BIOMES, IronStars.ID);
 
-    public static final ResourceKey<Biome> MOON = registerBiome("moon");
-
+//    public static final ResourceKey<Biome> MOON = registerBiome("moon");
 
     private static ResourceKey<Biome> registerBiome(String name) {
         BIOMES.register(name, () -> new Biome.BiomeBuilder()

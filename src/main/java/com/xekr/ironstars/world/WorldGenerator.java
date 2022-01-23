@@ -10,7 +10,7 @@ import com.mojang.serialization.JsonOps;
 import com.mojang.serialization.Lifecycle;
 import com.xekr.ironstars.IronStars;
 import com.xekr.ironstars.IronStarsUtil;
-import com.xekr.ironstars.registry.AllBiomes;
+import com.xekr.ironstars.registry.AllBlocks;
 import net.minecraft.core.MappedRegistry;
 import net.minecraft.core.Registry;
 import net.minecraft.core.RegistryAccess;
@@ -22,13 +22,6 @@ import net.minecraft.resources.RegistryWriteOps;
 import net.minecraft.resources.ResourceKey;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.util.CubicSpline;
-import net.minecraft.world.entity.EntityType;
-import net.minecraft.world.entity.MobCategory;
-import net.minecraft.world.level.biome.AmbientMoodSettings;
-import net.minecraft.world.level.biome.Biome;
-import net.minecraft.world.level.biome.BiomeGenerationSettings;
-import net.minecraft.world.level.biome.BiomeSpecialEffects;
-import net.minecraft.world.level.biome.MobSpawnSettings;
 import net.minecraft.world.level.biome.TerrainShaper;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.dimension.DimensionType;
@@ -40,6 +33,7 @@ import net.minecraft.world.level.levelgen.NoiseSettings;
 import net.minecraft.world.level.levelgen.NoiseSlider;
 import net.minecraft.world.level.levelgen.StructureSettings;
 import net.minecraft.world.level.levelgen.SurfaceRules;
+import net.minecraft.world.level.levelgen.VerticalAnchor;
 import net.minecraftforge.registries.IForgeRegistry;
 import net.minecraftforge.registries.IForgeRegistryEntry;
 import net.minecraftforge.registries.RegistryManager;
@@ -69,10 +63,6 @@ public class WorldGenerator extends RegistryWriteOps<JsonElement> implements Dat
     private void generate() {
         // TODO: 雕刻器还没写
 //        ConfiguredWorldCarvers.registerConfigurations(this.registryAccess.registryOrThrow(Registry.CONFIGURED_CARVER_REGISTRY));
-
-        Map<ResourceLocation, Biome> biomes = this.getBiomes();
-        biomes.forEach((rl, biome) -> this.registryAccess.registry(Registry.BIOME_REGISTRY).ifPresent(reg -> Registry.register(reg, rl, biome)));
-        biomes.forEach((rl, biome) -> this.serialize(Registry.BIOME_REGISTRY, rl, biome, Biome.DIRECT_CODEC));
 
         this.getDimensions().forEach((rl, dimension) -> this.serialize(Registry.LEVEL_STEM_REGISTRY, rl, dimension, LevelStem.CODEC));
     }
@@ -166,9 +156,9 @@ public class WorldGenerator extends RegistryWriteOps<JsonElement> implements Dat
     }
 
     @SuppressWarnings("UnusedReturnValue")
-    protected <T> T getOrCreateInRegistry(ResourceKey<? extends Registry<? extends T>> registryKey, ResourceKey<? extends Registry<T>> resourceKey, ResourceLocation pLocation, Supplier<T> resourceCreator) {
+    protected <T> T getOrCreateInRegistry(ResourceKey<? extends Registry<T>> registryKey, ResourceLocation pLocation, Supplier<T> resourceCreator) {
         Registry<T> registry = this.registryAccess.registryOrThrow(registryKey);
-        ResourceKey<T> resourceKey1 = ResourceKey.create(resourceKey, pLocation);
+        ResourceKey<T> resourceKey1 = ResourceKey.create(registryKey, pLocation);
         T resourceSaved = getRegistry(registry, resourceKey1);
         return resourceSaved != null ? resourceSaved : Registry.register(registry, resourceKey1.location(), resourceCreator.get());
     }
@@ -191,19 +181,19 @@ public class WorldGenerator extends RegistryWriteOps<JsonElement> implements Dat
         NoiseGeneratorSettings dimensionSettings = new NoiseGeneratorSettings(
                 new StructureSettings(Optional.empty(), ImmutableMap.of()),
                 NoiseSettings.create(
-                        -32,
+                        0,
                         256,
-                        new NoiseSamplingSettings(0.9999999814507745D, 0.9999999814507745D, 80.0D, 160.0D),
+                        new NoiseSamplingSettings(1.0D, 1.0D, 80.0D, 160.0D),
                         new NoiseSlider(-10, 3, 0),
                         new NoiseSlider(15, 3, 0),
                         1,
-                        2,
-                        true,
-                        true,
+                        1,
+                        false,
+                        false,
                         false,
                         new TerrainShaper(CubicSpline.constant(0.0F), CubicSpline.constant(0.0F), CubicSpline.constant(0.0F))
                 ),
-                Blocks.STONE.defaultBlockState(),
+                AllBlocks.MOON_ROCK.get().defaultBlockState(),
                 Blocks.WATER.defaultBlockState(),
                 tfSurface(),
                 0,
@@ -215,83 +205,43 @@ public class WorldGenerator extends RegistryWriteOps<JsonElement> implements Dat
                 false
         );
 
-        this.getOrCreateInRegistry(Registry.NOISE_GENERATOR_SETTINGS_REGISTRY, Registry.NOISE_GENERATOR_SETTINGS_REGISTRY, IronStars.id("moon_noise_config"), () -> dimensionSettings);
+        this.getOrCreateInRegistry(Registry.NOISE_GENERATOR_SETTINGS_REGISTRY, IronStars.id("moon_noise_config"), () -> dimensionSettings);
 
 
         NoiseBasedChunkGenerator chunkGen = new NoiseBasedChunkGenerator(RegistryAccess.builtin().registryOrThrow(Registry.NOISE_REGISTRY), new BiomeProvider(0L, new MappedRegistry<>(Registry.BIOME_REGISTRY, Lifecycle.experimental())), 0L, () -> dimensionSettings);
 
         final DimensionType dimensionType = DimensionType.create(
-                OptionalLong.of(13000L),
+                OptionalLong.empty(),
                 true,
                 false,
                 false,
-                true,
-                0.125D,
                 false,
+                1.0D,
                 false,
-                true,
                 true,
                 false,
-                -32,
-                32+256,
-                32+256,
+                true,
+                false,
+                0,
+                256,
+                256,
                 new ResourceLocation("infiniburn_overworld"),
-                IronStars.id("renderer"),
+                DimensionType.END_EFFECTS,
                 0f
         );
 
-        this.getOrCreateInRegistry(Registry.DIMENSION_TYPE_REGISTRY, Registry.DIMENSION_TYPE_REGISTRY, IronStars.id("moon_type"), () -> dimensionType);
+        this.getOrCreateInRegistry(Registry.DIMENSION_TYPE_REGISTRY, IronStars.id("moon_type"), () -> dimensionType);
 
         return ImmutableMap.of(
-                IronStars.id("twilightforest"), new LevelStem(() -> dimensionType, new ModChunkGenerator(chunkGen, true))
+                IronStars.id("moon"), new LevelStem(() -> dimensionType, new ModChunkGenerator(chunkGen, true))
         );
     }
 
     public static SurfaceRules.RuleSource tfSurface() {
-
         ImmutableList.Builder<SurfaceRules.RuleSource> builder = ImmutableList.builder();
+        builder.add(SurfaceRules.ifTrue(SurfaceRules.verticalGradient("bedrock_floor", VerticalAnchor.bottom(), VerticalAnchor.aboveBottom(5)), SurfaceRules.state(Blocks.BEDROCK.defaultBlockState())));
+        SurfaceRules.RuleSource surfacerules$rulesource9 = SurfaceRules.ifTrue(SurfaceRules.abovePreliminarySurface(), SurfaceRules.state(AllBlocks.MOON_SOIL.get().defaultBlockState()));
+        builder.add(surfacerules$rulesource9);
         return SurfaceRules.sequence(builder.build().toArray(SurfaceRules.RuleSource[]::new));
     }
-
-    private Map<ResourceLocation, Biome> getBiomes() {
-
-        BiomeSpecialEffects.Builder biomeAmbience = new BiomeSpecialEffects.Builder()
-                .fogColor(0xC0FFD8)
-                .waterColor(0x3F76E4)
-                .waterFogColor(0x050533)
-                .skyColor(0x20224A)
-                .ambientMoodSound(AmbientMoodSettings.LEGACY_CAVE_SETTINGS);
-
-        MobSpawnSettings.Builder spawnInfo = new MobSpawnSettings.Builder();
-
-        spawnInfo.creatureGenerationProbability(0.1f);
-
-        spawnInfo.addSpawn(MobCategory.CREATURE, new MobSpawnSettings.SpawnerData(EntityType.CHICKEN, 10, 4, 4));
-        spawnInfo.addSpawn(MobCategory.CREATURE, new MobSpawnSettings.SpawnerData(EntityType.WOLF, 5, 4, 4));
-
-        spawnInfo.addSpawn(MobCategory. MONSTER, new MobSpawnSettings.SpawnerData(EntityType.SPIDER, 10, 4, 4));
-        spawnInfo.addSpawn(MobCategory. MONSTER, new MobSpawnSettings.SpawnerData(EntityType.ZOMBIE, 10, 4, 4));
-        spawnInfo.addSpawn(MobCategory. MONSTER, new MobSpawnSettings.SpawnerData(EntityType.SKELETON, 10, 4, 4));
-        spawnInfo.addSpawn(MobCategory. MONSTER, new MobSpawnSettings.SpawnerData(EntityType.CREEPER, 1, 4, 4));
-        spawnInfo.addSpawn(MobCategory. MONSTER, new MobSpawnSettings.SpawnerData(EntityType.SLIME, 10, 4, 4));
-        spawnInfo.addSpawn(MobCategory. MONSTER, new MobSpawnSettings.SpawnerData(EntityType.ENDERMAN, 1, 1, 4));
-
-        spawnInfo.addSpawn(MobCategory. MONSTER, new MobSpawnSettings.SpawnerData(EntityType.BAT, 10, 1, 2));
-
-        BiomeGenerationSettings.Builder biomeGenerationSettings = new BiomeGenerationSettings.Builder();
-        Biome biome = new Biome.BiomeBuilder()
-                .precipitation(Biome.Precipitation.RAIN)
-                .biomeCategory(Biome.BiomeCategory.FOREST)
-                .temperature(0.5F)
-                .downfall(0.5F)
-                .specialEffects(biomeAmbience.build())
-                .mobSpawnSettings(spawnInfo.build())
-                .generationSettings(biomeGenerationSettings.build())
-                .temperatureAdjustment(Biome.TemperatureModifier.NONE)
-                .build();
-
-        ImmutableMap.Builder<ResourceLocation, Biome> builder = ImmutableMap.builder();
-        return builder.put(AllBiomes.MOON.location(), biome).build();
-    }
-
 }
