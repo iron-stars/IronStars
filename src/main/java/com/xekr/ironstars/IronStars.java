@@ -1,10 +1,11 @@
 package com.xekr.ironstars;
 
+import com.xekr.ironstars.registry.AllBiomes;
 import com.xekr.ironstars.recipe.AnvilRecipeTypes;
-import com.xekr.ironstars.recipe.RecipeEventHandler;
 import com.xekr.ironstars.registry.AllBlocks;
 import com.xekr.ironstars.registry.AllBlockEntities;
 import com.xekr.ironstars.registry.AllCapabilities;
+import com.xekr.ironstars.registry.AllDimensions;
 import com.xekr.ironstars.registry.AllFluids;
 import com.xekr.ironstars.registry.AllItems;
 import net.minecraft.resources.ResourceLocation;
@@ -20,7 +21,7 @@ public class IronStars {
 
     public static final String ID = "ironstars";
     public static final String NAME = "Iron Stars";
-    private static final Logger LOGGER = LogManager.getLogger();
+    public static final Logger LOGGER = LogManager.getLogger();
 
     public IronStars() {
         IEventBus bus = FMLJavaModLoadingContext.get().getModEventBus();
@@ -29,11 +30,12 @@ public class IronStars {
         AllBlockEntities.register(bus);
         AllItems.register(bus);
         AllFluids.register(bus);
+        AllBiomes.register(bus);
+        AllDimensions.init();
         AnvilRecipeTypes.init();
-        MinecraftForge.EVENT_BUS.register(RecipeEventHandler.class);
     }
 
-    public static ResourceLocation asResource(String name) {
+    public static ResourceLocation id(String name) {
         return new ResourceLocation(ID, name);
     }
 }

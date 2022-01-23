@@ -2,14 +2,18 @@ package com.xekr.ironstars.registry;
 
 import com.mojang.brigadier.CommandDispatcher;
 import com.xekr.ironstars.command.TestCommand;
+import com.xekr.ironstars.world.WorldGenerator;
 import net.minecraft.client.renderer.ItemBlockRenderTypes;
 import net.minecraft.client.renderer.RenderType;
 import net.minecraft.commands.CommandSourceStack;
+import net.minecraft.data.DataGenerator;
 import net.minecraftforge.api.distmarker.Dist;
+import net.minecraftforge.common.data.ExistingFileHelper;
 import net.minecraftforge.event.RegisterCommandsEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
+import net.minecraftforge.forge.event.lifecycle.GatherDataEvent;
 
 public final class AllEvents {
     @Mod.EventBusSubscriber
@@ -22,13 +26,12 @@ public final class AllEvents {
     }
     @Mod.EventBusSubscriber(bus = Mod.EventBusSubscriber.Bus.MOD)
     static class ModBusGlobal { // mod管线全局事件
-//        @SubscribeEvent
-//        public static void gatherData(GatherDataEvent event) {
-//            DataGenerator generator = event.getGenerator();
-//            ExistingFileHelper helper = event.getExistingFileHelper();
-//            generator.addProvider(new WorldGenerator(generator));
-//
-//        }
+        @SubscribeEvent
+        public static void gatherData(GatherDataEvent event) { //TODO 不好使
+            DataGenerator generator = event.getGenerator();
+            ExistingFileHelper helper = event.getExistingFileHelper();
+            generator.addProvider(new WorldGenerator(generator));
+        }
     }
     @Mod.EventBusSubscriber(bus = Mod.EventBusSubscriber.Bus.MOD, value = Dist.CLIENT)
     static class ModBusClient { // mod管线客户端事件

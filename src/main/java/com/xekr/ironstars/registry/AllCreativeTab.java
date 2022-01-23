@@ -5,7 +5,7 @@ import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.ItemStack;
 import org.jetbrains.annotations.NotNull;
 
-public class CreativeTab {
+public class AllCreativeTab {
 
     public static final CreativeModeTab BASE = new CreativeModeTab(IronStars.ID + ".base") {
         @Override
