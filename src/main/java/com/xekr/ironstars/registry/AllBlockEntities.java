@@ -16,6 +16,7 @@ public class AllBlockEntities {
     public static final RegistryObject<BlockEntityType<CopperPressurePlateBlockEntity>> COPPER_PRESSURE_PLATE = BLOCK_ENTITIES.register("copper_pressure_plate", () -> BlockEntityType.Builder.of(CopperPressurePlateBlockEntity::new, AllBlocks.COPPER_PRESSURE_PLATE.get()).build(null));
     public static final RegistryObject<BlockEntityType<TitaniumPressurePlateBlockEntity>> TITANIUM_PRESSURE_PLATE = BLOCK_ENTITIES.register("titanium_pressure_plate", () -> BlockEntityType.Builder.of(TitaniumPressurePlateBlockEntity::new, AllBlocks.TITANIUM_PRESSURE_PLATE.get()).build(null));
 
+
     public static void register(IEventBus bus) {
         BLOCK_ENTITIES.register(bus);
     }

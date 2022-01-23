@@ -2,9 +2,9 @@ package com.xekr.ironstars.registry;
 
 import com.xekr.ironstars.blocks.*;
 import com.xekr.ironstars.IronStars;
-import net.minecraft.world.level.block.Block;
-import net.minecraft.world.level.block.LiquidBlock;
-import net.minecraft.world.level.block.SoundType;
+import net.minecraft.resources.ResourceLocation;
+import net.minecraft.world.level.block.*;
+import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.block.state.BlockBehaviour.Properties;
 import net.minecraft.world.level.material.Material;
 import net.minecraftforge.eventbus.api.IEventBus;
@@ -12,8 +12,11 @@ import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
 
+import static net.minecraft.world.level.block.Blocks.TRIPWIRE_HOOK;
+
 
 public class AllBlocks {
+
     private static final DeferredRegister<Block> BLOCKS = DeferredRegister.create(ForgeRegistries.BLOCKS, IronStars.ID);
 
     //base
@@ -21,6 +24,7 @@ public class AllBlocks {
     public static final RegistryObject<Block> CENTRIFUGE = BLOCKS.register("centrifuge", () -> new Block(defaultProperties().noOcclusion()));
     public static final RegistryObject<Block> CHEMICAL_ACCUMULATOR = BLOCKS.register("chemical_accumulator", () -> new Block(defaultProperties().noOcclusion()));
     public static final RegistryObject<Block> COIL = BLOCKS.register("coil", () -> new CoilBlock(defaultProperties().noOcclusion()));
+    public static final RegistryObject<Block> COPPER_TRIPWIRE = BLOCKS.register("copper_tripwire", () -> new CopperTripWireBlock((TripWireHookBlock)TRIPWIRE_HOOK, BlockBehaviour.Properties.of(Material.DECORATION).noCollission()));;
 //    public static final RegistryObject<Block> ELECTRIC_WIRE = BLOCKS.register("electric_wire", () -> new ElectricWireBlock(getProperties())); // TODO:报错太多暂时删掉
     public static final RegistryObject<Block> INTERACTOR = BLOCKS.register("interactor", () -> new Block(defaultProperties().noOcclusion()));
     public static final RegistryObject<Block> ITEM_RAIL = BLOCKS.register("item_rail", () -> new Block(defaultProperties().noOcclusion()));
@@ -39,8 +43,10 @@ public class AllBlocks {
     public static final RegistryObject<Block> STEEL_BLOCK = BLOCKS.register("steel_block", () -> new Block(defaultProperties()));
     public static final RegistryObject<Block> TITANIUM_ALLOY_BLOCK = BLOCKS.register("titanium_alloy_block", () -> new Block(defaultProperties()));
     public static final RegistryObject<Block> TITANIUM_BLOCK = BLOCKS.register("titanium_block", () -> new Block(defaultProperties()));
+
     public static final RegistryObject<LiquidBlock> ACID = BLOCKS.register("acid", () -> new LiquidBlock(AllFluids.ACID_FLUID, liquidProperties()));
     public static final RegistryObject<LiquidBlock> REDSTONE = BLOCKS.register("redstone", () -> new LiquidBlock(AllFluids.REDSTONE_FLUID, liquidProperties()));
+    public static final RegistryObject<LiquidBlock> FUSION_FUEL = BLOCKS.register("fusion_fuel", () -> new LiquidBlock(AllFluids.FUSION_FUEL_FLUID, liquidProperties()));
 
     //deco
     public static final RegistryObject<Block> STEEL_TILES = BLOCKS.register("steel_tiles", () -> new Block(defaultProperties(Material.STONE).sound(SoundType.STONE)));

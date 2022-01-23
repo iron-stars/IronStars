@@ -46,6 +46,7 @@ public final class AllEvents {
             ItemBlockRenderTypes.setRenderLayer(AllBlocks.MOTOR_LAY.get(), RenderType.cutoutMipped());
             ItemBlockRenderTypes.setRenderLayer(AllBlocks.TURBINE.get(), RenderType.cutoutMipped());
             ItemBlockRenderTypes.setRenderLayer(AllBlocks.WINDMILL.get(), RenderType.cutoutMipped());
+            ItemBlockRenderTypes.setRenderLayer(AllBlocks.COPPER_TRIPWIRE.get(), RenderType.translucentMovingBlock());
 //      Fluids
             ItemBlockRenderTypes.setRenderLayer(AllFluids.ACID_FLUID.get(), RenderType.translucent());
             ItemBlockRenderTypes.setRenderLayer(AllFluids.ACID_FLUID_FLOWING.get(), RenderType.translucent());
