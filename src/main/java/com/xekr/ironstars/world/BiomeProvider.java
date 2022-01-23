@@ -10,6 +10,7 @@ import net.minecraft.resources.RegistryLookupCodec;
 import net.minecraft.resources.ResourceKey;
 import net.minecraft.world.level.biome.Biome;
 import net.minecraft.world.level.biome.BiomeSource;
+import net.minecraft.world.level.biome.Biomes;
 import net.minecraft.world.level.biome.Climate;
 
 import java.util.List;
@@ -18,11 +19,11 @@ import java.util.function.LongFunction;
 
 public class BiomeProvider extends BiomeSource {
     public static final Codec<BiomeProvider> CODEC = RecordCodecBuilder.create((instance) -> instance.group(
-            Codec.LONG.fieldOf("seed").stable().orElseGet(() -> AllDimensions.seed).forGetter((obj) -> obj.seed),
+            Codec.LONG.fieldOf("seed").stable().orElseGet(() -> AllDimensions.seed).forGetter(obj -> obj.seed),
             RegistryLookupCodec.create(Registry.BIOME_REGISTRY).forGetter(provider -> provider.registry)
     ).apply(instance, instance.stable(BiomeProvider::new)));
 
-    private static final List<ResourceKey<Biome>> BIOMES = ImmutableList.of(AllBiomes.MOON);
+    private static final List<ResourceKey<Biome>> BIOMES = ImmutableList.of(Biomes.DESERT);
 
     private final Registry<Biome> registry;
     private final Layer genBiomes;
