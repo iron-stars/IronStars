@@ -10,7 +10,7 @@ import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
 
-import static com.xekr.ironstars.registry.CreativeTab.*;
+import static com.xekr.ironstars.registry.AllCreativeTab.*;
 
 @SuppressWarnings("unused")
 public class AllItems {
