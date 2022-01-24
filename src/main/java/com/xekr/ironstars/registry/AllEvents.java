@@ -2,7 +2,7 @@ package com.xekr.ironstars.registry;
 
 import com.mojang.brigadier.CommandDispatcher;
 import com.xekr.ironstars.command.TestCommand;
-import com.xekr.ironstars.world.WorldGenerator;
+import com.xekr.ironstars.world.MoonWorldGenerator;
 import net.minecraft.client.renderer.ItemBlockRenderTypes;
 import net.minecraft.client.renderer.RenderType;
 import net.minecraft.commands.CommandSourceStack;
@@ -30,7 +30,7 @@ public final class AllEvents {
         public static void gatherData(GatherDataEvent event) { //TODO 不好使
             DataGenerator generator = event.getGenerator();
             ExistingFileHelper helper = event.getExistingFileHelper();
-            generator.addProvider(new WorldGenerator(generator));
+            generator.addProvider(new MoonWorldGenerator(generator));
         }
     }
     @Mod.EventBusSubscriber(bus = Mod.EventBusSubscriber.Bus.MOD, value = Dist.CLIENT)

@@ -1,7 +1,7 @@
 package com.xekr.ironstars.mixin;
 
 import com.mojang.serialization.Lifecycle;
-import com.xekr.ironstars.world.ModChunkGenerator;
+import com.xekr.ironstars.world.MoonChunkGenerator;
 import net.minecraft.client.Minecraft;
 import net.minecraft.world.level.storage.WorldData;
 import net.minecraftforge.api.distmarker.Dist;
@@ -17,7 +17,7 @@ public class MinecraftMixin {
     @Redirect(method = "doLoadLevel", at = @At(value = "INVOKE", target = "Lnet/minecraft/world/level/storage/WorldData;worldGenSettingsLifecycle()Lcom/mojang/serialization/Lifecycle;"))
     private Lifecycle isMoonWorld(WorldData instance) {
         return instance.worldGenSettings().dimensions().entrySet().stream().anyMatch(entry ->
-                entry.getValue().generator() instanceof ModChunkGenerator
+                entry.getValue().generator() instanceof MoonChunkGenerator
         ) ? Lifecycle.stable() : instance.worldGenSettingsLifecycle();
     }
 

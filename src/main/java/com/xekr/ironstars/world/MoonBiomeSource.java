@@ -16,26 +16,21 @@ import net.minecraft.world.level.biome.Climate;
 import java.util.List;
 import java.util.Optional;
 
-public class BiomeProvider extends BiomeSource {
-    public static final Codec<BiomeProvider> CODEC = RecordCodecBuilder.create((instance) -> instance.group(
+public class MoonBiomeSource extends BiomeSource {
+    public static final Codec<MoonBiomeSource> CODEC = RecordCodecBuilder.create(instance -> instance.group(
             Codec.LONG.fieldOf("seed").stable().orElseGet(() -> AllDimensions.seed).forGetter(obj -> obj.seed),
             RegistryLookupCodec.create(Registry.BIOME_REGISTRY).forGetter(provider -> provider.registry)
-    ).apply(instance, instance.stable(BiomeProvider::new)));
+    ).apply(instance, instance.stable(MoonBiomeSource::new)));
 
     private static final List<ResourceKey<Biome>> BIOMES = ImmutableList.of(Biomes.DESERT);
 
     private final Registry<Biome> registry;
     private final long seed;
 
-    public BiomeProvider(long seed, Registry<Biome> registryIn) {
+    public MoonBiomeSource(long seed, Registry<Biome> registryIn) {
         super(BIOMES.stream().map(ResourceKey::location).map(registryIn::getOptional).filter(Optional::isPresent).map(opt -> opt::get));
         this.seed = seed;
-        registry = registryIn;
-
-    }
-
-    public static int getBiomeId(ResourceKey<Biome> biome, Registry<Biome> registry) {
-        return registry.getId(registry.get(biome));
+        this.registry = registryIn;
     }
 
     @Override
@@ -45,7 +40,7 @@ public class BiomeProvider extends BiomeSource {
 
     @Override
     public BiomeSource withSeed(long pSeed) {
-        return new BiomeProvider(pSeed, registry);
+        return new MoonBiomeSource(pSeed, this.registry);
     }
 
     @Override
