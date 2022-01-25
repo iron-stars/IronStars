@@ -1,4 +1,4 @@
-// noinspection ES6ConvertVarToLetConst, JSUnusedGlobalSymbols
+// noinspection all
 
 var ASM = Java.type('net.minecraftforge.coremod.api.ASMAPI');
 var Opcodes = Java.type('org.objectweb.asm.Opcodes');

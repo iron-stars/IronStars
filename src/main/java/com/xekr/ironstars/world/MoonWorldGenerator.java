@@ -49,13 +49,13 @@ import java.util.Optional;
 import java.util.OptionalLong;
 import java.util.function.Supplier;
 
-public class WorldGenerator extends RegistryWriteOps<JsonElement> implements DataProvider {
+public class MoonWorldGenerator extends RegistryWriteOps<JsonElement> implements DataProvider {
     private final DataGenerator generator;
 
     private HashCache cache;
     private final HashSet<Object> SerializeCache = new HashSet<>();
 
-    public WorldGenerator(DataGenerator generator) {
+    public MoonWorldGenerator(DataGenerator generator) {
         super(JsonOps.INSTANCE, new RegistryAccess.RegistryHolder());
         this.generator = generator;
     }
@@ -208,7 +208,7 @@ public class WorldGenerator extends RegistryWriteOps<JsonElement> implements Dat
         this.getOrCreateInRegistry(Registry.NOISE_GENERATOR_SETTINGS_REGISTRY, IronStars.id("moon_noise_config"), () -> dimensionSettings);
 
 
-        NoiseBasedChunkGenerator chunkGen = new NoiseBasedChunkGenerator(RegistryAccess.builtin().registryOrThrow(Registry.NOISE_REGISTRY), new BiomeProvider(0L, new MappedRegistry<>(Registry.BIOME_REGISTRY, Lifecycle.experimental())), 0L, () -> dimensionSettings);
+        NoiseBasedChunkGenerator chunkGen = new NoiseBasedChunkGenerator(RegistryAccess.builtin().registryOrThrow(Registry.NOISE_REGISTRY), new MoonBiomeSource(0L, new MappedRegistry<>(Registry.BIOME_REGISTRY, Lifecycle.experimental())), 0L, () -> dimensionSettings);
 
         final DimensionType dimensionType = DimensionType.create(
                 OptionalLong.empty(),
@@ -233,15 +233,15 @@ public class WorldGenerator extends RegistryWriteOps<JsonElement> implements Dat
         this.getOrCreateInRegistry(Registry.DIMENSION_TYPE_REGISTRY, IronStars.id("moon_type"), () -> dimensionType);
 
         return ImmutableMap.of(
-                IronStars.id("moon"), new LevelStem(() -> dimensionType, new ModChunkGenerator(chunkGen, true))
+                IronStars.id("moon"), new LevelStem(() -> dimensionType, new MoonChunkGenerator(chunkGen, true))
         );
     }
 
     public static SurfaceRules.RuleSource tfSurface() {
         ImmutableList.Builder<SurfaceRules.RuleSource> builder = ImmutableList.builder();
         builder.add(SurfaceRules.ifTrue(SurfaceRules.verticalGradient("bedrock_floor", VerticalAnchor.bottom(), VerticalAnchor.aboveBottom(5)), SurfaceRules.state(Blocks.BEDROCK.defaultBlockState())));
-        SurfaceRules.RuleSource surfacerules$rulesource9 = SurfaceRules.ifTrue(SurfaceRules.abovePreliminarySurface(), SurfaceRules.state(AllBlocks.MOON_SOIL.get().defaultBlockState()));
-        builder.add(surfacerules$rulesource9);
+//        SurfaceRules.RuleSource surfacerules$rulesource9 = SurfaceRules.ifTrue(SurfaceRules.abovePreliminarySurface(), SurfaceRules.state(AllBlocks.MOON_SOIL.get().defaultBlockState()));
+//        builder.add(surfacerules$rulesource9);
         return SurfaceRules.sequence(builder.build().toArray(SurfaceRules.RuleSource[]::new));
     }
 }

@@ -34,18 +34,18 @@ import org.jetbrains.annotations.Nullable;
 import java.util.concurrent.CompletableFuture;
 import java.util.concurrent.Executor;
 
-public class ModChunkGenerator extends ChunkGenerator {
-    public static final Codec<ModChunkGenerator> CODEC = RecordCodecBuilder.create(instance -> instance.group(
+public class MoonChunkGenerator extends ChunkGenerator {
+    public static final Codec<MoonChunkGenerator> CODEC = RecordCodecBuilder.create(instance -> instance.group(
             ChunkGenerator.CODEC.fieldOf("wrapped_generator").forGetter(o -> o.delegate)
-    ).apply(instance, instance.stable(ModChunkGenerator::new)));
+    ).apply(instance, instance.stable(MoonChunkGenerator::new)));
 
     public final ChunkGenerator delegate;
 
-    public ModChunkGenerator(ChunkGenerator delegate, boolean owSeed) {
+    public MoonChunkGenerator(ChunkGenerator delegate, boolean owSeed) {
         this(owSeed ? delegate.withSeed(AllDimensions.seed) : delegate);
     }
 
-    private ModChunkGenerator(ChunkGenerator delegate) {
+    private MoonChunkGenerator(ChunkGenerator delegate) {
         super(delegate.getBiomeSource(), delegate.getBiomeSource(), delegate.getSettings(), delegate instanceof NoiseBasedChunkGenerator noiseGen ? noiseGen.seed : delegate.strongholdSeed);
         this.delegate = delegate;
     }
@@ -118,7 +118,7 @@ public class ModChunkGenerator extends ChunkGenerator {
 
     @Override
     public ChunkGenerator withSeed(long pSeed) {
-        return new ModChunkGenerator(this.delegate.withSeed(pSeed));
+        return new MoonChunkGenerator(this.delegate.withSeed(pSeed));
     }
 
     @Override
