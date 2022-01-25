@@ -1,0 +1,44 @@
+{
+  "carvers": {},
+  "features": [
+    [],
+    [],
+    [],
+    [],
+    [],
+    [],
+    [
+      "ironstars:ore_titanium"
+    ]
+  ],
+  "spawners": {
+    "monster": [],
+    "creature": [],
+    "ambient": [],
+    "axolotls": [],
+    "underground_water_creature": [],
+    "water_creature": [],
+    "water_ambient": [],
+    "misc": []
+  },
+  "spawn_costs": {},
+  "forge:registry_name": "ironstars:moon",
+  "precipitation": "none",
+  "temperature": -0.5,
+  "downfall": 0.4,
+  "category": "none",
+  "effects": {
+    "mood_sound": {
+      "sound": "ironstars:deep_space",
+      "tick_delay": 6000,
+      "block_search_extent": 8,
+      "offset": 2.0
+    },
+    "sky_color": 0,
+    "foliage_color": 12303291,
+    "grass_color": 12303291,
+    "fog_color": 12303291,
+    "water_color": 12303291,
+    "water_fog_color": 12303291
+  }
+}

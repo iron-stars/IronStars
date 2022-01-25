@@ -3,12 +3,13 @@
   "generator": {
     "wrapped_generator": {
       "biome_source": {
-        "type": "ironstars:ironstars_biomes"
+        "biome": "ironstars:moon",
+        "type": "ironstars:moon_biome_source"
       },
       "seed": 0,
       "settings": "ironstars:moon_noise_config",
       "type": "minecraft:noise"
     },
-    "type": "ironstars:structure_locating_wrapper"
+    "type": "ironstars:moon_generator"
   }
 }

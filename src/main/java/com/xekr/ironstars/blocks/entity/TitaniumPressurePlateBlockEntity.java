@@ -13,7 +13,7 @@ import static com.xekr.ironstars.blocks.TitaniumPressurePlateBlock.POWER;
 public class TitaniumPressurePlateBlockEntity extends BlockEntity {
     private long times;
     public TitaniumPressurePlateBlockEntity(BlockPos pWorldPosition, BlockState pBlockState) {
-        super(AllBlockEntities.TITANIUM_PRESSURE_PLATE.get(), pWorldPosition, pBlockState);
+        super(AllBlockEntities.TITANIUM_PRESSURE_PLATE, pWorldPosition, pBlockState);
     }
 
     public void tick() {

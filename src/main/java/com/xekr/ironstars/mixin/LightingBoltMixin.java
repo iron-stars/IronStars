@@ -21,7 +21,7 @@ public class LightingBoltMixin {
             BlockState blockState = world.getBlockState(targetPos);
             if (!blockState.is(Blocks.IRON_BLOCK))
                 break;
-            world.setBlockAndUpdate(targetPos, AllBlocks.MAGNET_BLOCK.get().defaultBlockState());
+            world.setBlockAndUpdate(targetPos, AllBlocks.MAGNET_BLOCK.defaultBlockState());
             targetPos = targetPos.relative(Direction.DOWN);
         }
     }

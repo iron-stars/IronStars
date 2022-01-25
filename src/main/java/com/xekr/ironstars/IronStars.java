@@ -6,8 +6,10 @@ import com.xekr.ironstars.registry.AllBlocks;
 import com.xekr.ironstars.registry.AllBlockEntities;
 import com.xekr.ironstars.registry.AllCapabilities;
 import com.xekr.ironstars.registry.AllDimensions;
+import com.xekr.ironstars.registry.AllFeatures;
 import com.xekr.ironstars.registry.AllFluids;
 import com.xekr.ironstars.registry.AllItems;
+import com.xekr.ironstars.registry.AllSounds;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.eventbus.api.IEventBus;
@@ -26,10 +28,12 @@ public class IronStars {
     public IronStars() {
         IEventBus bus = FMLJavaModLoadingContext.get().getModEventBus();
         bus.addListener(AllCapabilities::register);
+        AllSounds.register(bus);
         AllBlocks.register(bus);
         AllBlockEntities.register(bus);
         AllItems.register(bus);
         AllFluids.register(bus);
+        AllFeatures.register();
         AllBiomes.register(bus);
         AllDimensions.init();
         AnvilRecipeTypes.init();

@@ -1,38 +1,48 @@
 package com.xekr.ironstars.registry;
 
 import com.xekr.ironstars.IronStars;
-import com.xekr.ironstars.fluids.NormalFluid;
 import net.minecraft.resources.ResourceLocation;
+import net.minecraft.world.item.Item;
+import net.minecraft.world.level.block.LiquidBlock;
 import net.minecraft.world.level.material.FlowingFluid;
 import net.minecraft.world.level.material.Fluid;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.fluids.FluidAttributes;
+import net.minecraftforge.fluids.ForgeFlowingFluid;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
 
+import java.util.function.Supplier;
+
 public class AllFluids {
-    public static final ResourceLocation ACID_TEXTURE = new ResourceLocation("block/water_still");
-    public static final ResourceLocation FLOWING_ACID_TEXTURE = new ResourceLocation("block/water_flow");
-    public static final ResourceLocation REDSTONE_TEXTURE = new ResourceLocation("block/lava_still");
-    public static final ResourceLocation FLOWING_REDSTONE_TEXTURE = new ResourceLocation("block/lava_flow");
-    public static final ResourceLocation FUSION_FUEL_TEXTURE = new ResourceLocation("block/lava_still");
-    public static final ResourceLocation FLOWING_FUSION_FUEL_TEXTURE = new ResourceLocation("block/lava_flow");
+    private static final ResourceLocation WATER_STILL = new ResourceLocation("block/water_still");
+    private static final ResourceLocation WATER_FLOW = new ResourceLocation("block/water_flow");
+    private static final ResourceLocation LAVA_STILL = new ResourceLocation("block/lava_still");
+    private static final ResourceLocation LAVA_FLOW = new ResourceLocation("block/lava_flow");
 
-    public static final DeferredRegister<Fluid> FLUIDS = DeferredRegister.create(ForgeRegistries.FLUIDS, IronStars.ID);
+    private static final DeferredRegister<Fluid> REGISTRY = DeferredRegister.create(ForgeRegistries.FLUIDS, IronStars.ID);
 
-    public static RegistryObject<FlowingFluid> ACID_FLUID = FLUIDS.register("acid_fluid", () -> new NormalFluid.Source(AllFluids.acidPROPERTIES));
-    public static RegistryObject<FlowingFluid> ACID_FLUID_FLOWING = FLUIDS.register("acid_fluid_flowing", () -> new NormalFluid.Flowing(AllFluids.acidPROPERTIES));
-    public static RegistryObject<FlowingFluid> REDSTONE_FLUID = FLUIDS.register("redstone_fluid", () -> new NormalFluid.Source(AllFluids.redPROPERTIES));
-    public static RegistryObject<FlowingFluid> REDSTONE_FLUID_FLOWING = FLUIDS.register("redstone_fluid_flowing", () -> new NormalFluid.Flowing(AllFluids.redPROPERTIES));
-    public static RegistryObject<FlowingFluid> FUSION_FUEL_FLUID = FLUIDS.register("fusion_fuel_fluid", () -> new NormalFluid.Source(AllFluids.ffPROPERTIES));
-    public static RegistryObject<FlowingFluid> FUSION_FUEL_FLUID_FLOWING = FLUIDS.register("fusion_fuel_fluid_flowing", () -> new NormalFluid.Flowing(AllFluids.ffPROPERTIES));
+    public static final RegistryObject<FlowingFluid> ACID_FLUID = REGISTRY.register("acid_fluid", () -> new ForgeFlowingFluid.Source(AllFluids.ACID_PROPERTIES));
+    public static final RegistryObject<FlowingFluid> ACID_FLUID_FLOWING = REGISTRY.register("acid_fluid_flowing", () -> new ForgeFlowingFluid.Flowing(AllFluids.ACID_PROPERTIES));
+    public static final RegistryObject<FlowingFluid> REDSTONE_FLUID = REGISTRY.register("redstone_fluid", () -> new ForgeFlowingFluid.Source(AllFluids.RED_PROPERTIES));
+    public static final RegistryObject<FlowingFluid> REDSTONE_FLUID_FLOWING = REGISTRY.register("redstone_fluid_flowing", () -> new ForgeFlowingFluid.Flowing(AllFluids.RED_PROPERTIES));
+    public static final RegistryObject<FlowingFluid> FUSION_FUEL_FLUID = REGISTRY.register("fusion_fuel_fluid", () -> new ForgeFlowingFluid.Source(AllFluids.FUSION_FUEL_PROPERTIES));
+    public static final RegistryObject<FlowingFluid> FUSION_FUEL_FLUID_FLOWING = REGISTRY.register("fusion_fuel_fluid_flowing", () -> new ForgeFlowingFluid.Flowing(AllFluids.FUSION_FUEL_PROPERTIES));
 
-    public static NormalFluid.Properties acidPROPERTIES = new NormalFluid.Properties(ACID_FLUID, ACID_FLUID_FLOWING, FluidAttributes.builder(ACID_TEXTURE, FLOWING_ACID_TEXTURE).color(0xAAa5d439).density(4000).viscosity(4000)).bucket(AllItems.ACID_BUCKET).block(AllBlocks.ACID).slopeFindDistance(3).explosionResistance(100F);
-    public static NormalFluid.Properties redPROPERTIES = new NormalFluid.Properties(REDSTONE_FLUID, REDSTONE_FLUID_FLOWING, FluidAttributes.builder(REDSTONE_TEXTURE, FLOWING_REDSTONE_TEXTURE).color(0xBBdc143c).density(4000).viscosity(4000)).bucket(AllItems.REDSTONE_BUCKET).block(AllBlocks.REDSTONE).slopeFindDistance(3).explosionResistance(100F);
-    public static NormalFluid.Properties ffPROPERTIES = new NormalFluid.Properties(FUSION_FUEL_FLUID, FUSION_FUEL_FLUID_FLOWING, FluidAttributes.builder(FUSION_FUEL_TEXTURE, FLOWING_FUSION_FUEL_TEXTURE).color(0xBB48d1cc).density(4000).viscosity(4000)).bucket(AllItems.FUSION_FUEL_BUCKET).block(AllBlocks.FUSION_FUEL).slopeFindDistance(3).explosionResistance(100F);
+    private static final ForgeFlowingFluid.Properties ACID_PROPERTIES = new Properties(ACID_FLUID, ACID_FLUID_FLOWING, WATER_STILL, WATER_FLOW, 0xaaa5d439, AllItems.ACID_BUCKET, AllBlocks.ACID);
+    private static final ForgeFlowingFluid.Properties RED_PROPERTIES = new Properties(REDSTONE_FLUID, REDSTONE_FLUID_FLOWING, LAVA_STILL, LAVA_FLOW, 0xbbdc143c, AllItems.REDSTONE_BUCKET, AllBlocks.REDSTONE);
+    private static final ForgeFlowingFluid.Properties FUSION_FUEL_PROPERTIES = new Properties(FUSION_FUEL_FLUID, FUSION_FUEL_FLUID_FLOWING, LAVA_STILL, LAVA_FLOW,0xbb48d1cc, AllItems.FUSION_FUEL_BUCKET, AllBlocks.FUSION_FUEL);
+
+
+    static class Properties extends ForgeFlowingFluid.Properties {
+        public Properties(Supplier<FlowingFluid> still, Supplier<FlowingFluid> flowing, ResourceLocation still_id, ResourceLocation flowing_id, int color, Supplier<Item> bucket, LiquidBlock block) {
+            super(still, flowing, FluidAttributes.builder(still_id, flowing_id).color(color).density(4000).viscosity(4000));
+            this.bucket(bucket).block(() -> block).slopeFindDistance(3).explosionResistance(100f);
+        }
+    }
 
     public static void register(IEventBus bus) {
-        FLUIDS.register(bus);
+        REGISTRY.register(bus);
     }
 }
