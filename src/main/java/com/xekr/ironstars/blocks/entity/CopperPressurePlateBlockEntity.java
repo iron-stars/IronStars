@@ -12,7 +12,7 @@ import static com.xekr.ironstars.blocks.CopperPressurePlateBlock.POWERED;
 public class CopperPressurePlateBlockEntity extends BlockEntity {
     private long times;
     public CopperPressurePlateBlockEntity(BlockPos pWorldPosition, BlockState pBlockState) {
-        super(AllBlockEntities.COPPER_PRESSURE_PLATE.get(), pWorldPosition, pBlockState);
+        super(AllBlockEntities.COPPER_PRESSURE_PLATE, pWorldPosition, pBlockState);
     }
 
     public void tick() {

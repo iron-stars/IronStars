@@ -8,7 +8,6 @@ import net.minecraft.client.renderer.RenderType;
 import net.minecraft.commands.CommandSourceStack;
 import net.minecraft.data.DataGenerator;
 import net.minecraftforge.api.distmarker.Dist;
-import net.minecraftforge.common.data.ExistingFileHelper;
 import net.minecraftforge.event.RegisterCommandsEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
@@ -27,9 +26,8 @@ public final class AllEvents {
     @Mod.EventBusSubscriber(bus = Mod.EventBusSubscriber.Bus.MOD)
     static class ModBusGlobal { // mod管线全局事件
         @SubscribeEvent
-        public static void gatherData(GatherDataEvent event) { //TODO 不好使
+        public static void gatherData(GatherDataEvent event) {
             DataGenerator generator = event.getGenerator();
-            ExistingFileHelper helper = event.getExistingFileHelper();
             generator.addProvider(new MoonWorldGenerator(generator));
         }
     }
@@ -37,24 +35,26 @@ public final class AllEvents {
     static class ModBusClient { // mod管线客户端事件
         @SubscribeEvent
         public static void onRenderTypeSetup(FMLClientSetupEvent event) {
-            ItemBlockRenderTypes.setRenderLayer(AllBlocks.ACCELERATOR.get(), RenderType.cutoutMipped());
-            ItemBlockRenderTypes.setRenderLayer(AllBlocks.CENTRIFUGE.get(), RenderType.cutoutMipped());
-            ItemBlockRenderTypes.setRenderLayer(AllBlocks.CHEMICAL_ACCUMULATOR.get(), RenderType.cutoutMipped());
-            ItemBlockRenderTypes.setRenderLayer(AllBlocks.FISH_TANK.get(), RenderType.cutoutMipped());
-            ItemBlockRenderTypes.setRenderLayer(AllBlocks.INTERACTOR.get(), RenderType.cutoutMipped());
-            ItemBlockRenderTypes.setRenderLayer(AllBlocks.ITEM_RAIL.get(), RenderType.cutoutMipped());
-            ItemBlockRenderTypes.setRenderLayer(AllBlocks.MOON_DUST.get(), RenderType.cutout());
-            ItemBlockRenderTypes.setRenderLayer(AllBlocks.MAGNET_BLOCK.get(), RenderType.cutout());
-            ItemBlockRenderTypes.setRenderLayer(AllBlocks.MOTOR.get(), RenderType.cutoutMipped());
-            ItemBlockRenderTypes.setRenderLayer(AllBlocks.MOTOR_LAY.get(), RenderType.cutoutMipped());
-            ItemBlockRenderTypes.setRenderLayer(AllBlocks.TURBINE.get(), RenderType.cutoutMipped());
-            ItemBlockRenderTypes.setRenderLayer(AllBlocks.WINDMILL.get(), RenderType.cutoutMipped());
-            ItemBlockRenderTypes.setRenderLayer(AllBlocks.COPPER_TRIPWIRE.get(), RenderType.translucentMovingBlock());
+            ItemBlockRenderTypes.setRenderLayer(AllBlocks.ACCELERATOR, RenderType.cutoutMipped());
+            ItemBlockRenderTypes.setRenderLayer(AllBlocks.CENTRIFUGE, RenderType.cutoutMipped());
+            ItemBlockRenderTypes.setRenderLayer(AllBlocks.CHEMICAL_ACCUMULATOR, RenderType.cutoutMipped());
+            ItemBlockRenderTypes.setRenderLayer(AllBlocks.FISH_TANK, RenderType.cutoutMipped());
+            ItemBlockRenderTypes.setRenderLayer(AllBlocks.INTERACTOR, RenderType.cutoutMipped());
+            ItemBlockRenderTypes.setRenderLayer(AllBlocks.ITEM_RAIL, RenderType.cutoutMipped());
+            ItemBlockRenderTypes.setRenderLayer(AllBlocks.MOON_DUST, RenderType.cutout());
+            ItemBlockRenderTypes.setRenderLayer(AllBlocks.MAGNET_BLOCK, RenderType.cutout());
+            ItemBlockRenderTypes.setRenderLayer(AllBlocks.MOTOR, RenderType.cutoutMipped());
+            ItemBlockRenderTypes.setRenderLayer(AllBlocks.MOTOR_LAY, RenderType.cutoutMipped());
+            ItemBlockRenderTypes.setRenderLayer(AllBlocks.TURBINE, RenderType.cutoutMipped());
+            ItemBlockRenderTypes.setRenderLayer(AllBlocks.WINDMILL, RenderType.cutoutMipped());
+            ItemBlockRenderTypes.setRenderLayer(AllBlocks.COPPER_TRIPWIRE, RenderType.translucentMovingBlock());
 //      Fluids
             ItemBlockRenderTypes.setRenderLayer(AllFluids.ACID_FLUID.get(), RenderType.translucent());
             ItemBlockRenderTypes.setRenderLayer(AllFluids.ACID_FLUID_FLOWING.get(), RenderType.translucent());
             ItemBlockRenderTypes.setRenderLayer(AllFluids.REDSTONE_FLUID.get(), RenderType.translucent());
             ItemBlockRenderTypes.setRenderLayer(AllFluids.REDSTONE_FLUID_FLOWING.get(), RenderType.translucent());
+            ItemBlockRenderTypes.setRenderLayer(AllFluids.FUSION_FUEL_FLUID.get(), RenderType.translucent());
+            ItemBlockRenderTypes.setRenderLayer(AllFluids.FUSION_FUEL_FLUID_FLOWING.get(), RenderType.translucent());
         }
     }
 

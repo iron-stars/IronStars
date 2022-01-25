@@ -10,8 +10,8 @@ import com.mojang.serialization.JsonOps;
 import com.mojang.serialization.Lifecycle;
 import com.xekr.ironstars.IronStars;
 import com.xekr.ironstars.IronStarsUtil;
+import com.xekr.ironstars.registry.AllBiomes;
 import com.xekr.ironstars.registry.AllBlocks;
-import net.minecraft.core.MappedRegistry;
 import net.minecraft.core.Registry;
 import net.minecraft.core.RegistryAccess;
 import net.minecraft.data.BuiltinRegistries;
@@ -193,7 +193,7 @@ public class MoonWorldGenerator extends RegistryWriteOps<JsonElement> implements
                         false,
                         new TerrainShaper(CubicSpline.constant(0.0F), CubicSpline.constant(0.0F), CubicSpline.constant(0.0F))
                 ),
-                AllBlocks.MOON_ROCK.get().defaultBlockState(),
+                AllBlocks.MOON_ROCK.defaultBlockState(),
                 Blocks.WATER.defaultBlockState(),
                 tfSurface(),
                 0,
@@ -206,9 +206,7 @@ public class MoonWorldGenerator extends RegistryWriteOps<JsonElement> implements
         );
 
         this.getOrCreateInRegistry(Registry.NOISE_GENERATOR_SETTINGS_REGISTRY, IronStars.id("moon_noise_config"), () -> dimensionSettings);
-
-
-        NoiseBasedChunkGenerator chunkGen = new NoiseBasedChunkGenerator(RegistryAccess.builtin().registryOrThrow(Registry.NOISE_REGISTRY), new MoonBiomeSource(0L, new MappedRegistry<>(Registry.BIOME_REGISTRY, Lifecycle.experimental())), 0L, () -> dimensionSettings);
+        NoiseBasedChunkGenerator chunkGen = new NoiseBasedChunkGenerator(RegistryAccess.builtin().registryOrThrow(Registry.NOISE_REGISTRY), new MoonBiomeSource(AllBiomes.MOON), 0L, () -> dimensionSettings);
 
         final DimensionType dimensionType = DimensionType.create(
                 OptionalLong.empty(),
