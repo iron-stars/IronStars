@@ -2,7 +2,7 @@ package com.xekr.ironstars.mixin;
 
 import com.xekr.ironstars.config.IronStarsConfig;
 import com.xekr.ironstars.registry.AllBlocks;
-import com.xekr.ironstars.registry.AllItemTags;
+import com.xekr.ironstars.registry.AllTags;
 import net.minecraft.world.entity.item.ItemEntity;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
@@ -22,6 +22,6 @@ public class ItemEntityMixin {
 
     @Redirect(method = "hurt", at = @At(value = "INVOKE", target = "Lnet/minecraft/world/item/ItemStack;is(Lnet/minecraft/world/item/Item;)Z"))
     private boolean explosion(ItemStack instance, Item pItem) {
-        return instance.is(pItem) || instance.getItem().getTags().contains(AllItemTags.TITANIUM);
+        return instance.is(pItem) || AllTags.Items.TITANIUM_ALLOY.contains(instance.getItem());
     }
 }
