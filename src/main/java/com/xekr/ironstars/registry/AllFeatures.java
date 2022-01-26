@@ -12,13 +12,13 @@ import net.minecraft.world.level.levelgen.placement.CountPlacement;
 import net.minecraft.world.level.levelgen.placement.HeightRangePlacement;
 import net.minecraft.world.level.levelgen.placement.InSquarePlacement;
 import net.minecraft.world.level.levelgen.placement.PlacedFeature;
-import net.minecraft.world.level.levelgen.structure.templatesystem.BlockMatchTest;
 import net.minecraft.world.level.levelgen.structure.templatesystem.RuleTest;
+import net.minecraft.world.level.levelgen.structure.templatesystem.TagMatchTest;
 
 import java.util.List;
 
 public class AllFeatures {
-    private static final RuleTest MOON_ORE_REPLACEABLES = new BlockMatchTest(AllBlocks.MOON_ROCK);
+    private static final RuleTest MOON_ORE_REPLACEABLES = new TagMatchTest(AllTags.Blocks.MOON_ORE_REPLACEABLES);
     private static final List<OreConfiguration.TargetBlockState> ORE_TITANIUM_TARGET_LIST = List.of(OreConfiguration.target(MOON_ORE_REPLACEABLES, AllBlocks.TITANIUM_ORE.defaultBlockState()));
 
     public static final ConfiguredFeature<OreConfiguration, ?> TITANIUM_ORE = registerConfiguredFeature(IronStars.id("ore_titanium"), Feature.ORE.configured(new OreConfiguration(ORE_TITANIUM_TARGET_LIST, 10)));

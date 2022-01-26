@@ -1,6 +1,6 @@
 package com.xekr.ironstars.blocks;
 
-import com.xekr.ironstars.registry.AllItemTags;
+import com.xekr.ironstars.registry.AllTags;
 import net.minecraft.core.BlockPos;
 import net.minecraft.world.item.Items;
 import net.minecraft.world.entity.item.ItemEntity;
@@ -32,7 +32,7 @@ public class TitaniumAlloyPressurePlateBlock extends AbstractPressurePlateBlock 
     @Override
     protected int getSignalStrength(Level pLevel, BlockPos pPos) {
         return this.entityOnPlate(pLevel, pPos, ItemEntity.class, entity ->
-                entity.getItem().is(Items.NETHER_STAR) || entity.getItem().getItem().getTags().contains(AllItemTags.TITANIUM)
+                entity.getItem().is(Items.NETHER_STAR) || AllTags.Items.TITANIUM_ALLOY.contains(entity.getItem().getItem())
         ) ? 15 : 0;
     }
 
