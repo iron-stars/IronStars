@@ -34,6 +34,7 @@ import org.jetbrains.annotations.Nullable;
 import java.util.concurrent.CompletableFuture;
 import java.util.concurrent.Executor;
 
+// TODO 维度接下来就是写这个
 public class MoonChunkGenerator extends ChunkGenerator {
     public static final Codec<MoonChunkGenerator> CODEC = RecordCodecBuilder.create(instance -> instance.group(
             ChunkGenerator.CODEC.fieldOf("wrapped_generator").forGetter(o -> o.delegate)
