@@ -1,5 +1,5 @@
 # [IronStars](http://ironstars.polaris-mc.tech/)
-[![Support](https://img.shields.io/badge/Support-1-a5d439)](https://afdian.net/@Gugle)
+[![Support](https://img.shields.io/badge/Support-2-a5d439)](https://afdian.net/@Gugle)
 [![Build Mod](https://github.com/iron-stars/IronStars/actions/workflows/build-mod.yml/badge.svg)](https://github.com/iron-stars/IronStars/actions/workflows/build-mod.yml)
 [![license](https://img.shields.io/github/license/iron-stars/IronStars)](https://github.com/iron-stars/IronStars/blob/master/LICENSE)
 [![pull request](https://img.shields.io/bitbucket/pr-raw/iron-stars/IronStars)](https://github.com/iron-stars/IronStars/pulls)
@@ -20,6 +20,7 @@
 * [T2ake](https://space.bilibili.com/13029727)
 * [Xe_Kr](https://space.bilibili.com/5930630)
 ### supporter
+* [SpicyChicken](https://afdian.net/u/d7eae684e33811eb91ad52540025c377)
 * [宋盛元](https://afdian.net/u/dcb533f0716711eca56552540025c377)
 
 # Support US
