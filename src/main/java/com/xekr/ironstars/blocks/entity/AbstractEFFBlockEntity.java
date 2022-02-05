@@ -5,7 +5,9 @@ import com.xekr.ironstars.registry.AllCapabilities;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.nbt.CompoundTag;
+import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.entity.BlockEntity;
+import net.minecraft.world.level.block.entity.BlockEntityTicker;
 import net.minecraft.world.level.block.entity.BlockEntityType;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraftforge.common.capabilities.Capability;
@@ -13,13 +15,17 @@ import net.minecraftforge.common.util.LazyOptional;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 
-@Deprecated //TODO 先写着, 写完再去掉
-public abstract class AbstractEfficiencyBlockEntity extends BlockEntity {
+import java.util.Collections;
+import java.util.List;
+import java.util.UUID;
+
+public abstract class AbstractEFFBlockEntity extends BlockEntity {
     private int lazyTickCounter = 0;
 
-    @Nullable private BlockPos source;
+    @Nullable private UUID netId = null;
+    private List<BlockPos> sources = Collections.emptyList();
 
-    protected AbstractEfficiencyBlockEntity(BlockEntityType<?> type, BlockPos pos, BlockState state) {
+    protected AbstractEFFBlockEntity(BlockEntityType<?> type, BlockPos pos, BlockState state) {
         super(type, pos, state);
     }
 
@@ -43,7 +49,17 @@ public abstract class AbstractEfficiencyBlockEntity extends BlockEntity {
     protected void saveAdditional(CompoundTag pTag) {
     }
 
-    public abstract int getGeneratedEfficiency();
+    public UUID getNetwork() {
+        return this.netId;
+    }
+
+    public boolean hasNetwork() {
+        return this.netId != null;
+    }
+
+    public abstract boolean isSourceMachine();
+
+    public abstract int getMachineEfficiency();
 
     public abstract boolean canOutput(@Nullable Direction side);
 
