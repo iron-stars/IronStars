@@ -1,6 +1,6 @@
 # [IronStars](http://ironstars.polaris-mc.tech/)
 <!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
-[![All Contributors](https://img.shields.io/badge/all_contributors-5-orange.svg?style=flat-square)](#contributors-)
+[![All Contributors](https://img.shields.io/badge/all_contributors-8-orange.svg?style=flat-square)](#contributors-)
 <!-- ALL-CONTRIBUTORS-BADGE:END -->
 [![Support](https://img.shields.io/badge/Support-2-a5d439)](https://afdian.net/@Gugle)
 [![Build Mod](https://github.com/iron-stars/IronStars/actions/workflows/build-mod.yml/badge.svg)](https://github.com/iron-stars/IronStars/actions/workflows/build-mod.yml)
@@ -45,6 +45,9 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
     <td align="center"><a href="https://github.com/t2ake"><img src="https://avatars.githubusercontent.com/u/68280449?v=4?s=100" width="100px;" alt=""/><br /><sub><b>t2ake</b></sub></a><br /><a href="https://github.com/iron-stars/IronStars/commits?author=t2ake" title="Code">💻</a></td>
     <td align="center"><a href="https://github.com/Phoupraw"><img src="https://avatars.githubusercontent.com/u/50520903?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Phoupraw</b></sub></a><br /><a href="https://github.com/iron-stars/IronStars/commits?author=Phoupraw" title="Code">💻</a></td>
     <td align="center"><a href="https://lucunji.github.io"><img src="https://avatars.githubusercontent.com/u/36262513?v=4?s=100" width="100px;" alt=""/><br /><sub><b>LucunJi</b></sub></a><br /><a href="https://github.com/iron-stars/IronStars/commits?author=LucunJi" title="Code">💻</a></td>
+  </tr>
+  <tr>
+    <td align="center"><a href="https://github.com/XeKr"><img src="https://avatars.githubusercontent.com/u/45423407?v=4?s=100" width="100px;" alt=""/><br /><sub><b>XeKr</b></sub></a><br /><a href="#design-XeKr" title="Design">🎨</a> <a href="#ideas-XeKr" title="Ideas, Planning, & Feedback">🤔</a></td>
   </tr>
 </table>
 
