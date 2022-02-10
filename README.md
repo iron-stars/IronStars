@@ -39,8 +39,8 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
 <table>
   <tr>
     <td align="center"><a href="https://github.com/Cjsah"><img src="https://avatars.githubusercontent.com/u/46415647?v=4?s=100" width="100px;" alt=""/><br /><sub><b>꧁[C̲̅j̲̅s̲̅a̲̅h̲̅]꧂</b></sub></a><br /><a href="https://github.com/iron-stars/IronStars/commits?author=Cjsah" title="Code">💻</a></td>
-    <td align="center"><a href="http://China"><img src="https://avatars.githubusercontent.com/u/29054038?v=4?s=100" width="100px;" alt=""/><br /><sub><b>gloomybanana</b></sub></a><br /><a href="https://github.com/iron-stars/IronStars/commits?author=gloomybanana" title="Code">💻</a></td>
     <td align="center"><a href="https://github.com/Da-Hua"><img src="https://avatars.githubusercontent.com/u/58766472?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Hua</b></sub></a><br /><a href="https://github.com/iron-stars/IronStars/commits?author=Da-Hua" title="Code">💻</a></td>
+    <td align="center"><a href="http://China"><img src="https://avatars.githubusercontent.com/u/29054038?v=4?s=100" width="100px;" alt=""/><br /><sub><b>gloomybanana</b></sub></a><br /><a href="https://github.com/iron-stars/IronStars/commits?author=gloomybanana" title="Code">💻</a></td>
   </tr>
 </table>
 
