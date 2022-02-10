@@ -1,4 +1,7 @@
 # [IronStars](http://ironstars.polaris-mc.tech/)
+<!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
+[![All Contributors](https://img.shields.io/badge/all_contributors-1-orange.svg?style=flat-square)](#contributors-)
+<!-- ALL-CONTRIBUTORS-BADGE:END -->
 [![Support](https://img.shields.io/badge/Support-2-a5d439)](https://afdian.net/@Gugle)
 [![Build Mod](https://github.com/iron-stars/IronStars/actions/workflows/build-mod.yml/badge.svg)](https://github.com/iron-stars/IronStars/actions/workflows/build-mod.yml)
 [![license](https://img.shields.io/github/license/iron-stars/IronStars)](https://github.com/iron-stars/IronStars/blob/master/LICENSE)
@@ -25,3 +28,23 @@
 
 # Support US
 [<img src="./support_us.jpg" height="400"/>](https://afdian.net/@Gugle)
+
+## Contributors ✨
+
+Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/docs/en/emoji-key)):
+
+<!-- ALL-CONTRIBUTORS-LIST:START - Do not remove or modify this section -->
+<!-- prettier-ignore-start -->
+<!-- markdownlint-disable -->
+<table>
+  <tr>
+    <td align="center"><a href="https://github.com/Cjsah"><img src="https://avatars.githubusercontent.com/u/46415647?v=4?s=100" width="100px;" alt=""/><br /><sub><b>꧁[C̲̅j̲̅s̲̅a̲̅h̲̅]꧂</b></sub></a><br /><a href="https://github.com/iron-stars/IronStars/commits?author=Cjsah" title="Code">💻</a></td>
+  </tr>
+</table>
+
+<!-- markdownlint-restore -->
+<!-- prettier-ignore-end -->
+
+<!-- ALL-CONTRIBUTORS-LIST:END -->
+
+This project follows the [all-contributors](https://github.com/all-contributors/all-contributors) specification. Contributions of any kind welcome!
