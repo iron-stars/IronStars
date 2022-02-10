@@ -31,6 +31,15 @@
       "contributions": [
         "code"
       ]
+    },
+    {
+      "login": "Gu-ZT",
+      "name": "Gugle",
+      "avatar_url": "https://avatars.githubusercontent.com/u/34372427?v=4",
+      "profile": "http://gugle.polaris-mc.tech",
+      "contributions": [
+        "code"
+      ]
     }
   ],
   "contributorsPerLine": 7,
