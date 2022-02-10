@@ -12,23 +12,6 @@
 [![Java](https://img.shields.io/badge/Java-17-yellow)](https://docs.microsoft.com/java/openjdk/download)
 [![Minecraft](https://img.shields.io/badge/Minecraft-1.18.1-66ccff)](https://www.minecraft.net/)
 
-## Thanks For
-### author
-* [Cjsah](https://space.bilibili.com/19170004)
-* [Da-Hua](https://github.com/Da-Hua)
-* [Gugle](https://space.bilibili.com/19822751)
-* [gloomybanana](https://github.com/gloomybanana)
-* [LucunJi](https://space.bilibili.com/2117299)
-* [Phoupraw](https://space.bilibili.com/43760886)
-* [T2ake](https://space.bilibili.com/13029727)
-* [Xe_Kr](https://space.bilibili.com/5930630)
-### supporter
-* [SpicyChicken](https://afdian.net/u/d7eae684e33811eb91ad52540025c377)
-* [宋盛元](https://afdian.net/u/dcb533f0716711eca56552540025c377)
-
-# Support US
-[<img src="./support_us.jpg" height="400"/>](https://afdian.net/@Gugle)
-
 ## Contributors ✨
 
 Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/docs/en/emoji-key)):
@@ -57,3 +40,11 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
 <!-- ALL-CONTRIBUTORS-LIST:END -->
 
 This project follows the [all-contributors](https://github.com/all-contributors/all-contributors) specification. Contributions of any kind welcome!
+
+## Supporter for [afdian](https://afdian.net/)
+* [SpicyChicken](https://afdian.net/u/d7eae684e33811eb91ad52540025c377)
+* [宋盛元](https://afdian.net/u/dcb533f0716711eca56552540025c377)
+
+# Support US
+[<img src="./support_us.jpg" height="400"/>](https://afdian.net/@Gugle)
+
