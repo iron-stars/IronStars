@@ -43,6 +43,7 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
     <td align="center"><a href="http://China"><img src="https://avatars.githubusercontent.com/u/29054038?v=4?s=100" width="100px;" alt=""/><br /><sub><b>gloomybanana</b></sub></a><br /><a href="https://github.com/iron-stars/IronStars/commits?author=gloomybanana" title="Code">💻</a></td>
     <td align="center"><a href="http://gugle.polaris-mc.tech"><img src="https://avatars.githubusercontent.com/u/34372427?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Gugle</b></sub></a><br /><a href="https://github.com/iron-stars/IronStars/commits?author=Gu-ZT" title="Code">💻</a></td>
     <td align="center"><a href="https://github.com/Phoupraw"><img src="https://avatars.githubusercontent.com/u/50520903?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Phoupraw</b></sub></a><br /><a href="https://github.com/iron-stars/IronStars/commits?author=Phoupraw" title="Code">💻</a></td>
+    <td align="center"><a href="https://lucunji.github.io"><img src="https://avatars.githubusercontent.com/u/36262513?v=4?s=100" width="100px;" alt=""/><br /><sub><b>LucunJi</b></sub></a><br /><a href="https://github.com/iron-stars/IronStars/commits?author=LucunJi" title="Code">💻</a></td>
   </tr>
 </table>
 
