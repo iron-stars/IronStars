@@ -1,0 +1,20 @@
+name: Auto Mark Issue
+
+on:
+  issues:
+    types: [opened]
+
+jobs:
+  apply-label:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Apply Label
+        uses: actions/github-script@v5
+        with:
+          script: |
+            github.rest.issues.addLabels({
+              issue_number: context.issue.number,
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              labels: [':small_blue_diamond:waiting for review',':small_red_triangle_down:low']
+            })

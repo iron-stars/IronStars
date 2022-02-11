@@ -3,6 +3,11 @@ name: Build Mod
 on:
   push:
     branches: [ '1.18' ]
+    paths:
+      - 'src/*'
+      - 'gradle/*'
+      - '*.gradle'
+      - 'gradle.properties'
 
 jobs:
   build:
