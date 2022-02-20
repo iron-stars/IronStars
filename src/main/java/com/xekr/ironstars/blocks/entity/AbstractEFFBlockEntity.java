@@ -22,14 +22,14 @@ public abstract class AbstractEFFBlockEntity extends BlockEntity {
 
     @Nullable
     private EFFNetwork network = null;
-    private Set<Direction> sources = new HashSet<>();
+    private final Set<Direction> sources = new HashSet<>();
 
     protected AbstractEFFBlockEntity(BlockEntityType<?> type, BlockPos pos, BlockState state) {
         super(type, pos, state);
     }
 
     public void tick() {
-        if (this.lazyTickCounter-- == 0) {
+        if (--this.lazyTickCounter <= 0) {
             this.lazyTickCounter = 10;
             lazyTick();
         }
@@ -40,14 +40,15 @@ public abstract class AbstractEFFBlockEntity extends BlockEntity {
     }
 
     @Override
-    public void load(CompoundTag pTag) {
+    public void load(@Nonnull CompoundTag pTag) {
         super.load(pTag);
     }
 
     @Override
-    protected void saveAdditional(CompoundTag pTag) {
+    protected void saveAdditional(@Nonnull CompoundTag pTag) {
     }
 
+    @Nullable
     public EFFNetwork getNetwork() {
         return this.network;
     }

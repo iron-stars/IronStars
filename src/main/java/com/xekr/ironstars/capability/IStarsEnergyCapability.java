@@ -1,9 +1,11 @@
 package com.xekr.ironstars.capability;
 
+import com.xekr.ironstars.blocks.entity.AbstractEFFBlockEntity;
+import net.minecraft.core.BlockPos;
 import net.minecraft.nbt.CompoundTag;
 import net.minecraftforge.common.util.INBTSerializable;
 
-public interface IStarsEnergyCapability extends INBTSerializable<CompoundTag> {
+public interface IStarsEnergyCapability {
     /**
      * 获取发电效率
      */
@@ -15,21 +17,24 @@ public interface IStarsEnergyCapability extends INBTSerializable<CompoundTag> {
     int getRestEfficiency();
 
     /**
-     * 增加效率
-     * <p>只有发电机才会增加效率
+     * 新增机器
      */
-    void add(int amount);
+    boolean appendMachine(AbstractEFFBlockEntity blockEntity);
 
     /**
-     * 减少效率
+     * 新增机器
+     * @param isSourceMachine 是否发电机
      */
-    void reduce(int amount);
+    boolean appendMachine(BlockPos pos, int efficiency, boolean isSourceMachine);
+
+    /**
+     * 移除机器
+     */
+    boolean removeMachine(BlockPos pos);
 
     /**
      * 获取输出效率
-     * <p>如果效率不足, 降低效率输出
-     * @param expect 期待效率
-     * @return 实际效率
      */
-    int getOutput(int expect);
+    int getOutput(BlockPos pos);
+
 }
