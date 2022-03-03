@@ -7,7 +7,8 @@
   "mixins": [
     "AnvilBlockMixin",
     "ItemEntityMixin",
-    "LightingBoltMixin"
+    "LightingBoltMixin",
+    "MinecraftServerMixin"
   ],
   "client": [
     "MinecraftMixin"

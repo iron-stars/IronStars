@@ -1,28 +1,22 @@
 package com.xekr.ironstars.blocks.entity;
 
-import com.xekr.ironstars.capability.StarsEnergyCapability;
 import com.xekr.ironstars.efficiency.EFFNetwork;
-import com.xekr.ironstars.registry.AllCapabilities;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.nbt.CompoundTag;
 import net.minecraft.world.level.block.entity.BlockEntity;
 import net.minecraft.world.level.block.entity.BlockEntityType;
 import net.minecraft.world.level.block.state.BlockState;
-import net.minecraftforge.common.capabilities.Capability;
-import net.minecraftforge.common.util.LazyOptional;
 
 import javax.annotation.Nonnull;
 import javax.annotation.Nullable;
-import java.util.HashSet;
-import java.util.Set;
+import java.util.UUID;
 
-public abstract class AbstractEFFBlockEntity extends BlockEntity {
+public abstract class AbstractEFFBlockEntity extends BlockEntity implements EFFMachine {
     private int lazyTickCounter = 0;
 
     @Nullable
     private EFFNetwork network = null;
-    private final Set<Direction> sources = new HashSet<>();
 
     protected AbstractEFFBlockEntity(BlockEntityType<?> type, BlockPos pos, BlockState state) {
         super(type, pos, state);
@@ -35,43 +29,48 @@ public abstract class AbstractEFFBlockEntity extends BlockEntity {
         }
     }
 
+    @SuppressWarnings("ConstantConditions")
     public void lazyTick() {
-
+        BlockPos pos = this.getBlockPos();
+        for (Direction direction : this.getOutputSide()) {
+            BlockPos side = pos.relative(direction);
+            BlockEntity blockEntity = this.level.getBlockEntity(side);
+            if (blockEntity instanceof EFFMachine machine && machine.canInput(direction.getOpposite())) {
+                EFFNetwork network = machine.getNetwork();
+                if (network == null) machine.setNetwork(this.network);
+                else if (!network.equals(this.network)) EFFNetwork.merge(this.network, network);
+            }
+        }
     }
 
     @Override
-    public void load(@Nonnull CompoundTag pTag) {
-        super.load(pTag);
+    public void load(@Nonnull CompoundTag nbt) {
+        if (nbt.contains("uuid")) {
+            EFFNetwork network = EFFNetwork.getNetwork(UUID.fromString(nbt.getString("uuid")));
+            if (network != null && !network.equals(this.network))
+                network.appendMachine(this);
+        }
+        super.load(nbt);
     }
 
     @Override
-    protected void saveAdditional(@Nonnull CompoundTag pTag) {
+    protected void saveAdditional(@Nonnull CompoundTag nbt) {
+        if (this.network != null) nbt.putString("uuid", this.network.getId().toString());
     }
 
     @Nullable
+    @Override
     public EFFNetwork getNetwork() {
         return this.network;
     }
 
+    @Override
     public boolean hasNetwork() {
         return this.network != null;
     }
 
-    public abstract boolean isSourceMachine();
-
-    public abstract int getMachineEfficiency();
-
-    public abstract Set<Direction> getOutputSide();
-
-    public boolean canOutput(@Nonnull Direction side) {
-        return !this.sources.contains(side) && !this.getOutputSide().contains(side);
-    }
-
-    @Nonnull
     @Override
-    public <T> LazyOptional<T> getCapability(@Nonnull Capability<T> cap, @Nullable Direction side) {
-        if (side != null && this.network != null && cap == AllCapabilities.STARS_ENERGY_CAPABILITY && this.canOutput(side))
-            return LazyOptional.of(() -> new StarsEnergyCapability(this.network)).cast();
-        return super.getCapability(cap, side);
+    public void setNetwork(@Nullable EFFNetwork network) {
+        this.network = network;
     }
 }
